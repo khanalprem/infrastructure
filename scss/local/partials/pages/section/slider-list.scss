@@ -1,0 +1,65 @@
+.top-bar{
+    margin-top: -115px;
+    position: relative;
+    z-index: 1111;
+    margin-bottom: 40px;
+    @media #{$breakpoint-lg-desktop}{
+       margin-top: -85px;
+       margin-bottom: 30px;
+    }
+}
+
+.slider-list{
+    position: relative;
+    z-index: 1111;
+    padding: 15px 30px 15px;
+    @media #{$breakpoint-lg-desktop}{
+        padding: 10px 20px 10px;
+    }
+    .list-item{
+        a{
+            display: block;
+            text-transform: uppercase;
+            padding:.5rem;
+            color:$body-color;
+            font-weight: 600;
+            position: relative;
+            @include transition(all .5s linear);
+            border:1px solid transparent;
+            color:$body-color;
+            text-align: center;
+        }
+        &:not(:last-child){
+            margin-right: .875rem;
+        }
+    }
+    &.is-bg{
+        .list-item{
+            a{
+                background-color: $white-color;
+                @include radius(0);
+                &.current,
+                &:hover {
+                    color: $primary-color;
+                    background-color: $yellow-color;
+                }
+            }
+            &.current {
+                a{
+                    color: $primary-color;
+                    background-color: $yellow-color;
+                }
+            }
+        }
+    }
+    &.is-shadow{
+        background: $white-color;
+        @include box-shadow(0 0 70px $shadow-light);
+        @include flex-wrap(nowrap);
+        .list-item{
+            a{
+                text-transform: capitalize;
+            }
+        }
+    }
+}

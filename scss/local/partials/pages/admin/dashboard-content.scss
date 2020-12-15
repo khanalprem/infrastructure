@@ -1,0 +1,94 @@
+.admin-main{
+    &.is-bg{
+        background-color: $grey-light;
+    }
+    .dashboard-header{
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-between;
+        .left,
+        .right{
+            .item{
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+                .custom-select{
+                    min-width: 120px;
+                    @media #{$breakpoint-desktop}{
+                        min-width: 100px;
+                    }
+                }
+            }
+        }
+        .right{
+            .notification{
+                i{ color: $heading-color; }
+                &:hover{
+                    i{color: $secondary-color;}
+                }
+            }
+        }
+    }
+    .table-section{
+        .menu-contents{
+            h2{ color: $primary-color;}
+            margin-top: 2.25rem;
+            @media #{$breakpoint-desktop}{
+                margin-top: 1.75rem;
+            }
+            .menu-options{
+                margin-top: 1.5rem;
+                @include display-flex(flex);
+                @include align-items-center;
+                @include justify-content-between;
+                @media #{$breakpoint-desktop}{
+                    margin-top: 1.25rem;
+                }
+                .option-items{
+                    li{
+                        &:not(:last-child){
+                            margin-right: 10px;
+                        }
+                        a.common-link{
+                            &.is-border{
+                                max-width: 42px;
+                                @media #{$breakpoint-desktop}{
+                                    max-width: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .table-view{
+            margin-top: 1rem;
+            @media #{$breakpoint-desktop}{
+                margin-top: 0.75rem;
+            }
+            .custom-tab{
+                .custom-tab-content{
+                    padding: 0;
+                }
+            }
+            table{
+                a{
+                    @include display-flex(inline-flex);
+                    @include align-items-center;
+                    &.is-end{
+                        @include justify-content-end;
+                    }
+                    &.load-more{
+                        width: 100%;
+                    }
+                    &:hover{
+                        color: $secondary-color;
+                        i{
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

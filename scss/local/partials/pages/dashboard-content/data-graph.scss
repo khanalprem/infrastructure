@@ -1,0 +1,54 @@
+.data-graph-body{
+    flex: 0 0 70%;
+    max-width: 70%;
+    height: calc(100vh - 106px);
+    @media #{$breakpoint-xl}{
+        flex: 0 0 100%;
+        max-width: 100%;;
+    }
+    .grid-representation-data{
+        background: $primary-xs-light;
+        @include radius(20px);
+        padding: 15px;
+        @media #{$breakpoint-lg-desktop}{
+            padding: 10px;
+        }
+        .row{
+            .grid{
+                height: 80px;
+                text-align: center;
+                @include display-flex(flex);
+                @include justify-content-center;
+                @include flex-direction-column(column);
+                &:not(:last-child){
+                    border-right: 1px solid $border-color;
+                }
+                @media #{$breakpoint-lg-desktop}{
+                    height: 70px;
+                }
+                @media #{$breakpoint-desktop}{
+                    height: 60px;
+                }
+                h3.label{
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    //bar-graph-body
+    .bar-graph-body{
+        margin-top: 50px;
+        @media #{$breakpoint-desktop}{
+            margin-top: 40px;
+        }
+    }
+    //line-graph-body
+    .line-graph-body{
+        margin-top: 30px;
+        @media #{$breakpoint-desktop}{
+            margin-top: 20px;
+        }
+    }
+
+}
