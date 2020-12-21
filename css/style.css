@@ -4639,10 +4639,13 @@ ul.demo-list {
     }
 } */
 .container-fluid.container-full-padding {
-  padding: 0 10rem; }
+  padding: 0 15rem; }
   @media only screen and (max-width: 1560px) {
     .container-fluid.container-full-padding {
       padding: 0 10rem; } }
+  @media only screen and (max-width: 1199px) {
+    .container-fluid.container-full-padding {
+      padding: 4rem; } }
   @media only screen and (max-width: 991px) {
     .container-fluid.container-full-padding {
       padding: 2rem; } }
@@ -7593,7 +7596,6 @@ footer.site-footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../../img/section-shape/right-bottom-shape.png");
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: right top !important; }
@@ -7640,22 +7642,28 @@ footer.site-footer {
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: right !important; }
+    @media only screen and (max-width: 1560px) {
+      .banner .banner-caption {
+        top: 7rem !important; } }
     .banner .banner-caption .caption-content {
       position: relative;
       max-width: 860px;
       top: 80px;
       width: 100%;
       height: 80%; }
+      @media only screen and (max-width: 1560px) {
+        .banner .banner-caption .caption-content {
+          top: 40px; } }
       @media only screen and (max-width: 1440px) {
         .banner .banner-caption .caption-content {
           max-width: 700px;
-          top: 25px; } }
+          top: 30px; } }
       .banner .banner-caption .caption-content h1 {
-        font-size: 3.7sa5rem;
+        font-size: 3.75rem;
         color: #333333;
         font-weight: 400;
         padding-bottom: 40px;
-        line-height: 68px;
+        line-height: 64px;
         text-transform: capitalize;
         max-width: 700px; }
         @media only screen and (max-width: 1440px) {
@@ -9322,7 +9330,6 @@ aside.admin-sidebar {
         content: ' ';
         width: 100%;
         height: 100%;
-        background-image: url(../.././img/dashboard/taking-notes.png);
         background-size: contain;
         background-position: bottom right;
         background-repeat: no-repeat;
