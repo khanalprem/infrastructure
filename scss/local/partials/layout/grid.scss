@@ -12,9 +12,12 @@
 } */
 .container-fluid{
     &.container-full-padding{
-        padding: 0 15rem;
-        @media #{$breakpoint-desktop}{
+        padding: 0 10rem;
+        @media #{$breakpoint-lg-desktop}{
             padding: 0 10rem;
+        }
+        @media #{$breakpoint-lg}{
+            padding: 2rem;
         }
     }
 }

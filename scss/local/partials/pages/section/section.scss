@@ -4,11 +4,12 @@
 @import "form-table";
 @import "common-title";
 @import "logo";
+@import "footer";
 .section{
-    padding: 80px 0;
+    padding: 130px 0;
     position: relative;
-    @media #{$breakpoint-lg-desktop}{
-        padding: 60px 0;
+    @media #{$breakpoint-desktop}{
+        padding: 110px 0;
     }
     
     &.is-light-bg{

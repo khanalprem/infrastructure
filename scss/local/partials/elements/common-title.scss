@@ -1,58 +1,21 @@
 .common-title{
     display: block;
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
     max-width: 970px;
-    @media #{$breakpoint-lg-desktop}{
-        margin-bottom: 2rem;         
+    @media #{$breakpoint-desktop}{
+        margin-bottom: 25px;         
     }
-    @media #{$breakpoint-lg}{
-        @include flex-hr-center;
-        text-align: center;
-    }
-
-    .span-label{
-        font-size: 15px;
-        line-height: 20px;
-        color: $secondary-color;
-        margin-bottom: 12px;
-        font-weight: 700;
-        display: block;
-        text-transform: uppercase;
-        @media #{$breakpoint-lg-desktop}{
-            font-size: 12px;
-            margin-bottom: 8px;
-        }
-        @media #{$breakpoint-md-desktop}{
-            font-size: 11px;
-            margin-bottom: 5px;
-        }
-    }
-
-    h2{
-        font-family: $heading-fonts;
-        color: $white-color;
-        font-weight: 600;
-        text-transform: initial;
-        font-size: 1.9rem;
-        line-height: 50px;
-        @media #{$breakpoint-lg-desktop}{
-            font-size: 1.5rem; 
-            line-height:40px;           
-        }
-        @media #{$breakpoint-md-desktop}{
-            font-size: 1.25rem;
-            line-height: 34px;
-        }
-        @media #{$breakpoint-sm}{
-            line-height: 30px;
-        }
-    }
-
-    p{
-        margin-top: 20px;
+    h1{
+        font-size: $font-size-h1;
         color: $heading-color;
-        @media #{$breakpoint-lg-desktop}{
-            margin-top: 15px;
+        font-weight: 400;
+        span{
+            text-transform: lowercase;
+            &.italic{
+                font-style: italic;
+                color: $primary-color;
+                text-transform: capitalize;
+            }
         }
     }
     

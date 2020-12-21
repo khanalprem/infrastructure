@@ -2,17 +2,17 @@ a.common-link,
   [class*=common-button] {
     -webkit-font-smoothing: antialiased;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: .938rem;
     text-decoration: none;
-    text-transform: initial;
+    text-transform: capitalize;
     padding: .625rem .875rem;
+    color: $secondary-color;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 180px;
     min-height: 35px;
-    @include radius(10px);
     border: none;
     outline: none;
     line-height: inherit;
@@ -26,6 +26,17 @@ a.common-link,
     cursor: pointer;
      transition: all .3s ease-in-out;
     position: relative;
+    &:hover{
+        color: $secondary-light;
+        &.is-icon{
+            i{
+                color: $secondary-light;
+                &.is-circle{
+                    border: 1px solid $secondary-light;
+                }
+            }
+        }
+    }
     &:focus {
         outline: none;
     }
@@ -39,16 +50,15 @@ a.common-link,
     @media #{$breakpoint-desktop}{
         width: 140px;
          min-height: 30px;
-         @include radius(7px);
-         font-size: .875rem;
+         font-size: .825rem;
          padding: .425rem .75rem;
     }
     
     &.is-icon {
         svg,
         i {
-            color: $white-color;
-            transition: margin .3s ease-in-out;
+            color: $secondary-color;
+            transition: all .3s ease-in-out;
             font-weight: 500;
             position: relative;
             &.is-mr{
@@ -57,6 +67,17 @@ a.common-link,
             &.is-ml{
                 margin-left: 0.5rem;
             }
+            &.is-circle{
+                transition: all .3s ease-in-out;
+                border: 1px solid $secondary-color;
+                @include radius(50%);
+                padding: 10px;
+                margin-right: 15px !important;
+                @media #{$breakpoint-desktop}{
+                    padding: 6px;
+                }
+            }
+           
             @media #{$breakpoint-desktop}{
                 &.is-mr{
                     margin-right: .25rem;
@@ -80,8 +101,6 @@ a.common-link,
         color: $white-color;
         background-color: $secondary-color;
         border-color: $secondary-color;
-        // @include box-shadow(0 10px 40px rgba($yellow-color, .25));
-      
         &:disabled {
             color: $white-color;
             background-color: $grey-light;
@@ -98,12 +117,20 @@ a.common-link,
 
 
         &:hover {
-            background-color: $secondary-color;
-            border-color: $secondary-color;
+            background-color: $secondary-light;
+            border-color: $secondary-light;
             color: $white-color;
-            @include box-shadow(0 4px 8px $border-dark);
         }
 
+    }
+
+    &.is-light-bg{
+        background: $white-color;
+        color: $secondary-color;
+        &:hover{
+            background: $secondary-color;
+            color: $white-color;
+        }
     }
 
     &.is-full-width {
@@ -235,6 +262,7 @@ a.load-more-button {
 
 .buttons {
     @include display-flex(flex);
+    
     button,
     a {
         &:not(:last-child) {

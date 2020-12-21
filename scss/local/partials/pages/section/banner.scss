@@ -3,20 +3,9 @@
     @include transition(all .4s ease);
     &.full-height-banner{
         position: relative;
-        @include cover(center);
+       
+        background-position: 100% 75%;
         @include transition(all .4s ease);
-        &::before{
-            content: ' ';
-            position: absolute;
-            top:0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            height: 100%;
-            width: 100%;
-            background: rgba($primary-color, .6);
-            @include transition(all .4s ease);
-        }
     }
     &.overlay {
         &::after {
@@ -56,53 +45,73 @@
         -webkit-background-image: linear-gradient(100deg , $primary-color, $primary-dark);
         background-image: linear-gradient(100deg , $primary-color, $primary-dark);
     }
-    .banner-caption{
+    .banner-center{
         @include display-flex(flex);
         @include align-items-center;
         @include justify-content-start;
-        position: absolute;
         width: 100%;
         height: 100%;
-        left: 0;
-        top: 0 !important;
-        right: 0;
-        bottom: 0;
+    }
+    .banner-caption{
+        position: relative;
+        width: 100%;
+        height: 90%;
+        top: 8rem !important;
+        @include contain(right);
         .caption-content{
             position: relative;
-            top: 120px;
             max-width: 860px;
+            top: 80px;
+            width: 100%;
+            height: 80%;
             @media #{$breakpoint-desktop}{
-                max-width: 750px;
-                top: 100px;
+                max-width: 700px;
+                top: 25px;
             }
             h1{
-                font-size: $font-size-h1-title;
-                color: $white-color;
+                font-size: 3.5rem; //64px
+                color: $heading-color;
                 font-weight: 400;
-                padding-bottom: 15px;
-                line-height: 85px;
+                padding-bottom: 40px;
+                line-height: 68px;
                 text-transform: capitalize;
+                max-width: 700px;
                 @media #{$breakpoint-desktop}{
-                    margin-bottom: 25px;
-                    line-height: 75px;
+                    font-size: 2.85rem;
+                    max-width: 500px;
+                    line-height: 50px;
                 }
                 span{
-                    text-transform: lowercase;
+                    &.sm{
+                        text-transform: lowercase;
+                    }
+                    &.italic{
+                        font-style: italic;
+                        color: $primary-color;
+                        text-transform: capitalize;
+                    }
                 }
             }
             p{
-                max-width: 790px;
-                font-size: 1.125rem; 
-                line-height: 28px;
-                font-weight: 600;
-                color: $white-color;
-                font-family: $body-fonts;
+                max-width: 690px;
+                font-size: 1.25rem; 
+                line-height: 30px;
+                color: $heading-color;
                 @media #{$breakpoint-desktop}{
                     font-size: 1rem;
-                    line-height: 22px;
+                    line-height: 25px;
+                    max-width: 550px;
                 }
             }
-            
+            .buttons{
+                padding-top: 180px;
+                @media #{$breakpoint-lg-desktop}{
+                    padding-top: 150px;
+                }
+                @media #{$breakpoint-desktop}{
+                    padding-top: 100px;
+                }
+            }
         }
     }
 

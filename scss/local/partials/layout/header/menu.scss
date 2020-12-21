@@ -8,30 +8,20 @@
             margin: 0;
             li{
                 position: relative;
-                &:not(:last-child){
+                /* &:not(:last-child){
                     margin-right: 50px;
-                }
+                } */
                 a{
-                    font-size: .875rem;
-                    color: $white-color;
+                    padding: 12px 35px;
+                    font-size: .938rem;
+                    font-weight: 600;
+                    color: $heading-color;
                     position: relative;
-                    font-family: $body-fonts-secondary;
-                    text-transform: uppercase;
-                    letter-spacing: .9px;
+                    text-transform: capitalize;
                     @include transition(all .4s ease);
                     @media #{$breakpoint-desktop}{
-                        font-size: .75rem;
+                        font-size: .875rem;
                         letter-spacing:.8px;
-                    }
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        bottom: -5px;
-                        left: 0;
-                        height: 2px;
-                        width: 0%;
-                        background: $secondary-color;
-                        @include transition(all .4s ease);
                     }
                 }
                 &.active,

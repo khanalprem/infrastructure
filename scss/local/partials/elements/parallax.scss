@@ -11,14 +11,14 @@
         bottom: 0;
         right: 0;
         z-index: -1;
-        background-blend-mode: multiply;
+
     }
     &.is-testimonial{
 
         &::after{
             @include cover(center);
-            background-image: url('././../img/testi.jpg');
-            background-color: $bg-color;
+            // background-image: url('../../img/home/man-filling-water.png');
+            background-color: rgba($primary-color, .8);
         }
     }
 }

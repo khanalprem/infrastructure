@@ -8,8 +8,8 @@ header{
         position: absolute;
         z-index: 11111;
         width: 100%;
-        @include transition(all .4s ease);
-        padding: 2rem 0;
+        @include transition(all .4s linear);
+        padding: 1.5rem 0;
         @media #{$breakpoint-md-desktop}{
             padding: .5rem 0;     
         }
@@ -25,20 +25,20 @@ header{
             /* logo */
            .logo{
                 font-family: $logo-fonts;
-                font-size: 17px;
+              /*   font-size: 17px;
                 line-height: 20px;
-                font-weight: 700;
-                max-width: 170px;
+                font-weight: 700; */
+                max-width: 230px;
                 text-transform: uppercase;
                 cursor: pointer;
                 display: inline-block;
                 @media #{$breakpoint-desktop}{
-                    font-size: 15px;
-                    line-height: 18px;
-                    max-width: 150px;
+                   /*  font-size: 15px;
+                    line-height: 18px; */
+                    max-width: 200px;
                 }
                 &.is-dark{
-                    color: $primary-color;
+                    // color: $primary-color;
                     .logo-dark{
                         display: block;
                     }
@@ -47,7 +47,7 @@ header{
                     }
                 }
                 &.is-light{
-                    color: $white-color;
+                    // color: $white-color;
                     .logo-dark{
                         display: none;
                     }
@@ -101,10 +101,6 @@ header{
                     margin-top: 15px;
                 }
             }
-        }
-        &.scroll-header{
-            background-color: $white-color;
-            @include box-shadow(0 10px 10px rgba($heading-color, .6)); 
         }
     }
     &.is-fixed{
@@ -162,6 +158,29 @@ header{
                 opacity: 1;
             }
         }
+    }
+    &.scroll-header{
+        background: rgba($white-color, .1);
+        top: 0 !important;
+        @include box-shadow(0 0 15px 2px $shadow-light);
+        backdrop-filter: blur(5px);
+        padding: .5rem 0;
+        .header-in{
+            .logo{
+                &.is-light{
+                    color: $secondary-color;
+                }
+            }
+        }
+        .main-navigation{
+           ul.menu-collapse {
+               li {
+                   a {
+                       color: $secondary-color;
+                   }
+               }
+            }
+        } 
     }
     /* &:hover{
         .search-box{

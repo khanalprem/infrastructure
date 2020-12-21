@@ -30,19 +30,21 @@
     <!-- stylesheet start -->
     <link rel="stylesheet" href="css/aos.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" type="text/css" />
 </head>
 
 <body class="">
-    <header class="site-header">
+    <header class="site-header is-fixed">
         <div class="container-fluid container-full-padding">
             <div class="header-in">
-                <a class="logo is-light" href="home.html">
-                    BLUE INFRASTRUCTURES
+                <a class="logo" href="home.html">
+                    <img src="./img/logo.png" alt="logo">
                 </a>
                 <div class="main-navigation">
                     <ul class="menu-collapse">
-                        <li class="active"><a href="home.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href=map.html>Map</a></li>
                     </ul>
@@ -51,21 +53,204 @@
 
         </div>
     </header>
-    <section class="banner full-height-banner" style="background-image: url(img/login/login-bg.png);">
-        <div class="banner-caption">
-            <div class="container-fluid container-full-padding">
-                <div class="caption-content">
-                    <h1>Welcome <span>to</span> Blue Infrastructures Mapping Initiative.</h1>
-                    <p>Blue Infrastructure is a way to view the water resources around us to see how it best contributes to our needs for preservation of ancient water sources, ecological soundness and healthy drinking water.</p>
+    <section class="banner full-height-banner">
+        <div class="banner-center">
+            <div class="banner-caption" style="background-image: url(img/home/main-illustration.svg);">
+                <div class="container-fluid container-full-padding">
+                    <div class="caption-content">
+                        <h1>Welcome <span class="sm">to</span><br/> <span class="italic">Blue Infrastructures Mapping Initiative.</span></h1>
+                        <p>Blue Infrastructure is a way to view the water resources around us to see how it best contributes to our needs for preservation of ancient water sources, ecological soundness and healthy drinking water.</p>
+                        <div class="buttons">
+                            <a href="#info" class="common-link is-icon is-auto">
+                                <i class="material-icons is-mr is-circle">expand_more</i>
+                                <span>Discover More</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="section intro-section is-bg" id="info">
+        <div class="container-fluid container-full-padding">
+            <div class="row">
+                <div class="grid-lg-4 grid-md-12">
+                    <figure>
+                        <img src="./img/home/intro-img.png" alt="intro">
+                    </figure>
+                </div>
+                <div class="grid-lg-8 grid-md-12">
+                    <div class="intro-para">    
+                        <div class="common-title">
+                            <h1><span class="italic">Blue Infrastructures</span> <span class="sm">in</span> Kathmandu Valley</h1>
+                        </div>
+                        <p>Blue Infrastructure are vital sources of water for people living in the Kathmandu Valley. Spout sites and the water they provide also hold important cultural and spiritual meaning. However, spouts are increasingly running dry and many residents worry that spouts without water will become museum pieces.</p>
+                        <div class="buttons mt-100">
+                            <button class="common-button is-bg">
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="section testimonial-section" style="background-image: url(img/home/man-filling-water.png);">
+        <div class="container-fluid container-full-padding">
+            <div class="row">
+                <div class="grid-lg-6 grid-md-12">
+                    <div class="testimonial-content">
+                        <span class="title">Key messages</span>
+                        <div class="testimonial-slider slider">
+                            <div class="testimonial-slider-item">
+                                <h2>It approaches to urban flood resilience, recognized globally and in international literature, that capitalizes on the benefits of working with urban naturalised water-flows. </h2>
+                                <div class="person-info">
+                                    <figure><img src="./img/home/testimonial/bidyasundarshakya.jpg" alt="pp"></figure>
+                                    <div class="status">
+                                        <h4>Bidya Sundar Shakya</h4>
+                                        <span class="position">Mayor of Kathmandu</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slider-item">
+                                <h2>It approaches to urban flood resilience, recognized globally and in international literature, that capitalizes on the benefits of working with urban naturalised water-flows. </h2>
+                                <div class="person-info">
+                                    <figure><img src="./img/home/testimonial/Bidhya-Sundar-Shakya.jpg" alt="pp"></figure>
+                                    <div class="status">
+                                        <h4>Bidya Sundar Shakya</h4>
+                                        <span class="position">Mayor of Kathmandu</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slider-item">
+                                <h2>It approaches to urban flood resilience, recognized globally and in international literature, that capitalizes on the benefits of working with urban naturalised water-flows. </h2>
+                                <div class="person-info">
+                                    <figure><img src="./img/home/testimonial/bidyasundarshakya.jpg" alt="pp"></figure>
+                                    <div class="status">
+                                        <h4>Bidya Sundar Shakya</h4>
+                                        <span class="position">Mayor of Kathmandu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-lg-6 grid-md-12">
+                    <div class="infrastructures-data-grid">
+                        <div class="row-grid">
+                            <div class="grid-data">
+                                <div class="infra-data">
+                                    <div class="data">8</div>
+                                    <div class="label">Water Spouts</div>
+                                </div>
+                            </div>
+                            <div class="grid-data">
+                                <div class="infra-data">
+                                    <div class="data">13</div>
+                                    <div class="label">Ponds</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-grid">
+                            <div class="grid-data">
+                                <div class="infra-data">
+                                    <div class="data">11</div>
+                                    <div class="label">ancient rivers</div>
+                                </div>
+                            </div>
+                            <div class="grid-data">
+                                <div class="infra-data">
+                                    <div class="data">19</div>
+                                    <div class="label">ancient taps</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section significance-section">
+        <div class="container-fluid container-full-padding">
+            <div class="row">
+                <div class="grid-lg-6 grid-md-12">
+                    <div class="contents">
+                        <div class="common-title">
+                            <h1>Why preserve <span class="italic">Blue Infrastructures?</span></h1>
+                        </div>
+                        <p>Natural water resources include lakes, rivers, streams, ice pack, groundwater, precipitation and oceans. As global climate change begins to affect the distribution of water resources in the world, water use in all sectors is coming under increasing scrutiny. Residential, commercial and industrial users often compete with agricultural irrigation, hydropower production and navigation for water resources.</p>
+                        <ul>
+                            <li>
+                                <figure><img src="./img/home/Preserving_Cultural_Heritage_icon.svg" alt="preserve-icon"/></figure>
+                                <div class="list-info">
+                                    <h3>Preserving Cultural Heritage</h3>
+                                    <p>Blue Infrastructures are vital sources of intangible and tangible cultural heritage for Kathmandu residents and are significant religious sites for Buddhists and Hindus.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure><img src="./img/home/Residential_Commercial_Industrial_Use_icon.svg" alt="industrial-icon"/></figure>
+                                <div class="list-info">
+                                    <h3>Residential, Commercial and Industrial Use</h3>
+                                    <p>Residential water use includes drinking, cleaning etc. In the commercial and industrial sectors, most water is used for processing products, with cooling coming in second.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure><img src="./img/home/hydropower_icon.svg" alt="hydropower-icon"/></figure>
+                                <div class="list-info">
+                                    <h3>Hydropower and Hydroelectric facilities</h3>
+                                    <p>Hydroelectric facilities use the power of flowing water to turn turbines that produce electricity. New technologies promise to increase the efficiency of power generation.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-lg-6 grid-md-12">
+                    <div class="picture-illustrtations">
+                        <div class="left-picture-illust">
+                            <img src="./img/home/image-5.jpg" alt="image-illus"/>
+                        </div>
+                        <div class="right-picture-illust">
+                            <img src="./img/home/image-3.jpg" alt="img/illus"/>
+                            <img src="./img/home/image-4.jpg" alt="img-illus"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer  style="background-image: url('img/home/footer-image.png');">
+        <div class="container-fluid container-full-padding">
+            <div class="explore-section">
+                <div class="common-title">
+                    <h1 class="is-light">Explore <span class="italic">Blue Infrastructures</span> heritage at glance.</h1>
+                </div>
+                <div class="buttons">
+                    <button class="common-button is-light-bg">
+                        <span>Learn More</span>
+                    </button>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="logo"><img src="./img/logo.png" alt="logo-light"/></div>
+                <div class="copyright">
+                    <p>Copyright 2020, <span class="title">Blue infrastructures</span></p>
+                    <p>Designed By <span class="title">Naxa</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed-action-btn">
+        <a class="scroll-top scroll-to-target" data-target="html"><i class="material-icons">keyboard_arrow_up</i></a>
+    </div>
      <!-- Jquery Core Js -->
  <script src="js/jquery-3.4.1.min.js"></script>
  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
  <script src="js/slick.min.js"></script>
- <script src="js/map.js"></script>
  <script src="js/aos.js"></script>
  <script src="js/blue_infra.js"></script>
  <script>

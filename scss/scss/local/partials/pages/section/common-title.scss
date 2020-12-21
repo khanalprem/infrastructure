@@ -1,0 +1,12 @@
+.common-title{
+    h1{
+        font-size: $font-size-h1-title;
+        color: $primary-color;
+        margin-bottom: 30px;
+        line-height: 85px;
+        @media #{$breakpoint-desktop}{
+            margin-bottom: 25px;
+            line-height: 75px;
+        }
+    }
+}

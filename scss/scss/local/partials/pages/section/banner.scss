@@ -1,0 +1,109 @@
+.banner {
+    position: relative;
+    @include transition(all .4s ease);
+    &.full-height-banner{
+        position: relative;
+        @include cover(center);
+        @include transition(all .4s ease);
+        &::before{
+            content: ' ';
+            position: absolute;
+            top:0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba($primary-color, .6);
+            @include transition(all .4s ease);
+        }
+    }
+    &.overlay {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('../../img/section-shape/right-bottom-shape.png');
+            @include contain(right top);
+            // z-index: 999;
+            @media #{$breakpoint-lg}{
+                display: none;
+            }
+        }
+    }
+    &.sm-banner{
+        min-height: 280px;
+        .banner-caption{
+            @include transform(translateY(-10%));
+        }
+        @media #{$breakpoint-lg-desktop}{
+           min-height: 235px;       
+        }
+        @media #{$breakpoint-sm}{
+            min-height: 300px;
+            /* .banner-caption{
+                padding-top: 80px;
+            } */
+        }
+    }
+    
+    &.is-primary{
+        -webkit-background-image: linear-gradient(100deg , $primary-color, $primary-dark);
+        background-image: linear-gradient(100deg , $primary-color, $primary-dark);
+    }
+    .banner-caption{
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-start;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0 !important;
+        right: 0;
+        bottom: 0;
+        .caption-content{
+            position: relative;
+            top: 120px;
+            max-width: 860px;
+            @media #{$breakpoint-desktop}{
+                max-width: 750px;
+                top: 100px;
+            }
+            h1{
+                font-size: $font-size-h1-title;
+                color: $white-color;
+                font-weight: 400;
+                padding-bottom: 15px;
+                line-height: 85px;
+                text-transform: capitalize;
+                @media #{$breakpoint-desktop}{
+                    margin-bottom: 25px;
+                    line-height: 75px;
+                }
+                span{
+                    text-transform: lowercase;
+                }
+            }
+            p{
+                max-width: 790px;
+                font-size: 1.125rem; 
+                line-height: 28px;
+                font-weight: 600;
+                color: $white-color;
+                font-family: $body-fonts;
+                @media #{$breakpoint-desktop}{
+                    font-size: 1rem;
+                    line-height: 22px;
+                }
+            }
+            
+        }
+    }
+
+}

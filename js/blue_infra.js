@@ -266,20 +266,36 @@
   toggle_button();
 
   function headerStyle() {
+  
     var scrollLink = $('.scroll-top');
-    scrollLink.on('click', function() {
-      window.scrollTo(0, 0);
-    });
     $(window).scroll(function(){
-        if($(window).scrollTop() > 100){
+        if($(window).scrollTop() > 400){
             scrollLink.addClass('open');
+            $('header').addClass('scroll-header');
         } 
         else {
           scrollLink.removeClass('open');
+          $('header').removeClass('scroll-header');
         }
-      });
+    });
+      /*  scrollLink.on('click', function() {
+      window.scrollTo(0, 0);
+    }); */
   }
   headerStyle();
+
+  // Scroll to a Specific Div
+	if($('.scroll-to-target').length){
+		$(".scroll-to-target").on('click', function() {
+			var target = $(this).attr('data-target');
+		   // animate
+		   $('html, body').animate({
+			   scrollTop: $(target).offset().top
+			 }, 1000);
+	
+		});
+	}
+
 
   function popup_chat(){
     $('.popup-chat .popup-chat-link').on('click', function(e){
@@ -338,156 +354,23 @@
   }
   collapse_toggle();
 
-  if (jQuery(".category-slider").length > 0) {
-    var mainSlider = $('.category-slider');
+  if (jQuery(".testimonial-slider").length > 0) {
+    var mainSlider = $('.testimonial-slider');
 
 
     mainSlider.slick({
-      slidesToShow: 5,
+      slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: false,
       autoplaySpeed: 1000,
       dots: false,
       arrows:true,
-      responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 4,
-          }
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-          }
-        }
-      ]
     });
 
   }
 
-   //column chart
-   var options = {
-    series: [{
-    name: 'Local Level',
-    data: [1, 8, 2, 5, 8, 2, 1, 6, 3, 2, 1, 3,5, 8 , 2]
-  }, {
-    name: 'CDO',
-    data: [4, 3, 1, 2, 13, 13, 11, 1, 8, 2, 5, 8, 2, 1, 2]
-  }, {
-    name: 'Central Office',
-    data: [1, 7, 1, 9, 15, 11, 2, 4, 3, 1, 2, 13, 1, 2, 4 ]
-  }],
-    chart: {
-    type: 'bar',
-    height: 350,
-    stacked: true,
-  },
-  plotOptions: {
-    bar: {
-      horizontal: true,
-    },
-  },
-  colors: ['#ED3646','#0946BF','#19A96E'],
-  xaxis: {
-  /*    labels: {
-      show: false
-    }, */
-    categories: ['आदर्श कोतवाल ग्रामीण नगरपालिका', 'बारागढी ग्रामीण नगरपालिका','Pheta ग्रामीण नगरपालिका', 'कराईमै ग्रामीण नगरपालिका', 'प्रशौनी ग्रामीण नगरपालिका',
-    'विश्रामपुर ग्रामीण नगरपालिका', 'देवताल ग्रामीण नगरपालिका', 'परावानीपुर ग्रामीण नगरपालिका', 'Laksminiya ग्रामीण नगरपालिका','मुखियापट्टी मुसहरिमिया ग्रामीण…','जनक नन्दिनी ग्रामीण नगरपालिका',
-    'Aaurahi ग्रामीण नगरपालिका', 'बटेश्वर ग्रामीण नगरपालिका', 'धनौजी ग्रामीण नगरपालिका', 'Sonama ग्रामीण नगरपालिका'],
-  },
-  yaxis: {
-    /* labels: {
-      show: true
-    } */
-  },
-  fill: {
-    opacity: 1
   
-  },
-  legend: {
-    position: 'bottom',
-  }
-  };
 
-  var chart = new ApexCharts(document.querySelector("#column-chart"), options);
-  chart.render();
-
-
-    // line-chart
-  var options = {
-    series: [
-      {
-        name: "सञ्चित",
-        data: [1200, 1590, 1590, 1200, 1600, 1580, 1920, 1990, 1700, 2000, 1900, 2050]
-      },
-      {
-        name: "दैनिक",
-        data: [1000, 1390, 1390, 1000, 1300, 1280, 1620, 1690, 1400, 1700, 1600, 1750]
-      }
-  ],
-  colors: ['#0946BF', '#ED3646'],
-    chart: {
-    height: 370,
-    type: 'line',
-    zoom: {
-      enabled: false
-    }
-  },
-  responsive: [{
-    breakpoint: 480,
-    options: {
-      chart: {
-        height: 200,
-      },
-    },
-  }],
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    width: 3,
-    curve: 'straight'
-  },
-  markers: {
-    size: 0
-  },
-  grid: {
-    row: {
-      colors: ['transparent', 'transparent'], // takes an array which will be repeated on columns
-      opacity: 0.5
-    },
-  },
-  xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  },
-  yaxis: {
-    labels: {
-      show: true
-    }
-  }
-  };
-
-  var chart = new ApexCharts(document.querySelector("#line-chart"), options);
-  chart.render();
-
-
- /*  function letter_movement(){
-    var opac = anime({
-      targets: '.letter',
-      opacity:1,
-      scale:1,
-      easing:'easeInBounce',
-      delay: function(el, index) {
-        return index * 150;
-      },
-      direction: 'alternate',
-      loop: false
-    });
-  }
-  letter_movement(); */
 
 })(window.jQuery);
 

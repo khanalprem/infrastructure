@@ -1,0 +1,139 @@
+.table-wrap{
+    width: 100%;
+    margin: 25px 0;
+    &.is-border{
+        @include radius(10px);
+        border: 1px solid $border-color;
+    }
+    .table-bottom-content{
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-between;
+        .item{
+            padding: 10px 15px;
+            &:not(:last-child){
+                flex: 0 0 40%;
+            }
+            &:last-child{
+                flex: 0 0 60%;
+            }
+            ul.total-count{
+                padding-right: 2rem;
+                width: 100%;
+                @include display-flex(flex);
+                @include align-items-end;
+                @include flex-direction-column(column);
+                li{
+                    @include display-flex(flex);
+                    @include align-items-center;
+                    &:not(:last-child){
+                        margin-bottom: 2px;
+                    }
+                    span{
+                        &.label{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.content-table {
+    border-collapse: collapse;
+    @include radius(10px);
+    @include box-shadow(0 0 0 1px $border-color);
+    width: 100%;
+    &.content-table-in{
+        width: 150%;
+        @include box-shadow(none);
+        tbody tr{
+            td{
+                vertical-align:top;
+            }
+        }
+    }
+    thead tr {
+        font-weight: 400;
+        background-color:$grey-light;
+        text-align: left;
+        border-bottom: 1px solid $border-color;
+        th{
+            font-weight: 400;
+            &:first-child{
+                border-top-left-radius: 10px;
+            }
+            &:last-child{
+                border-top-right-radius: 10px;
+            }
+            &.bg-dark{
+                background: $sub-border;
+            }
+        }
+    }
+    th,td {
+        padding: 10px 14px;
+    }
+    tbody tr {
+        &:not(:last-child){
+            border-bottom: 1px solid $border-color;
+        }
+        td{
+           
+            span.span-18{
+                color: $heading-color;;
+            }
+            &.td-age{
+                @include display-flex(flex);
+                @include align-items-center;
+                input.form-control{
+                    margin-right: 20px;
+                    &.age{
+                        width: 60px;
+                    }
+                }
+            }
+            .flex-wrap{
+                @include display-flex(flex);
+                @include align-items-center;
+                margin-bottom: 5px;
+                input.form-control, 
+                .custom-select{
+                    width: 75px;
+                }
+                input.form-control{
+                    margin-right: 5px;
+                }
+                span.span-18{
+                    padding-right: 5px;
+                }
+            }
+            input{
+                &.form-control{
+                    &::placeholder{
+                        font-size: 1rem;
+                        color: $heading-color;
+                    }
+                    &.is-sm{
+                        width: 45px;
+                    }
+                }
+            }
+            a.delete{
+                cursor: pointer;
+                i{
+                    color: $secondary-color;
+                }
+                &:hover{
+                    i{
+                        color: rgba($secondary-color, .7);
+                    }
+                }
+            }
+            a.common-link{
+                margin: 15px 0;
+            }
+           
+        }
+    }
+}

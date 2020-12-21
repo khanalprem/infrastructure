@@ -1,12 +1,26 @@
 .common-title{
     h1{
-        font-size: $font-size-h1-title;
-        color: $primary-color;
-        margin-bottom: 30px;
-        line-height: 85px;
+        font-size: $font-size-h1;
+        color: $heading-color;
+        font-weight: 400;
+        span{
+            text-transform: lowercase;
+            &.italic{
+                font-style: italic;
+                color: $primary-color;
+                text-transform: capitalize;
+            }
+        }
         @media #{$breakpoint-desktop}{
             margin-bottom: 25px;
-            line-height: 75px;
+        }
+        &.is-light{
+            color: $white-color;
+            span{
+                &.italic{
+                    color: $white-color;
+                }
+            }
         }
     }
 }

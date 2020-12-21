@@ -1,0 +1,82 @@
+.common-title{
+    display: block;
+    margin-bottom: 3rem;
+    max-width: 970px;
+    @media #{$breakpoint-lg-desktop}{
+        margin-bottom: 2rem;         
+    }
+    @media #{$breakpoint-lg}{
+        @include flex-hr-center;
+        text-align: center;
+    }
+
+    .span-label{
+        font-size: 15px;
+        line-height: 20px;
+        color: $secondary-color;
+        margin-bottom: 12px;
+        font-weight: 700;
+        display: block;
+        text-transform: uppercase;
+        @media #{$breakpoint-lg-desktop}{
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        @media #{$breakpoint-md-desktop}{
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+    }
+
+    h2{
+        font-family: $heading-fonts;
+        color: $white-color;
+        font-weight: 600;
+        text-transform: initial;
+        font-size: 1.9rem;
+        line-height: 50px;
+        @media #{$breakpoint-lg-desktop}{
+            font-size: 1.5rem; 
+            line-height:40px;           
+        }
+        @media #{$breakpoint-md-desktop}{
+            font-size: 1.25rem;
+            line-height: 34px;
+        }
+        @media #{$breakpoint-sm}{
+            line-height: 30px;
+        }
+    }
+
+    p{
+        margin-top: 20px;
+        color: $heading-color;
+        @media #{$breakpoint-lg-desktop}{
+            margin-top: 15px;
+        }
+    }
+    
+    &.is-dark{
+        h2{
+            color: $heading-color;
+            span{
+                color: $primary-color;
+            }
+        }
+    }
+    &.is-center{
+        @include flex-hr-center;
+        text-align: center;
+        max-width: 970px;
+        margin:0 auto;
+        margin-bottom: 3rem;
+        @media #{$breakpoint-lg-desktop} {
+            max-width:690px;
+            margin-bottom: 2rem;
+        }
+        @media #{$breakpoint-desktop} {
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
