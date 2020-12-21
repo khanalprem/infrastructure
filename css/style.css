@@ -7580,6 +7580,7 @@ footer.site-footer {
   transition: all 0.4s ease; }
   .banner.full-height-banner {
     position: relative;
+    height: 100vh;
     background-position: 100% 75%;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
