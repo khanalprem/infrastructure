@@ -1,5 +1,5 @@
 // @import url(letter.scss);
-.letter-anim{
+/* .letter-anim{
     @include display-flex(flex);
     .before-space, .after-space{
         @include display-flex(flex);
@@ -11,7 +11,7 @@
     .after-space{
         margin-left: 15px;
     }
-}
+} */
 .admin-main{
     @include animation(opacity 1s ease-in-out);
 }
