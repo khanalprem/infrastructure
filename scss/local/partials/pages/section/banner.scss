@@ -1,6 +1,9 @@
 .banner {
     position: relative;
     @include transition(all .4s ease);
+    &.home-banner{
+        overflow: hidden;
+    }
     &.full-height-banner{
         position: relative;
         height: 100vh;

@@ -6,7 +6,7 @@
         margin-bottom: 25px;         
     }
     h1{
-        font-size: $font-size-h1;
+        // font-size: $font-size-h1;
         color: $heading-color;
         font-weight: 400;
         span{
@@ -17,14 +17,21 @@
                 text-transform: capitalize;
             }
         }
+        @media #{$breakpoint-desktop}{
+            margin-bottom: 25px;
+        }
     }
-    
-    &.is-dark{
-        h2{
-            color: $heading-color;
+    &.is-light{
+        h1{
+            color: $white-color;
             span{
-                color: $primary-color;
+                &.italic{
+                    color: $white-color;
+                }
             }
+        }
+        span.label{
+            color: $white-color;
         }
     }
     &.is-center{

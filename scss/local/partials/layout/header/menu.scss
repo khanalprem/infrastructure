@@ -27,9 +27,8 @@
                 &.active,
                 &:hover{
                     a{
-                        &::before{
-                            width: 50%;
-                        }
+                        background: $secondary-color;
+                        color: $white-color;
                         i,svg{
                             color: $white-color;
                         }
@@ -180,11 +179,6 @@
                 li{
                     a{
                         color: white;
-                    }
-                    &:hover{
-                        a{
-                            color: yellow;
-                        }
                     }
                 }
             }

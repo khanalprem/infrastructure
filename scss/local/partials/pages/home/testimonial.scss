@@ -73,6 +73,9 @@
                 }
                 .person-info{
                     margin-top: 60px;
+                    @media #{$breakpoint-desktop}{
+                        margin-top: 30px;
+                    }
                     @include display-flex(flex);
                     @include align-items-center;
                     @media #{$breakpoint-lg}{
@@ -88,41 +91,37 @@
                             border: 1px solid $white-color;
                             object-fit: cover;
                             object-position: top;;
+                            @media #{$breakpoint-desktop}{
+                                width: 55px;
+                                height: 55px;
+                            }
                         }
                     }
                     .status{
                         margin-left: 25px;
+                        @media #{$breakpoint-desktop}{
+                            margin-left: 20px;
+                        }
                         h4{
                             font-family: $body-fonts;
                             color: $white-color;
                             margin-bottom: 5px;
+                            @media #{$breakpoint-desktop}{
+                                margin-bottom: 2px;
+                            }
+
                         }
                         span.position{
                             color: $white-color;
                             font-size: .938rem;;
+                            @media #{$breakpoint-desktop}{
+                                font-size: .875rem;;
+                            }
                         }
                     }
                 }
             }
-            @media #{$breakpoint-desktop}{
-                margin-top: 30px;
-                .person-info{
-                    margin-top: 50px;
-                    figure{
-                        width: 55px;
-                        height: 55px;
-                    }
-                    .status{
-                        margin-left: 20px;
-                        h4{
-                            margin-bottom: 2px;
-                        }
-                        span.position{
-                            font-size: .875rem;;
-                        }
-                    }
-                }
-            }
+           
         }
     }
     .infrastructures-data-grid{

@@ -6,28 +6,28 @@
         bottom: -20%;
         margin-bottom: 0;
         z-index: 997;
-        padding: 15px;
+        padding: 12px;
         line-height: 0;
         @include radius(50%);
         text-align: center;
         background: $secondary-color;
         @include transition(all .4s ease);
-        @include box-shadow(0 2px 5px $shadow-dark);
+        @include box-shadow(0 2px 5px rgba($heading-color, .7));
         color: $primary-color;
         i{
             color: $white-color;
         }
         @media #{$breakpoint-desktop}{
-            padding: 12px;
+            padding: 10px;
             i{
-                font-size: 20px;
+                font-size: 16px;
             }
         }
         &:hover{
             cursor: pointer;
-            @include box-shadow(0 4px 7px $shadow-dark);
+            @include box-shadow(0 4px 7px rgba($heading-color, .7));
             i{
-                color: $primary-color;
+                color: $white-color;
             }
         }
         &.open{

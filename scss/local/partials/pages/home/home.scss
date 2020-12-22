@@ -154,7 +154,7 @@
                     img{
                         max-width: 150px;
                         @media #{$breakpoint-desktop}{
-                            margin-right: 120px;
+                            max-width: 120px;
                          }
                     }
                 }

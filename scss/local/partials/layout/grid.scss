@@ -15,7 +15,10 @@
         // @media only screen and (min-width: 1561px){
             padding: 0 15rem;
         // }
-        @media only screen and (max-width: 1560px){
+        @media #{$breakpoint-xl-desktop}{
+            padding: 0 10rem;
+        }
+        @media #{$breakpoint-lg-desktop}{
             padding: 0 10rem;
         }
         @media #{$breakpoint-xl}{

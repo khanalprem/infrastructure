@@ -36,6 +36,13 @@ footer{
             @include align-items-center;
             text-align: center;
         }
+        .logo{
+            img{ 
+                @media #{$breakpoint-desktop}{
+                    max-width: 200px;
+                }
+            }
+        }
         .copyright{
             p{ 
                 color: $white-color;
@@ -44,7 +51,11 @@ footer{
                     font-weight: 700;
                     text-transform: uppercase;
                 }
+                @media #{$breakpoint-desktop}{
+                    font-size: 12px;
+                }
                 @media #{$breakpoint-md}{
+                   
                     &:last-child{
                         margin-top: 5px;
                     }

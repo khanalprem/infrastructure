@@ -460,8 +460,8 @@ body {
   overflow-y: scroll; }
   @media only screen and (max-width: 1440px) {
     body {
-      font-size: .938rem;
-      line-height: 1.2; } }
+      font-size: .9rem;
+      line-height: 1.3; } }
   body::-webkit-scrollbar {
     width: 4px;
     background: #F5F5F5;
@@ -618,7 +618,7 @@ h1 {
   @media only screen and (max-width: 1440px) {
     h1 {
       font-size: 2.25rem;
-      line-height: 48px; } }
+      line-height: 42px; } }
 
 h2 {
   font-size: 1.875rem;
@@ -626,14 +626,14 @@ h2 {
   line-height: 42px; }
   @media only screen and (max-width: 1440px) {
     h2 {
-      font-size: 1.625rem;
-      line-height: 38px; } }
+      font-size: 1.525rem;
+      line-height: 30px; } }
 
 h3 {
   font-size: 1.375rem; }
   @media only screen and (max-width: 1440px) {
     h3 {
-      font-size: 1rem; } }
+      font-size: 1.125rem; } }
 
 h4 {
   font-size: 1.063rem; }
@@ -1291,7 +1291,6 @@ h6 {
     .common-title {
       margin-bottom: 25px; } }
   .common-title h1 {
-    font-size: 2.875rem;
     color: #333333;
     font-weight: 400; }
     .common-title h1 span {
@@ -1300,10 +1299,15 @@ h6 {
         font-style: italic;
         color: #1AA9C4;
         text-transform: capitalize; }
-  .common-title.is-dark h2 {
-    color: #333333; }
-    .common-title.is-dark h2 span {
-      color: #1AA9C4; }
+    @media only screen and (max-width: 1440px) {
+      .common-title h1 {
+        margin-bottom: 25px; } }
+  .common-title.is-light h1 {
+    color: #ffffff; }
+    .common-title.is-light h1 span.italic {
+      color: #ffffff; }
+  .common-title.is-light span.label {
+    color: #ffffff; }
   .common-title.is-center {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4317,7 +4321,7 @@ ul.demo-list {
   bottom: -20%;
   margin-bottom: 0;
   z-index: 997;
-  padding: 15px;
+  padding: 12px;
   line-height: 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -4330,22 +4334,22 @@ ul.demo-list {
   -o-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  -webkit-box-shadow: 0 2px 5px #0000000D;
-  box-shadow: 0 2px 5px #0000000D;
+  -webkit-box-shadow: 0 2px 5px rgba(51, 51, 51, 0.7);
+  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.7);
   color: #1AA9C4; }
   .fixed-action-btn .scroll-top i {
     color: #ffffff; }
   @media only screen and (max-width: 1440px) {
     .fixed-action-btn .scroll-top {
-      padding: 12px; }
+      padding: 10px; }
       .fixed-action-btn .scroll-top i {
-        font-size: 20px; } }
+        font-size: 16px; } }
   .fixed-action-btn .scroll-top:hover {
     cursor: pointer;
-    -webkit-box-shadow: 0 4px 7px #0000000D;
-    box-shadow: 0 4px 7px #0000000D; }
+    -webkit-box-shadow: 0 4px 7px rgba(51, 51, 51, 0.7);
+    box-shadow: 0 4px 7px rgba(51, 51, 51, 0.7); }
     .fixed-action-btn .scroll-top:hover i {
-      color: #1AA9C4; }
+      color: #ffffff; }
   .fixed-action-btn .scroll-top.open {
     bottom: 5%; }
 .fixed-action-btn.is-shadow .scroll-top {
@@ -4639,6 +4643,9 @@ ul.demo-list {
 } */
 .container-fluid.container-full-padding {
   padding: 0 15rem; }
+  @media only screen and (max-width: 1660px) {
+    .container-fluid.container-full-padding {
+      padding: 0 10rem; } }
   @media only screen and (max-width: 1560px) {
     .container-fluid.container-full-padding {
       padding: 0 10rem; } }
@@ -6244,10 +6251,11 @@ ul.demo-list {
         .main-navigation ul.menu-collapse li a {
           font-size: .875rem;
           letter-spacing: .8px; } }
-    .main-navigation ul.menu-collapse li.active a::before, .main-navigation ul.menu-collapse li:hover a::before {
-      width: 50%; }
-    .main-navigation ul.menu-collapse li.active a i, .main-navigation ul.menu-collapse li.active a svg, .main-navigation ul.menu-collapse li:hover a i, .main-navigation ul.menu-collapse li:hover a svg {
+    .main-navigation ul.menu-collapse li.active a, .main-navigation ul.menu-collapse li:hover a {
+      background: #E4B148;
       color: #ffffff; }
+      .main-navigation ul.menu-collapse li.active a i, .main-navigation ul.menu-collapse li.active a svg, .main-navigation ul.menu-collapse li:hover a i, .main-navigation ul.menu-collapse li:hover a svg {
+        color: #ffffff; }
     .main-navigation ul.menu-collapse li.is-submenu a {
       padding-right: 1.5rem;
       position: relative;
@@ -6372,8 +6380,6 @@ ul.demo-list {
             color: #0055ff; }
 .main-navigation.is-dark ul.menu-collapse li a {
   color: white; }
-.main-navigation.is-dark ul.menu-collapse li:hover a {
-  color: yellow; }
 
 /* toggle-button */
 .toggle-button {
@@ -6676,11 +6682,19 @@ header {
     -webkit-box-shadow: 0 0 15px 2px #00000029;
     box-shadow: 0 0 15px 2px #00000029;
     backdrop-filter: blur(5px);
-    padding: .5rem 0; }
-    header.scroll-header .header-in .logo.is-light {
-      color: #E4B148; }
+    padding: .75rem 0; }
+    header.scroll-header .header-in .logo.is-light .logo-dark {
+      display: block; }
+    header.scroll-header .header-in .logo.is-light .logo-white {
+      display: none; }
+    header.scroll-header .header-in .logo.is-dark .logo-dark {
+      display: block; }
+    header.scroll-header .header-in .logo.is-dark .logo-white {
+      display: none; }
     header.scroll-header .main-navigation ul.menu-collapse li a {
       color: #E4B148; }
+      header.scroll-header .main-navigation ul.menu-collapse li a:hover {
+        color: #ffffff; }
 
 @media only screen and (max-width: 991px) {
   .Is-toggle .site-header .header-in .main-navigation {
@@ -7578,6 +7592,8 @@ footer.site-footer {
   -o-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   transition: all 0.4s ease; }
+  .banner.home-banner {
+    overflow: hidden; }
   .banner.full-height-banner {
     position: relative;
     height: 100vh;
@@ -8047,24 +8063,6 @@ footer.site-footer {
   .content-table tbody tr td a.common-link {
     margin: 15px 0; }
 
-.common-title h1 {
-  font-size: 2.875rem;
-  color: #333333;
-  font-weight: 400; }
-  .common-title h1 span {
-    text-transform: lowercase; }
-    .common-title h1 span.italic {
-      font-style: italic;
-      color: #1AA9C4;
-      text-transform: capitalize; }
-  @media only screen and (max-width: 1440px) {
-    .common-title h1 {
-      margin-bottom: 25px; } }
-  .common-title h1.is-light {
-    color: #ffffff; }
-    .common-title h1.is-light span.italic {
-      color: #ffffff; }
-
 footer {
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -8122,12 +8120,18 @@ footer {
         -ms-flex-align: center;
         align-items: center;
         text-align: center; } }
+    @media only screen and (max-width: 1440px) {
+      footer .footer-copyright .logo img {
+        max-width: 200px; } }
     footer .footer-copyright .copyright p {
       color: #ffffff;
       font-size: 14px; }
       footer .footer-copyright .copyright p span.title {
         font-weight: 700;
         text-transform: uppercase; }
+      @media only screen and (max-width: 1440px) {
+        footer .footer-copyright .copyright p {
+          font-size: 12px; } }
       @media only screen and (max-width: 767px) {
         footer .footer-copyright .copyright p:last-child {
           margin-top: 5px; } }
@@ -8963,6 +8967,9 @@ aside.admin-sidebar {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center; }
+          @media only screen and (max-width: 1440px) {
+            .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info {
+              margin-top: 30px; } }
           @media only screen and (max-width: 991px) {
             .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info {
               -webkit-box-pack: center;
@@ -8983,29 +8990,28 @@ aside.admin-sidebar {
             border: 1px solid #ffffff;
             object-fit: cover;
             object-position: top; }
+            @media only screen and (max-width: 1440px) {
+              .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info figure img {
+                width: 55px;
+                height: 55px; } }
           .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info .status {
             margin-left: 25px; }
+            @media only screen and (max-width: 1440px) {
+              .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info .status {
+                margin-left: 20px; } }
             .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info .status h4 {
               font-family: "Ubuntu", sans-serif;
               color: #ffffff;
               margin-bottom: 5px; }
+              @media only screen and (max-width: 1440px) {
+                .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info .status h4 {
+                  margin-bottom: 2px; } }
             .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info .status span.position {
               color: #ffffff;
               font-size: .938rem; }
-      @media only screen and (max-width: 1440px) {
-        .testimonial-section .testimonial-content .testimonial-slider {
-          margin-top: 30px; }
-          .testimonial-section .testimonial-content .testimonial-slider .person-info {
-            margin-top: 50px; }
-            .testimonial-section .testimonial-content .testimonial-slider .person-info figure {
-              width: 55px;
-              height: 55px; }
-            .testimonial-section .testimonial-content .testimonial-slider .person-info .status {
-              margin-left: 20px; }
-              .testimonial-section .testimonial-content .testimonial-slider .person-info .status h4 {
-                margin-bottom: 2px; }
-              .testimonial-section .testimonial-content .testimonial-slider .person-info .status span.position {
-                font-size: .875rem; } }
+              @media only screen and (max-width: 1440px) {
+                .testimonial-section .testimonial-content .testimonial-slider .testimonial-slider-item .person-info .status span.position {
+                  font-size: .875rem; } }
   .testimonial-section .infrastructures-data-grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9256,7 +9262,7 @@ aside.admin-sidebar {
           max-width: 150px; }
           @media only screen and (max-width: 1440px) {
             .significance-section .contents ul.partners li.partner-list .fig img {
-              margin-right: 120px; } }
+              max-width: 120px; } }
 .significance-section .picture-illustrtations {
   height: 100%;
   display: -webkit-box;
