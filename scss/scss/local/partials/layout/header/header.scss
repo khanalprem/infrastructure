@@ -38,7 +38,6 @@ header{
                     max-width: 150px;
                 }
                 &.is-dark{
-                    color: $primary-color;
                     .logo-dark{
                         display: block;
                     }
@@ -47,7 +46,6 @@ header{
                     }
                 }
                 &.is-light{
-                    color: $white-color;
                     .logo-dark{
                         display: none;
                     }

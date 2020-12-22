@@ -13,7 +13,7 @@
                 }
                 a{
                     font-size: .875rem;
-                    color: $white-color;
+                    color: $heading-color;
                     position: relative;
                     font-family: $body-fonts-secondary;
                     text-transform: uppercase;
@@ -189,12 +189,7 @@
             &.menu-collapse{
                 li{
                     a{
-                        color: white;
-                    }
-                    &:hover{
-                        a{
-                            color: yellow;
-                        }
+                        color: $white-color;
                     }
                 }
             }

@@ -28,27 +28,20 @@
             left: 0;
             right: 0;
             bottom: 0;
-            // background-image: url('../../img/section-shape/right-bottom-shape.png');
-            @include contain(right top);
-            // z-index: 999;
-            @media #{$breakpoint-lg}{
-                display: none;
-            }
+            @include cover(center);
+            background-color: rgba($primary-color, .8);
         }
     }
     &.sm-banner{
-        min-height: 280px;
+        min-height: 160px;
         .banner-caption{
-            @include transform(translateY(-10%));
+            // @include transform(translateY(-10%));
         }
         @media #{$breakpoint-lg-desktop}{
-           min-height: 235px;       
+           min-height: 120px;       
         }
         @media #{$breakpoint-sm}{
-            min-height: 300px;
-            /* .banner-caption{
-                padding-top: 80px;
-            } */
+            min-height: 200px;
         }
     }
     

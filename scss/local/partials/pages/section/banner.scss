@@ -4,7 +4,6 @@
     &.full-height-banner{
         position: relative;
         height: 100vh;
-       
         background-position: 100% 75%;
         @include transition(all .4s ease);
     }
@@ -18,27 +17,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            // background-image: url('../../img/section-shape/right-bottom-shape.png');
-            @include contain(right top);
-            // z-index: 999;
-            @media #{$breakpoint-lg}{
-                display: none;
-            }
+            background-color: rgba($primary-color, .8);
+            @include cover(center);
+            z-index: 1;
         }
     }
     &.sm-banner{
-        min-height: 280px;
-        .banner-caption{
-            @include transform(translateY(-10%));
-        }
+        height: 600px;
         @media #{$breakpoint-lg-desktop}{
-           min-height: 235px;       
-        }
-        @media #{$breakpoint-sm}{
-            min-height: 300px;
-            /* .banner-caption{
-                padding-top: 80px;
-            } */
+           height: 500px;       
         }
     }
     
@@ -46,34 +33,28 @@
         -webkit-background-image: linear-gradient(100deg , $primary-color, $primary-dark);
         background-image: linear-gradient(100deg , $primary-color, $primary-dark);
     }
+
     .banner-center{
         @include display-flex(flex);
         @include align-items-center;
         @include justify-content-start;
         width: 100%;
         height: 100%;
+        position: relative;
+        z-index: 11;
+        &.is-center{
+            top: 30px !important;
+            @include justify-content-center;
+        }
     }
+    
     .banner-caption{
         position: relative;
-        width: 100%;
-        height: 90%;
-        top: 8rem !important;
-        @include contain(right);
-        @media #{$breakpoint-lg-desktop}{
-            top: 7rem !important;
-        }
         .caption-content{
             position: relative;
             max-width: 860px;
-            top: 80px;
-            width: 100%;
-            height: 80%;
-            @media #{$breakpoint-lg-desktop}{
-                top: 40px;
-            }
-            @media #{$breakpoint-desktop}{
-                max-width: 700px;
-                top: 30px;
+            &.is-center{
+                text-align: center;
             }
             h1{
                 font-size: 3.75rem; //64px
@@ -110,6 +91,16 @@
                     max-width: 550px;
                 }
             }
+            span.title{
+                font-size: .939rem;
+                line-height: 18px;
+                display: block;
+                margin-bottom: 15px;
+                font-weight: 700;
+                letter-spacing: 4.8px;
+                color: $white-color;
+                text-transform: capitalize;
+            }
             .buttons{
                 padding-top: 180px;
                 @media #{$breakpoint-lg-desktop}{
@@ -119,7 +110,40 @@
                     padding-top: 100px;
                 }
             }
+            &.is-light{
+                h1{
+                    color: $white-color;
+                    span{
+                        &.italic{
+                            color: $white-color;
+                        }
+                    }
+                }
+                span.title{
+                    color: $white-color;
+                }
+            }
+        }
+        &.home-banner-caption{
+            width: 100%;
+            height: 90%;
+            top: 8rem !important;
+            @include contain(right);
+            @media #{$breakpoint-lg-desktop}{
+                top: 7rem !important;
+            }
+            .caption-content{
+                top: 80px;
+                width: 100%;
+                height: 80%;
+                @media #{$breakpoint-lg-desktop}{
+                    top: 40px;
+                }
+                @media #{$breakpoint-desktop}{
+                    max-width: 700px;
+                    top: 30px;
+                }
+            }
         }
     }
-
 }

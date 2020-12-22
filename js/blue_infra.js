@@ -6,7 +6,7 @@
   var winHeight =$(window).innerHeight();
   var headHeight =  $('.site-header').innerHeight();
   $('.banner .map').css('min-height', winHeight);
-  $('.banner .banner-caption').css('top', headHeight);
+  // $('.banner .banner-caption').css('top', headHeight);
   
   function resize(){
     var y = screen.height;

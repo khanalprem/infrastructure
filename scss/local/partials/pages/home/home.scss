@@ -56,6 +56,16 @@
                 max-width: 550px;
             }
         }
+        .para{
+            p{
+                &:not(:last-child){
+                    margin-bottom: 25px;
+                    @media #{$breakpoint-desktop}{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
         ul{
             margin-top: 50px;
             @media #{$breakpoint-desktop}{
@@ -100,6 +110,52 @@
                         h3{
                             margin-bottom: 8px;
                         }
+                    }
+                }
+            }
+        }
+        ul.partners{
+            @include display-flex(flex);
+            @include align-items-start;
+            @media #{$breakpoint-sm}{
+                @include flex-direction-column(column);
+                @include justify-content-center;
+                @include align-items-center;
+            }
+            margin-top: 80px;
+            @media #{$breakpoint-desktop}{
+                margin-top: 60px;
+            }
+            li.partner-list{
+                @include display-flex(flex);
+                @include flex-direction-column(column);
+                &:not(:last-child){
+                    margin-right: 120px;
+                    @media #{$breakpoint-desktop}{
+                       margin-right: 90px;
+                    }
+                    @media #{$breakpoint-sm}{
+                        margin-right: 0;
+                     }
+                }
+                span.title{
+                    font-size: .938rem;
+                    font-weight: 700;
+                    color: $heading-color;
+                    display: block;
+                    margin-bottom: 35px;
+                    @media #{$breakpoint-desktop}{
+                        font-size: .825rem;
+                       margin-bottom: 25px;
+                     }
+                }
+                .fig{
+                    display: block;
+                    img{
+                        max-width: 150px;
+                        @media #{$breakpoint-desktop}{
+                            margin-right: 120px;
+                         }
                     }
                 }
             }
