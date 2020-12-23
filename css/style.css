@@ -1665,6 +1665,7 @@ ul.option-list {
         -ms-transform: translateX(12px);
         transform: translateX(12px); } }
 
+.common-link,
 a.common-link,
 [class*=common-button] {
   -webkit-font-smoothing: antialiased;
@@ -1693,18 +1694,23 @@ a.common-link,
   cursor: pointer;
   transition: all .3s ease-in-out;
   position: relative; }
+  .common-link:hover,
   a.common-link:hover,
   [class*=common-button]:hover {
     color: #f3ddb0; }
+    .common-link:hover.is-icon i,
     a.common-link:hover.is-icon i,
     [class*=common-button]:hover.is-icon i {
       color: #f3ddb0; }
+      .common-link:hover.is-icon i.is-circle,
       a.common-link:hover.is-icon i.is-circle,
       [class*=common-button]:hover.is-icon i.is-circle {
         border: 1px solid #f3ddb0; }
+  .common-link:focus,
   a.common-link:focus,
   [class*=common-button]:focus {
     outline: none; }
+  .common-link:disabled,
   a.common-link:disabled,
   [class*=common-button]:disabled {
     color: #ffffff;
@@ -1713,12 +1719,15 @@ a.common-link,
     opacity: 0.65;
     cursor: not-allowed; }
   @media only screen and (max-width: 1440px) {
+    .common-link,
     a.common-link,
     [class*=common-button] {
       width: 140px;
       min-height: 30px;
       font-size: .825rem;
       padding: .425rem .75rem; } }
+  .common-link.is-icon svg,
+  .common-link.is-icon i,
   a.common-link.is-icon svg,
   a.common-link.is-icon i,
   [class*=common-button].is-icon svg,
@@ -1727,16 +1736,22 @@ a.common-link,
     transition: all .3s ease-in-out;
     font-weight: 500;
     position: relative; }
+    .common-link.is-icon svg.is-mr,
+    .common-link.is-icon i.is-mr,
     a.common-link.is-icon svg.is-mr,
     a.common-link.is-icon i.is-mr,
     [class*=common-button].is-icon svg.is-mr,
     [class*=common-button].is-icon i.is-mr {
       margin-right: .5rem; }
+    .common-link.is-icon svg.is-ml,
+    .common-link.is-icon i.is-ml,
     a.common-link.is-icon svg.is-ml,
     a.common-link.is-icon i.is-ml,
     [class*=common-button].is-icon svg.is-ml,
     [class*=common-button].is-icon i.is-ml {
       margin-left: 0.5rem; }
+    .common-link.is-icon svg.is-circle,
+    .common-link.is-icon i.is-circle,
     a.common-link.is-icon svg.is-circle,
     a.common-link.is-icon i.is-circle,
     [class*=common-button].is-icon svg.is-circle,
@@ -1750,33 +1765,42 @@ a.common-link,
       padding: 10px;
       margin-right: 15px !important; }
       @media only screen and (max-width: 1440px) {
+        .common-link.is-icon svg.is-circle,
+        .common-link.is-icon i.is-circle,
         a.common-link.is-icon svg.is-circle,
         a.common-link.is-icon i.is-circle,
         [class*=common-button].is-icon svg.is-circle,
         [class*=common-button].is-icon i.is-circle {
           padding: 6px; } }
     @media only screen and (max-width: 1440px) {
+      .common-link.is-icon svg.is-mr,
+      .common-link.is-icon i.is-mr,
       a.common-link.is-icon svg.is-mr,
       a.common-link.is-icon i.is-mr,
       [class*=common-button].is-icon svg.is-mr,
       [class*=common-button].is-icon i.is-mr {
         margin-right: .25rem; }
+      .common-link.is-icon svg.is-ml,
+      .common-link.is-icon i.is-ml,
       a.common-link.is-icon svg.is-ml,
       a.common-link.is-icon i.is-ml,
       [class*=common-button].is-icon svg.is-ml,
       [class*=common-button].is-icon i.is-ml {
         margin-left: 0.25rem; } }
+  .common-link.is-disable,
   a.common-link.is-disable,
   [class*=common-button].is-disable {
     color: white;
     background-color: #c4c4c4;
     border-color: #c4c4c4;
     cursor: none; }
+  .common-link.is-bg,
   a.common-link.is-bg,
   [class*=common-button].is-bg {
     color: #ffffff;
     background-color: #E4B148;
     border-color: #E4B148; }
+    .common-link.is-bg:disabled,
     a.common-link.is-bg:disabled,
     [class*=common-button].is-bg:disabled {
       color: #ffffff;
@@ -1784,27 +1808,33 @@ a.common-link,
       border-color: transparent;
       opacity: 0.65;
       cursor: not-allowed; }
+    .common-link.is-bg.is-disable,
     a.common-link.is-bg.is-disable,
     [class*=common-button].is-bg.is-disable {
       color: #ffffff;
       background-color: #d7d7d7;
       border-color: #d7d7d7; }
+    .common-link.is-bg:hover,
     a.common-link.is-bg:hover,
     [class*=common-button].is-bg:hover {
       background-color: #f3ddb0;
       border-color: #f3ddb0;
       color: #ffffff; }
+  .common-link.is-light-bg,
   a.common-link.is-light-bg,
   [class*=common-button].is-light-bg {
     background: #ffffff;
     color: #E4B148; }
+    .common-link.is-light-bg:hover,
     a.common-link.is-light-bg:hover,
     [class*=common-button].is-light-bg:hover {
       background: #E4B148;
       color: #ffffff; }
+  .common-link.is-full-width,
   a.common-link.is-full-width,
   [class*=common-button].is-full-width {
     width: 100%; }
+  .common-link.is-clear,
   a.common-link.is-clear,
   [class*=common-button].is-clear {
     background-color: transparent;
@@ -1816,43 +1846,54 @@ a.common-link,
     padding: 0;
     min-height: initial;
     min-width: initial; }
+    .common-link.is-clear i,
     a.common-link.is-clear i,
     [class*=common-button].is-clear i {
       color: #E4B148; }
+    .common-link.is-clear.is-dark,
     a.common-link.is-clear.is-dark,
     [class*=common-button].is-clear.is-dark {
       color: #333333; }
+      .common-link.is-clear.is-dark i,
       a.common-link.is-clear.is-dark i,
       [class*=common-button].is-clear.is-dark i {
         color: #333333; }
+    .common-link.is-clear:hover,
     a.common-link.is-clear:hover,
     [class*=common-button].is-clear:hover {
       color: rgba(228, 177, 72, 0.7); }
+      .common-link.is-clear:hover i,
       a.common-link.is-clear:hover i,
       [class*=common-button].is-clear:hover i {
         color: rgba(228, 177, 72, 0.7); }
+  .common-link.is-border,
   a.common-link.is-border,
   [class*=common-button].is-border {
     background-color: #ffffff;
     color: #333333;
     border: 1px solid #000000; }
+    .common-link.is-border:hover,
     a.common-link.is-border:hover,
     [class*=common-button].is-border:hover {
       background-color: #f3ddb0;
       border-color: #E4B148; }
+    .common-link.is-border.is-secondary,
     a.common-link.is-border.is-secondary,
     [class*=common-button].is-border.is-secondary {
       border: 1px solid #E4B148;
       color: #E4B148; }
+    .common-link.is-border.is-icon i,
     a.common-link.is-border.is-icon i,
     [class*=common-button].is-border.is-icon i {
       color: #000000; }
+  .common-link.is-white-border,
   a.common-link.is-white-border,
   [class*=common-button].is-white-border {
     background: transparent;
     color: #ffffff;
     border: 1px solid #ffffff;
     position: relative; }
+    .common-link.is-white-border::before,
     a.common-link.is-white-border::before,
     [class*=common-button].is-white-border::before {
       position: absolute;
@@ -1867,39 +1908,48 @@ a.common-link,
       -ms-transition: all 0.4s ease;
       transition: all 0.4s ease;
       z-index: -1; }
+    .common-link.is-white-border:hover,
     a.common-link.is-white-border:hover,
     [class*=common-button].is-white-border:hover {
       border: 1px solid #E4B148; }
+      .common-link.is-white-border:hover::before,
       a.common-link.is-white-border:hover::before,
       [class*=common-button].is-white-border:hover::before {
         height: 100%;
         border: 1px solid #E4B148;
         background: #E4B148; }
+  .common-link.no-border,
   a.common-link.no-border,
   [class*=common-button].no-border {
     background-color: transparent;
     color: #ffffff;
     border-color: transparent; }
+    .common-link.no-border:hover,
     a.common-link.no-border:hover,
     [class*=common-button].no-border:hover {
       color: #E4B148; }
+  .common-link.is-sm,
   a.common-link.is-sm,
   [class*=common-button].is-sm {
     padding: .425rem .75rem;
     min-width: 120px; }
     @media only screen and (max-width: 1440px) {
+      .common-link.is-sm,
       a.common-link.is-sm,
       [class*=common-button].is-sm {
         width: 125px;
         padding: .25rem .75rem; } }
+  .common-link.is-auto,
   a.common-link.is-auto,
   [class*=common-button].is-auto {
     width: auto;
     min-width: auto; }
+  .common-link.is-rounded,
   a.common-link.is-rounded,
   [class*=common-button].is-rounded {
     -webkit-border-radius: 20px;
     border-radius: 20px; }
+  .common-link.is-mid-rounded,
   a.common-link.is-mid-rounded,
   [class*=common-button].is-mid-rounded {
     -webkit-border-radius: 5px;
@@ -4645,10 +4695,10 @@ ul.demo-list {
   padding: 0 15rem; }
   @media only screen and (max-width: 1660px) {
     .container-fluid.container-full-padding {
-      padding: 0 10rem; } }
+      padding: 0 5rem; } }
   @media only screen and (max-width: 1560px) {
     .container-fluid.container-full-padding {
-      padding: 0 10rem; } }
+      padding: 0 5rem; } }
   @media only screen and (max-width: 1199px) {
     .container-fluid.container-full-padding {
       padding: 4rem; } }
@@ -7659,6 +7709,11 @@ footer.site-footer {
         line-height: 64px;
         text-transform: capitalize;
         max-width: 700px; }
+        @media only screen and (max-width: 1560px) {
+          .banner .banner-caption .caption-content h1 {
+            font-size: 3.5rem;
+            max-width: 500px;
+            line-height: 60px; } }
         @media only screen and (max-width: 1440px) {
           .banner .banner-caption .caption-content h1 {
             font-size: 2.85rem;
@@ -8017,21 +8072,19 @@ footer.site-footer {
         border-top-right-radius: 10px; }
       .content-table thead tr th.bg-dark {
         background: #E0E0E0; }
-  .content-table th, .content-table td {
+  .content-table th,
+  .content-table td {
     padding: 10px 14px; }
   .content-table tbody tr:not(:last-child) {
     border-bottom: 1px solid #e6e6e6; }
   .content-table tbody tr td span.span-18 {
     color: #333333; }
   .content-table tbody tr td.td-age {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    /*  @include display-flex(flex);
+    @include align-items-center; */ }
     .content-table tbody tr td.td-age input.form-control {
-      margin-right: 20px; }
+      margin-right: 10px;
+      display: inline-block; }
       .content-table tbody tr td.td-age input.form-control.age {
         width: 60px; }
   .content-table tbody tr td .flex-wrap {
