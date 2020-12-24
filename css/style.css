@@ -9847,7 +9847,8 @@ aside.admin-sidebar {
         flex-direction: column; }
         .map-content-wrap .map-header .map-tools .left {
           margin-bottom: 10px; } }
-    .map-content-wrap .map-header .map-tools .left, .map-content-wrap .map-header .map-tools .right {
+    .map-content-wrap .map-header .map-tools .left,
+    .map-content-wrap .map-header .map-tools .right {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;

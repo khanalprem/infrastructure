@@ -1,90 +1,110 @@
-.map-content-wrap{
-    .map-header{
+.map-content-wrap {
+    .map-header {
         position: relative;
         background: $white-color;
         width: 100%;
         @include display-flex(flex);
         border-bottom: 1px solid $border-color;
-        .map-tools{
+
+        .map-tools {
             padding: 10px 20px;
             width: 100%;
             @include display-flex(flex);
             @include align-items-center;
             @include justify-content-between;
-            @media #{$breakpoint-lg-desktop}{
+
+            @media #{$breakpoint-lg-desktop} {
                 padding: 5px 15px;
             }
-            @media #{$breakpoint-md}{
+
+            @media #{$breakpoint-md} {
                 @include flex-direction-column(column);
-                .left{
+
+                .left {
                     margin-bottom: 10px;
                 }
             }
-            .left, .right{
+
+            .left,
+            .right {
                 @include display-flex(flex);
                 @include align-items-center;
             }
 
-            .right{
-                @media #{$breakpoint-sm}{
+            .right {
+                @media #{$breakpoint-sm} {
                     @include flex-direction-column(column);
 
                 }
             }
-            .custom-select{
+
+            .custom-select {
                 width: 170px;
                 min-width: 170px;
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     width: 160px;
                     min-width: 160px;
                 }
-                &:not(:last-child){
+
+                &:not(:last-child) {
                     margin-right: 8px;
-                     @media #{$breakpoint-sm}{
-                         margin-right: 0;
+
+                    @media #{$breakpoint-sm} {
+                        margin-right: 0;
                     }
                 }
-               
+
             }
         }
     }
-    .map-body{
+
+    .map-body {
         height: calc(100% - 62px);
         @include display-flex(flex);
+
         // @media #{$breakpint }
-        .map-container{
+        .map-container {
             width: 100%;
             height: 100%;
         }
-        .infrastructure-item-details{
+
+        .infrastructure-item-details {
             padding: 25px;
             background: #ffffff;
             width: 450px;
             border-left: 1px solid $border-color;
             display: none;
             height: 100%;
-            @media #{$breakpoint-lg-desktop}{
+
+            @media #{$breakpoint-lg-desktop} {
                 height: calc(100vh - 130px);
             }
-            @media #{$breakpoint-xl}{
+
+            @media #{$breakpoint-xl} {
                 height: auto;
             }
-            &.active{
+
+            &.active {
                 display: block;
             }
-            @media #{$breakpoint-desktop}{
+
+            @media #{$breakpoint-desktop} {
                 padding: 20px;
                 width: 360px;
             }
-            .infra-title{
+
+            .infra-title {
                 margin-bottom: 25px;
                 @include display-flex(flex);
                 @include align-items-center;
                 @include justify-content-between;
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     margin-bottom: 18px;
                 }
-                .infra-details-close{   
+
+                .infra-details-close {
                     width: 35px;
                     height: 35px;
                     line-height: 45px;
@@ -94,86 +114,106 @@
                     background: $bg-color;
                     cursor: pointer;
                     @include transition(all .4s ease);
-                    i{
+
+                    i {
                         color: $text-color;
                     }
-                    @media #{$breakpoint-desktop}{
+
+                    @media #{$breakpoint-desktop} {
                         width: 25px;
                         height: 25px;
                         line-height: 35px;
                     }
-                    &:hover{
+
+                    &:hover {
                         background: $white-color;
                         border: 1px solid $secondary-color;
-                        i{
+
+                        i {
                             color: $secondary-color;
                         }
                     }
                 }
             }
-            .infra-slider{
+
+            .infra-slider {
                 padding-bottom: 10px;
-                &.slider{
+
+                &.slider {
                     .slick-dots {
                         @include justify-content-start;
                         bottom: -10px;
                     }
                 }
-                .infra-slider-item{
-                    figure{
+
+                .infra-slider-item {
+                    figure {
                         @include radius(10px);
                         height: 230px;
-                        @media #{$breakpoint-desktop}{
+
+                        @media #{$breakpoint-desktop} {
                             height: 180px;
                         }
-                        img{
-                             @include radius(10px);
-                             width: 100%;
-                             height: 100%;
-                             object-fit: cover;
-                             object-position: center;
+
+                        img {
+                            @include radius(10px);
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
                         }
                     }
                 }
             }
-            ul.infra-details{
+
+            ul.infra-details {
                 margin-top: 40px;
-                li{
+
+                li {
                     @include display-flex(flex);
+
                     // @include align-items-center;
-                    &:not(:last-child){
+                    &:not(:last-child) {
                         margin-bottom: 5px;
                     }
-                    span{
+
+                    span {
                         font-size: 15px;
                         color: $heading-color;
-                        &.label{
+
+                        &.label {
                             font-weight: 700;
                             flex: 0 0 40%;
                         }
-                        @media #{$breakpoint-desktop}{
+
+                        @media #{$breakpoint-desktop} {
                             font-size: 13px;
                         }
                     }
                 }
             }
-            .desc{
+
+            .desc {
                 margin-top: 30px;
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     margin-top: 25px;
                 }
-                h4{
+
+                h4 {
                     font-family: $body-fonts;
                     font-size: 20px;
                     font-weight: 700;
                 }
-                p{
+
+                p {
                     margin-top: 15px;
                     font-size: 15px;
                     color: $heading-color;
-                    @media #{$breakpoint-desktop}{
+
+                    @media #{$breakpoint-desktop} {
                         font-size: 13px;
-                         margin-top: 12px;
+                        margin-top: 12px;
                     }
                 }
             }
@@ -182,20 +222,23 @@
 }
 
 
-.collapse-sidebar{
+.collapse-sidebar {
     line-height: 0;
     padding-right: 15px;
-    a{
-        i{
+
+    a {
+        i {
             color: $text-color;
         }
-        &:hover{
-            i{
+
+        &:hover {
+            i {
                 color: $secondary-color;
             }
         }
     }
-    @media #{$breakpoint-xl}{
+
+    @media #{$breakpoint-xl} {
         display: none;
     }
 }
