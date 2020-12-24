@@ -3,12 +3,16 @@
 @import "admin/dashboard";
 @import "home/home";
 @import "dashboard-content/dashboard-content";
-.page-header{
+@import "map/map";
+
+.page-header {
     margin-bottom: 1rem;
 }
-.container-in{
+
+.container-in {
     padding: 0 6rem;
 }
+
 .hoverable-link {
     display: inline;
     cursor: pointer;

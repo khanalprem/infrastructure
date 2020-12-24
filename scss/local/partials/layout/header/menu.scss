@@ -8,9 +8,9 @@
             margin: 0;
             li{
                 position: relative;
-                /* &:not(:last-child){
-                    margin-right: 50px;
-                } */
+                &:not(:last-child){
+                    margin-right: 10px;
+                }
                 a{
                     padding: 12px 35px;
                     font-size: .938rem;
@@ -250,7 +250,7 @@
     }
 }
 
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 767px){
     .toggle-button {
         display: block;
         margin-left: 1rem;

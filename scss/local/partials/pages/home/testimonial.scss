@@ -35,31 +35,8 @@
             }
         }
         .testimonial-slider {
-            width: 100%;
             padding-top: 40px;
             padding-bottom: 80px;
-            /* .slick-prev, .slick-next{
-                padding: 10px;
-                @include radius(50%);
-                border: 1px solid $white-color;
-                cursor: pointer;
-                &::before,
-                &::after{
-                    color: $white-color;
-                    font-family: 'Material Icons';
-                }
-            }
-            .slick-next{
-                &::before{
-                    content: 'navigate_next';
-                }
-                
-            }
-            .slick-prev{
-                &::before{
-                    content: 'navigate_before';
-                }
-            } */
             .testimonial-slider-item{
 
                 width: 100%;

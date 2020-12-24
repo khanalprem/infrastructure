@@ -9,12 +9,9 @@ header{
         z-index: 11111;
         width: 100%;
         @include transition(all .4s linear);
-        padding: 1.5rem 0;
+        padding: 1.25rem 0;
         @media #{$breakpoint-md-desktop}{
-            padding: .5rem 0;     
-        }
-        @media #{$breakpoint-pt}{
-            padding: 10px;
+            padding: 1rem 0;     
         }
         .header-in {
             @include display-flex(flex);
@@ -25,20 +22,14 @@ header{
             /* logo */
            .logo{
                 font-family: $logo-fonts;
-              /*   font-size: 17px;
-                line-height: 20px;
-                font-weight: 700; */
                 max-width: 230px;
                 text-transform: uppercase;
                 cursor: pointer;
                 display: inline-block;
                 @media #{$breakpoint-desktop}{
-                   /*  font-size: 15px;
-                    line-height: 18px; */
                     max-width: 200px;
                 }
                 &.is-dark{
-                    // color: $primary-color;
                     .logo-dark{
                         display: block;
                     }
@@ -47,7 +38,6 @@ header{
                     }
                 }
                 &.is-light{
-                    // color: $white-color;
                     .logo-dark{
                         display: none;
                     }
@@ -96,10 +86,10 @@ header{
                 }
             }
             @media #{$breakpoint-sm}{
-                @include flex-direction-column(column);
-                .right-menu{
+                // @include flex-direction-column(column);
+               /*  .right-menu{
                     margin-top: 15px;
-                }
+                } */
             }
         }
     }
@@ -208,7 +198,7 @@ header{
     } */
 }
 
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 576px){
     .Is-toggle{
         .site-header{
             .header-in{
