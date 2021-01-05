@@ -36,7 +36,7 @@
     }
 
     @media #{$breakpoint-xl} {
-        height: initial;
+        // height: initial;
         @include flex-direction-column(column);
     }
 
@@ -51,6 +51,7 @@
         padding-top: 78px;
         @include transition(all .4s ease);
         height: 100vh;
+        @include animation(slowRevealation .4s ease);
 
         @media #{$breakpoint-lg-desktop} {
             width: 350px;
@@ -62,10 +63,13 @@
         }
 
         @media #{$breakpoint-xl} {
+            order: 2;
             padding-top: 10px;
             width: 100%;
-            height:auto;
+            height: auto;
             position: relative;
+            border: 0;
+            display: block;
         }
 
         &.active {
@@ -80,6 +84,7 @@
         position: relative;
         z-index: 1;
         @include transition(all .4s ease);
+        @include animation(slowRevealation .4s ease);
 
         @media #{$breakpoint-lg-desktop} {
             width: calc(100% - 360px);
@@ -94,7 +99,11 @@
         @media #{$breakpoint-xl} {
             width: calc(100% - 0px);
             margin-left: 0;
-            height: 600px;
+            order: 1;
+
+            .map-body {
+                display: none;
+            }
         }
 
         &.active {
@@ -104,20 +113,51 @@
 
     }
 
-    &.toggle-map-body{
-        .map-aside{
-            margin-left: -400px;
-             @media #{$breakpoint-lg-desktop} {
-                margin-left: -360px;
+    @media #{$breakpoint-xl} {
+        &.toggle-card-body {
+            @include flex-direction-row(row);
+
+            .map-aside {
+                display: none !important;
             }
 
-            @media #{$breakpoint-desktop} {
-                margin-left: -300px;
+            .map-content-wrap {
+                .map-body {
+                    display: block;
+
+                    .map-container {
+                        display: none;
+                    }
+
+                    .infrastructure-item-details {
+                        &.active {
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: auto;
+                            z-index: 1111;
+                            top: 0;
+                            left: 0;
+                            background: $white-color;
+                            border-left: 0;
+                        }
+                    }
+                }
             }
         }
-        .map-content-wrap{
-            width: 100%;
-            margin-left: 0;
+
+        &.toggle-map-body {
+            @include flex-direction-row(row);
+
+            .map-aside {
+                display: none;
+            }
+
+            .map-content-wrap {
+                .map-body {
+                    display: block;
+                }
+            }
         }
     }
 }

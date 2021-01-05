@@ -1,49 +1,67 @@
-.common-title{
+.common-title {
     display: block;
     margin-bottom: 30px;
     max-width: 970px;
-    @media #{$breakpoint-desktop}{
-        margin-bottom: 25px;         
+
+    @media #{$breakpoint-desktop} {
+        margin-bottom: 25px;
     }
-    h1{
-        // font-size: $font-size-h1;
+
+    @media #{$breakpoint-lg} {
+        margin-bottom: 15px;
+    }
+
+    h1 {
         color: $heading-color;
         font-weight: 400;
-        span{
+
+        span {
             text-transform: lowercase;
-            &.italic{
+
+            &.italic {
                 font-style: italic;
                 color: $primary-color;
                 text-transform: capitalize;
             }
         }
-        @media #{$breakpoint-desktop}{
+
+        @media #{$breakpoint-desktop} {
             margin-bottom: 25px;
         }
+
+        @media #{$breakpoint-lg} {
+            margin-bottom: 15px;
+        }
     }
-    &.is-light{
-        h1{
+
+    &.is-light {
+        h1 {
             color: $white-color;
-            span{
-                &.italic{
+
+            span {
+                &.italic {
                     color: $white-color;
                 }
             }
         }
-        span.label{
+
+        span.label {
             color: $white-color;
         }
     }
-    &.is-center{
+
+    &.is-center {
         @include flex-hr-center;
         text-align: center;
         max-width: 970px;
-        margin:0 auto;
+        margin: 0 auto;
         margin-bottom: 3rem;
+
         @media #{$breakpoint-lg-desktop} {
-            max-width:690px;
+            max-width: 690px;
             margin-bottom: 2rem;
         }
+
         @media #{$breakpoint-desktop} {
             max-width: 600px;
             margin-bottom: 1.5rem;

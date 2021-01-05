@@ -1,0 +1,29 @@
+.factory {
+    position: relative;
+
+}
+
+#drop_circle {
+    #circle {
+        fill: transparent;
+        stroke: $secondary-color;
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        animation: dash 10s infinite forwards;
+        stroke-width: .25;
+    }
+}
+
+#drop_circle {
+    @include animation(water-anim 2.25s infinite alternate);
+    // position: absolute;
+    transform-origin: right;
+    transform-box: fill-box;
+
+}
+
+@keyframes water-anim {
+    0% {}
+
+    100% {}
+}

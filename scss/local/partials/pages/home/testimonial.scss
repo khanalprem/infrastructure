@@ -1,7 +1,8 @@
-.testimonial-section{
+.testimonial-section {
     position: relative;
     @include cover(center);
-    &::before{
+
+    &::before {
         position: absolute;
         content: '';
         top: 0;
@@ -12,54 +13,71 @@
         height: 100%;
         background-color: rgba($primary-color, .8);
     }
-    .testimonial-content{
+
+    .testimonial-content {
         width: 100%;
         height: 100%;
         @include display-flex(flex);
         @include flex-direction-column(column);
         @include justify-content-center;
-        @media #{$breakpoint-lg}{
+
+        @media #{$breakpoint-lg} {
             @include align-items-center;
             text-align: center;
         }
-        span.title{
+
+        span.title {
             font-size: .938rem;
             letter-spacing: 4.8px;
             text-transform: uppercase;
             font-weight: 700;
             display: block;
             color: $white-color;
-            @media #{$breakpoint-desktop}{
+
+            @media #{$breakpoint-desktop} {
                 font-size: .875rem;
                 letter-spacing: 4.5px;
             }
         }
+
         .testimonial-slider {
             padding-top: 40px;
             padding-bottom: 80px;
-            .testimonial-slider-item{
+
+            @media #{$breakpoint-lg} {
+                padding-bottom: 50px;
+            }
+
+            .testimonial-slider-item {
 
                 width: 100%;
-                h2{
+
+                h2 {
                     font-weight: 400;
                     color: $white-color;
                     max-width: 540px;
-                    @media #{$breakpoint-lg}{
-                       margin: auto;
+
+                    @media #{$breakpoint-lg} {
+                        margin: auto;
                     }
                 }
-                .person-info{
+
+                .person-info {
                     margin-top: 60px;
-                    @media #{$breakpoint-desktop}{
+
+                    @media #{$breakpoint-desktop} {
                         margin-top: 30px;
                     }
+
                     @include display-flex(flex);
                     @include align-items-center;
-                    @media #{$breakpoint-lg}{
+
+                    @media #{$breakpoint-lg} {
                         @include justify-content-center;
                     }
-                    figure{
-                        img{
+
+                    figure {
+                        img {
                             @include radius(50%);
                             border: 1px solid $white-color;
                             max-width: 75px;
@@ -67,97 +85,125 @@
                             @include radius(50%);
                             border: 1px solid $white-color;
                             object-fit: cover;
-                            object-position: top;;
-                            @media #{$breakpoint-desktop}{
+                            object-position: top;
+                            ;
+
+                            @media #{$breakpoint-desktop} {
                                 width: 55px;
                                 height: 55px;
                             }
                         }
                     }
-                    .status{
+
+                    .status {
                         margin-left: 25px;
-                        @media #{$breakpoint-desktop}{
+
+                        @media #{$breakpoint-desktop} {
                             margin-left: 20px;
                         }
-                        h4{
+
+                        h4 {
                             font-family: $body-fonts;
                             color: $white-color;
                             margin-bottom: 5px;
-                            @media #{$breakpoint-desktop}{
+
+                            @media #{$breakpoint-desktop} {
                                 margin-bottom: 2px;
                             }
 
                         }
-                        span.position{
+
+                        span.position {
                             color: $white-color;
-                            font-size: .938rem;;
-                            @media #{$breakpoint-desktop}{
-                                font-size: .875rem;;
+                            font-size: .938rem;
+                            ;
+
+                            @media #{$breakpoint-desktop} {
+                                font-size: .875rem;
+                                ;
                             }
                         }
                     }
                 }
             }
-           
+
         }
     }
-    .infrastructures-data-grid{
+
+    .infrastructures-data-grid {
         @include display-flex(flex);
         @include flex-wrap(wrap);
-        @media #{$breakpoint-lg}{
+
+        @media #{$breakpoint-lg} {
             @include justify-content-center;
-            margin-top: 8rem;
+            margin-top: 6rem;
         }
-        .row-grid{
-            &:last-child{
+
+        @media only screen and (max-width: 593px) {
+            @include flex-direction-column(column);
+            @include align-items-center;
+        }
+
+        .row-grid {
+            &:last-child {
                 margin-top: 5rem;
                 margin-left: 30px;
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     margin-top: 3rem;
                     margin-bottom: 20px;
                 }
-                @media #{$breakpoint-sm}{
+
+                @media only screen and (max-width: 593px) {
                     margin-top: 0;
                     margin-left: 0;
                 }
             }
-            .grid-data{
+
+            .grid-data {
                 margin-bottom: 30px;
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     margin-bottom: 20px;
                 }
             }
         }
-        .infra-data{
+
+        .infra-data {
             background: $primary-color;
             height: 315px;
             width: 315px;
             @include radius(10px);
             @include flex-hr-center;
-            @media #{$breakpoint-desktop}{
+
+            @media #{$breakpoint-desktop} {
                 height: 250px;
                 width: 250px;
                 @include radius(6px);
             }
-            .data{
-               font-size: 75px;
-               line-height: 85px;
-               font-family: $heading-fonts;
-               color: $white-color; 
-               margin-bottom: 5px;
-               font-style: italic;
-               @media #{$breakpoint-desktop}{
-                   font-size: 65px;
-                   line-height: 75px;
-                   margin-bottom: 3px;
-               }
+
+            .data {
+                font-size: 75px;
+                line-height: 85px;
+                font-family: $heading-fonts;
+                color: $white-color;
+                margin-bottom: 5px;
+                font-style: italic;
+
+                @media #{$breakpoint-desktop} {
+                    font-size: 65px;
+                    line-height: 75px;
+                    margin-bottom: 3px;
+                }
             }
-            .label{
+
+            .label {
                 font-size: 18px;
                 color: $white-color;
                 text-transform: capitalize;
                 font-weight: 700;
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     font-size: 16px;
                 }
             }

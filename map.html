@@ -1,44 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- SOCIAL MEDIA META -->
-    <meta property="og:description" content="Blue Infrastructures ">
-    <meta property="og:image" content="preview.html">
-    <meta property="og:site_name" content="Blue Infrastructures">
-    <meta property="og:title" content="Blue Infrastructures">
-    <meta property="og:type" content="website">
+    <meta property="og:description" content="Blue Infrastructures " />
+    <meta property="og:image" content="preview.html" />
+    <meta property="og:site_name" content="Blue Infrastructures" />
+    <meta property="og:title" content="Blue Infrastructures" />
+    <meta property="og:type" content="website" />
 
     <!-- TWITTER META -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="Blue Infrastructures">
-    <meta name="twitter:creator" content="Naxa Mappers">
-    <meta name="twitter:title" content="Blue Infrastructures">
-    <meta name="twitter:description" content="Blue Infrastructures">
-    <meta name="twitter:image" content="preview.html">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="Blue Infrastructures" />
+    <meta name="twitter:creator" content="Naxa Mappers" />
+    <meta name="twitter:title" content="Blue Infrastructures" />
+    <meta name="twitter:description" content="Blue Infrastructures" />
+    <meta name="twitter:image" content="preview.html" />
 
     <!--title-->
     <title>Blue Infrastructures</title>
 
     <!-- faveicon start   -->
-    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32" />
 
     <!-- stylesheet start -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <link rel="stylesheet" href="css/all.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/slick.css" type="text/css" />
     <link rel="stylesheet" href="css/slick-theme.css" type="text/css" />
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" type="text/css" />
 </head>
 
 <body>
-
     <!-- header -->
     <header class="site-header is-fixed is-light is-border">
         <div class="container-fluid">
@@ -52,18 +53,13 @@
                 <!-- main-navigation -->
                 <div class="main-navigation">
                     <ul class="menu-collapse">
-                        <li><a href="about.html">About</a></li>
-                        <li class="active"><a href=map.html>Map</a></li>
+                        <li><a href="about.html">
+                                <span>About</span>
+                            </a></li>
+                        <li><a href=map.html class="call-to-action">
+                                <span>Map</span>
+                            </a></li>
                     </ul>
-                </div>
-
-
-                <!-- toggle-button -->
-                <div class="toggle-button">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </div>
             </div>
         </div>
@@ -155,7 +151,6 @@
                     </ul>
                 </div>
             </div>
-
         </aside>
 
         <!-- map-content -->
@@ -165,9 +160,9 @@
                 <div class="map-tools">
                     <!-- search option -->
                     <div class="left">
-                        <div class="collapse-sidebar">
+                        <!--  <div class="collapse-sidebar">
                             <a href="#/"><i class="material-icons">menu</i></a>
-                        </div>
+                        </div> -->
 
                         <div class="search-bar">
                             <div class="search-wrap is-transparent">
@@ -175,6 +170,10 @@
                                 <input type="text" class="form-control is-non-capitalize is-light"
                                     placeholder="Search by location or keyword" />
                             </div>
+                        </div>
+
+                        <div class="map-view">
+                            <a href="#"><i class="material-icons">map</i></a>
                         </div>
                     </div>
 
@@ -213,16 +212,13 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
 
             <!-- map-body-->
             <div class="map-body">
                 <div class="map-container">
-                    <div id="map-content">
-
-                    </div>
+                    <div id="map-content"></div>
                 </div>
                 <div class="infrastructure-item-details is-overflow no-scrollbar">
                     <div class="infra-title">
@@ -232,7 +228,6 @@
                     <div class="infra-slider slider is-right-nav is-dark-nav is-sm">
                         <div class="infra-slider-item">
                             <figure><img src="./img/home/image-5.jpg" alt="pp" /></figure>
-
                         </div>
                         <div class="infra-slider-item">
                             <figure><img src="./img/home/image-4.jpg" alt="pp" /></figure>
@@ -261,16 +256,19 @@
                     </ul>
                     <div class="desc">
                         <h4>Description</h4>
-                        <p>Sundhara (Nuga hiti) is famous for its gold plating and provides pure water for the rain god
-                            Rato Machhendranath during the chariot festival every 12 years. It is increasingly important
-                            to "renters," or migrants from rural areas who have moved to Kathmandu to make money or send
-                            their children to school....Read more</p>
+                        <p>
+                            Sundhara (Nuga hiti) is famous for its gold plating and provides
+                            pure water for the rain god Rato Machhendranath during the
+                            chariot festival every 12 years. It is increasingly important to
+                            "renters," or migrants from rural areas who have moved to
+                            Kathmandu to make money or send their children to school....Read
+                            more
+                        </p>
                     </div>
                 </div>
             </div>
         </main>
     </section>
-
 
     <!-- Jquery Core Js -->
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -284,12 +282,12 @@
         // ADD YOUR ACCESS TOKEN FROM
         // https://account.mapbox.com
         mapboxgl.accessToken =
-            'pk.eyJ1IjoiZ2VvbWF0dXBlbiIsImEiOiJja2E5bDFwb2swdHNyMnNvenZxa2Vpeml2In0.fCStqdwmFYFP-cUvb5vMCw';
+            "pk.eyJ1IjoiZ2VvbWF0dXBlbiIsImEiOiJja2E5bDFwb2swdHNyMnNvenZxa2Vpeml2In0.fCStqdwmFYFP-cUvb5vMCw";
         var map = new mapboxgl.Map({
-            container: 'map-content', // container id
-            style: 'mapbox://styles/mapbox/light-v10', // style URL
+            container: "map-content", // container id
+            style: "mapbox://styles/mapbox/light-v10", // style URL
             center: [83.989834, 28.219089], // starting position [lng, lat]
-            zoom: 12 // starting zoom
+            zoom: 12, // starting zoom
         });
     </script>
 </body>

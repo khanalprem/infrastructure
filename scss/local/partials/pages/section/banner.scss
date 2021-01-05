@@ -1,18 +1,21 @@
 .banner {
     position: relative;
-    @include transition(all .4s ease);
-    &.home-banner{
+    @include transition(all 0.4s ease);
+
+    &.home-banner {
         overflow: hidden;
     }
-    &.full-height-banner{
+
+    &.full-height-banner {
         position: relative;
         height: 100vh;
         background-position: 100% 75%;
-        @include transition(all .4s ease);
+        @include transition(all 0.4s ease);
     }
+
     &.overlay {
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 100%;
@@ -20,24 +23,28 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba($primary-color, .8);
+            background-color: rgba($primary-color, 0.8);
             @include cover(center);
             z-index: 1;
         }
     }
-    &.sm-banner{
+
+    &.sm-banner {
         height: 600px;
-        @media #{$breakpoint-lg-desktop}{
-           height: 500px;       
+
+        @media #{$breakpoint-lg-desktop} {
+            height: 500px;
         }
     }
-    
-    &.is-primary{
-        -webkit-background-image: linear-gradient(100deg , $primary-color, $primary-dark);
-        background-image: linear-gradient(100deg , $primary-color, $primary-dark);
+
+    &.is-primary {
+        -webkit-background-image: linear-gradient(100deg,
+                $primary-color,
+                $primary-dark);
+        background-image: linear-gradient(100deg, $primary-color, $primary-dark);
     }
 
-    .banner-center{
+    .banner-center {
         @include display-flex(flex);
         @include align-items-center;
         @include justify-content-start;
@@ -45,21 +52,25 @@
         height: 100%;
         position: relative;
         z-index: 11;
-        &.is-center{
+
+        &.is-center {
             top: 30px !important;
             @include justify-content-center;
         }
     }
-    
-    .banner-caption{
+
+    .banner-caption {
         position: relative;
-        .caption-content{
+
+        .caption-content {
             position: relative;
             max-width: 860px;
-            &.is-center{
+
+            &.is-center {
                 text-align: center;
             }
-            h1{
+
+            h1 {
                 font-size: 3.75rem; //64px
                 color: $heading-color;
                 font-weight: 400;
@@ -67,93 +78,133 @@
                 line-height: 64px;
                 text-transform: capitalize;
                 max-width: 700px;
-                @media #{$breakpoint-lg-desktop}{
+
+                @media #{$breakpoint-lg-desktop} {
                     font-size: 3.5rem;
                     max-width: 500px;
                     line-height: 60px;
                 }
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     font-size: 2.85rem;
                     max-width: 500px;
                     line-height: 50px;
                 }
-                span{
-                    &.sm{
+
+                span {
+                    &.sm {
                         text-transform: lowercase;
                     }
-                    &.italic{
+
+                    &.italic {
                         font-style: italic;
                         color: $primary-color;
                         text-transform: capitalize;
                     }
                 }
             }
-            p{
+
+            p {
                 max-width: 690px;
-                font-size: 1.25rem; 
+                font-size: 1.25rem;
                 line-height: 30px;
                 color: $heading-color;
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     font-size: 1rem;
                     line-height: 25px;
                     max-width: 550px;
                 }
             }
-            span.title{
-                font-size: .939rem;
+
+            span.title {
+                font-size: 0.939rem;
                 line-height: 18px;
                 display: block;
-                margin-bottom: 15px;
+                margin-bottom: 30px;
                 font-weight: 700;
                 letter-spacing: 4.8px;
                 color: $white-color;
-                text-transform: capitalize;
+                text-transform: uppercase;
             }
-            .buttons{
+
+            .buttons {
                 padding-top: 180px;
-                @media #{$breakpoint-lg-desktop}{
+
+                @media #{$breakpoint-lg-desktop} {
                     padding-top: 150px;
                 }
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     padding-top: 100px;
                 }
             }
-            &.is-light{
-                h1{
+
+            &.is-light {
+                h1 {
                     color: $white-color;
-                    span{
-                        &.italic{
+
+                    span {
+                        &.italic {
                             color: $white-color;
                         }
                     }
                 }
-                span.title{
+
+                span.title {
                     color: $white-color;
                 }
             }
         }
-        &.home-banner-caption{
+
+        &.home-banner-caption {
             width: 100%;
             height: 90%;
             top: 8rem !important;
             @include contain(right);
-            @media #{$breakpoint-lg-desktop}{
+
+            @media #{$breakpoint-lg-desktop} {
                 top: 7rem !important;
             }
-            .caption-content{
+
+            @media #{$breakpoint-md} {
+                background-size: cover !important;
+                background-position: center 15vh !important;
+                top: 0 !important;
+                height: 100%;
+
+                .container-full-padding {
+                    height: 100%;
+                }
+            }
+
+            .caption-content {
                 top: 80px;
                 width: 100%;
                 height: 80%;
-                @media #{$breakpoint-lg-desktop}{
+
+                @media #{$breakpoint-lg-desktop} {
                     top: 40px;
                 }
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     max-width: 700px;
                     top: 30px;
                 }
-                @media #{$breakpoint-md}{
-                    @include flex_hr_center;
+
+                @media #{$breakpoint-md} {
+                    top: 0;
+                    height: 100%;
+                    padding-top: 100px;
+                    @include display-flex(flex);
+                    @include align-items-center;
+                    @include flex-direction-column(column);
                     text-align: center;
+
+                    .buttons {
+                        position: absolute;
+                        bottom: 2rem;
+                    }
                 }
             }
         }

@@ -48,19 +48,16 @@
                 </a>
                 <div class="main-navigation">
                     <ul class="menu-collapse">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href=map.html>Map</a></li>
+                        <li><a href="about.html">
+                                <span>About</span>
+                            </a></li>
+                        <li><a href=map.html class="call-to-action">
+                                <span>Map</span>
+                            </a></li>
                     </ul>
                 </div>
-                <div class="toggle-button">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
 
-        </div>
+            </div>
     </header>
     <section class="banner full-height-banner home-banner">
         <div class="banner-center">
@@ -87,13 +84,14 @@
     <section class="section intro-section is-bg" id="info">
         <div class="container-fluid container-full-padding">
             <div class="row">
-                <div class="grid-lg-4 grid-md-12">
+                <div class="grid-lg-4 order-lg-1 grid-md-12">
                     <figure>
                         <img src="./img/home/intro-img.png" alt="intro">
                     </figure>
                 </div>
-                <div class="grid-lg-8 grid-md-12">
-                    <div class="intro-para">
+                <div class="grid-lg-8 order-lg-2 grid-md-12">
+                    <div class="intro-para" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                        data-aos-duration="2000">
                         <div class="common-title">
                             <h1><span class="italic">Blue Infrastructures</span> <span class="sm">in</span> Kathmandu
                                 Valley</h1>
@@ -102,10 +100,14 @@
                             Spout sites and the water they provide also hold important cultural and spiritual meaning.
                             However, spouts are increasingly running dry and many residents worry that spouts without
                             water will become museum pieces.</p>
-                        <div class="buttons mt-100">
+                        <!--  <div class="buttons mt-100">
                             <button class="common-button is-bg">
                                 <span>Learn More</span>
                             </button>
+                        </div> -->
+                        <div class="button-container mt-100">
+                            <span class="mas">Click Me!</span>
+                            <button class="common-button type=" button" name="Hover">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -164,13 +166,13 @@
                 <div class="grid-lg-6 grid-md-12">
                     <div class="infrastructures-data-grid">
                         <div class="row-grid">
-                            <div class="grid-data">
+                            <div class="grid-data" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="infra-data">
                                     <div class="data">8</div>
                                     <div class="label">Water Spouts</div>
                                 </div>
                             </div>
-                            <div class="grid-data">
+                            <div class="grid-data" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="infra-data">
                                     <div class="data">13</div>
                                     <div class="label">Ponds</div>
@@ -178,14 +180,14 @@
                             </div>
                         </div>
                         <div class="row-grid">
-                            <div class="grid-data">
+                            <div class="grid-data" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="infra-data">
                                     <div class="data">11</div>
                                     <div class="label">ancient rivers</div>
                                 </div>
                             </div>
                             <div class="grid-data">
-                                <div class="infra-data">
+                                <div class="infra-data" data-aos="fade-up" data-aos-duration="2000">
                                     <div class="data">19</div>
                                     <div class="label">ancient taps</div>
                                 </div>
@@ -201,7 +203,7 @@
         <div class="container-fluid container-full-padding">
             <div class="row">
                 <div class="grid-lg-6 grid-md-12">
-                    <div class="contents">
+                    <div class="contents" data-aos="fade-right" data-aos-duration="3000">
                         <div class="common-title">
                             <h1>Why preserve <span class="italic">Blue Infrastructures?</span></h1>
                         </div>
@@ -212,8 +214,9 @@
                             production and navigation for water resources.</p>
                         <ul>
                             <li>
-                                <figure><img src="./img/home/Preserving_Cultural_Heritage_icon.svg"
-                                        alt="preserve-icon" /></figure>
+                                <figure data-aos="fade-zoom-in" data-aos-duration="4000"><img
+                                        src="./img/home/Preserving_Cultural_Heritage_icon.svg" alt="preserve-icon" />
+                                </figure>
                                 <div class="list-info">
                                     <h3>Preserving Cultural Heritage</h3>
                                     <p>Blue Infrastructures are vital sources of intangible and tangible cultural
@@ -222,8 +225,10 @@
                                 </div>
                             </li>
                             <li>
-                                <figure><img src="./img/home/Residential_Commercial_Industrial_Use_icon.svg"
-                                        alt="industrial-icon" /></figure>
+                                <figure data-aos="fade-zoom-in" data-aos-duration="4000"><img
+                                    src="./img/home/Residential_Commercial_Industrial_Use_icon.svg"
+                                    alt="industrial-icon" /></figure>
+                               
                                 <div class="list-info">
                                     <h3>Residential, Commercial and Industrial Use</h3>
                                     <p>Residential water use includes drinking, cleaning etc. In the commercial and
@@ -232,7 +237,8 @@
                                 </div>
                             </li>
                             <li>
-                                <figure><img src="./img/home/hydropower_icon.svg" alt="hydropower-icon" /></figure>
+                                <figure data-aos="fade-zoom-in" data-aos-duration="4000"><img
+                                        src="./img/home/hydropower_icon.svg" alt="hydropower-icon" /></figure>
                                 <div class="list-info">
                                     <h3>Hydropower and Hydroelectric facilities</h3>
                                     <p>Hydroelectric facilities use the power of flowing water to turn turbines that
@@ -247,11 +253,14 @@
                 <div class="grid-lg-6 grid-md-12">
                     <div class="picture-illustrtations">
                         <div class="left-picture-illust">
-                            <img src="./img/home/image-5.jpg" alt="image-illus" />
+                            <img data-aos="fade-zoom-in" data-aos-duration="3000" src="./img/home/image-5.jpg"
+                                alt="image-illus" />
                         </div>
                         <div class="right-picture-illust">
-                            <img src="./img/home/image-3.jpg" alt="img/illus" />
-                            <img src="./img/home/image-4.jpg" alt="img-illus" />
+                            <img data-aos="fade-zoom-in" data-aos-duration="3000" src="./img/home/image-3.jpg"
+                                alt="img/illus" />
+                            <img data-aos="fade-zoom-in" data-aos-duration="3000" src="./img/home/image-4.jpg"
+                                alt="img-illus" />
                         </div>
                     </div>
                 </div>
@@ -265,15 +274,18 @@
                 <div class="common-title is-light">
                     <h1>Explore <span class="italic">Blue Infrastructures</span> heritage at glance.</h1>
                 </div>
-                <div class="buttons">
-                    <button class="common-button is-light-bg">
-                        <span>Learn More</span>
-                    </button>
+                <div class="buttons" data-aos="flip-up" data-aos-duration="2000">
+                    <div class="button-container is-light">
+                        <span class="mas">Click Me !</span>
+                        <button class="common-button" type="button">Explore Map</button>
+                    </div>
                 </div>
             </div>
             <div class="footer-copyright">
-                <div class="logo"><img src="./img/logo-white.png" alt="logo-light" /></div>
-                <div class="copyright">
+                <div class="logo" data-aos="fade-up" data-aos-duration="500"><img src=" ./img/logo-white.png"
+                        alt="logo-light" />
+                </div>
+                <div class="copyright" data-aos="fade-up" data-aos-duration="500">
                     <p>Copyright 2020, <span class="title">Blue infrastructures</span></p>
                     <p>Designed By <span class="title">Naxa</span></p>
                 </div>

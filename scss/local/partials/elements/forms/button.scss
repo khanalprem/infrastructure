@@ -56,7 +56,6 @@ a.common-link,
 
     @media #{$breakpoint-desktop} {
         width: 140px;
-        min-height: 30px;
         font-size: .825rem;
         padding: .425rem .75rem;
     }
@@ -413,5 +412,58 @@ a.load-more-button {
 
     &.is-orange {
         background-color: $orange-light;
+    }
+}
+
+.button-container {
+    position: relative;
+    width: 180px;
+    min-height: 35px;
+    overflow: hidden;
+    border: 1px solid $secondary-color;
+    transition: 0.5s;
+
+    .mas {
+        position: absolute;
+        color: $secondary-color;
+        width: 101%;
+        height: 100%;
+        overflow: hidden;
+        font-weight: 700;
+        font-size: .938rem;
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-center;
+    }
+
+    button.common-button {
+        width: 101%;
+        height: 100%;
+        background: $secondary-color;
+        color: $white-color;
+        -webkit-mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
+        mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
+        -webkit-mask-size: 7100% 100%;
+        mask-size: 7100% 100%;
+        -webkit-animation: ani2 0.7s steps(70) forwards;
+        animation: ani2 0.7s steps(70) forwards;
+
+        &:hover {
+            -webkit-animation: ani 0.7s steps(70) forwards;
+            animation: ani 0.7s steps(70) forwards;
+
+        }
+    }
+
+    &.is-light {
+        .mas {
+            background: $secondary-color;
+            color: $white-color;
+        }
+
+        button.common-button {
+            background: $white-color;
+            color: $secondary-color;
+        }
     }
 }

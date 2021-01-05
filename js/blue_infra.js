@@ -245,13 +245,13 @@
   }
   portfolio_more();
 
-  function toggle_button() {
-    $('.header-in .toggle-button').on('click', function () {
-      $(this).toggleClass('active');
-      $('body').toggleClass('Is-toggle');
-    });
-  }
-  toggle_button();
+  /*  function toggle_button() {
+     $('.header-in .hamburgerWrapper').on('click', function () {
+       $(this).hamburgerWrapper('active');
+       $('body').toggleClass('Is-toggle');
+     });
+   }
+   toggle_button(); */
 
   function headerStyle() {
 
@@ -339,9 +339,9 @@
   collapse_toggle();
 
 
-//map-body functions 
-  function infrastructre_details(){
-    $('.map-aside ul.infrastructure-list li.infrastructures-item').on('click', function(){
+  //map-body functions 
+  function infrastructre_details() {
+    $('.map-aside ul.infrastructure-list li.infrastructures-item').on('click', function () {
       if ($(this).closest('li.infrastructures-item').next().hasClass('active')) {
         $('ul.infrastructure-list li.infrastructures-item').removeClass('active');
         $('.map-body .infrastructure-item-details').removeClass('active');
@@ -353,23 +353,33 @@
       $('.map-body .infrastructure-item-details').addClass('active');
     })
   }
-   infrastructre_details();
+  infrastructre_details();
 
-   function infrastructure_details_removal(){
-     $('.map-body .infrastructure-item-details .infra-details-close').on('click', function(){
-       $('.map-body .infrastructure-item-details').removeClass('active');
-     })
-   }
-   infrastructure_details_removal();
+  function infrastructure_details_removal() {
+    $('.map-body .infrastructure-item-details .infra-details-close').on('click', function () {
+      $('.map-body .infrastructure-item-details').removeClass('active');
+      $('.map-content').removeClass('toggle-card-body');
+    })
+  }
+  infrastructure_details_removal();
 
-  function toggle_map_body(){
-    $('.map-content').on('click','.collapse-sidebar a', function(){
+  function toggle_map_body() {
+    $('.map-content').on('click', '.map-view a', function () {
       $('.map-content').toggleClass('toggle-map-body');
     })
   }
   toggle_map_body()
 
-/* ---map-body functions */
+  function toggle_card_body() {
+    $('.map-aside').on('click', '.infrastructure-list li a', function () {
+      $('.map-content').toggleClass('toggle-card-body');
+    })
+  }
+  toggle_card_body()
+
+
+
+  /* ---map-body functions */
 
 
   if (jQuery(".testimonial-slider").length > 0) {
@@ -387,7 +397,7 @@
   }
 
 
-   if (jQuery(".infra-slider").length > 0) {
+  if (jQuery(".infra-slider").length > 0) {
     var mainSlider = $('.infra-slider');
 
 
