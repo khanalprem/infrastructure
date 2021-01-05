@@ -9895,7 +9895,7 @@ aside.admin-sidebar {
       float: left; }
     .map-aside .body .top-section .title a.view-all {
       float: right; }
-      @media only screen and (max-width: 1199px) {
+      @media only screen and (max-width: 767px) {
         .map-aside .body .top-section .title a.view-all {
           display: none; } }
   .map-aside .body .mid-section ul.infrastructure-list {
@@ -9905,11 +9905,9 @@ aside.admin-sidebar {
     @media only screen and (max-width: 1440px) {
       .map-aside .body .mid-section ul.infrastructure-list {
         height: calc(100vh - 120px); } }
-    @media only screen and (max-width: 1199px) {
+    @media only screen and (max-width: 767px) {
       .map-aside .body .mid-section ul.infrastructure-list {
-        height: 60vh;
-        padding-right: 0;
-        max-width: 500px; } }
+        height: calc(100vh - 240px); } }
     .map-aside .body .mid-section ul.infrastructure-list::-webkit-scrollbar {
       width: 6px; }
     .map-aside .body .mid-section ul.infrastructure-list::-webkit-scrollbar-track {
@@ -9918,16 +9916,6 @@ aside.admin-sidebar {
       background: #C9C9C9; }
     .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item:not(:last-child) {
       margin-bottom: 10px; }
-    @media only screen and (max-width: 1199px) {
-      .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item {
-        flex: 0 0 33%;
-        padding-right: 10px; } }
-    @media only screen and (max-width: 767px) {
-      .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item {
-        flex: 0 0 50%; } }
-    @media only screen and (max-width: 480px) {
-      .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item {
-        flex: 0 0 100%; } }
     .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item a {
       display: block;
       cursor: pointer; }
@@ -9947,11 +9935,9 @@ aside.admin-sidebar {
         @media only screen and (max-width: 1440px) {
           .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item a figure {
             height: 160px; } }
-        @media only screen and (max-width: 1199px) {
+        @media only screen and (max-width: 767px) {
           .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item a figure {
-            height: 200px;
-            max-width: 500px;
-            margin: auto; } }
+            height: 200px; } }
         .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item a figure::before {
           content: '';
           position: absolute;
@@ -10055,7 +10041,7 @@ aside.admin-sidebar {
       display: none; }
       .map-content-wrap .map-header .map-tools .map-view a i {
         color: #1AA9C4; }
-    @media only screen and (max-width: 1199px) {
+    @media only screen and (max-width: 767px) {
       .map-content-wrap .map-header .map-tools {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -10089,7 +10075,7 @@ aside.admin-sidebar {
         .map-content-wrap .map-header .map-tools .custom-select {
           width: 160px;
           min-width: 160px; } }
-      @media only screen and (max-width: 1199px) {
+      @media only screen and (max-width: 767px) {
         .map-content-wrap .map-header .map-tools .custom-select {
           width: 100%;
           max-width: 160px;
@@ -10175,7 +10161,7 @@ aside.admin-sidebar {
             color: #E4B148; }
     .map-content-wrap .map-body .infrastructure-item-details .infra-slider {
       padding-bottom: 10px; }
-      @media only screen and (max-width: 1199px) {
+      @media only screen and (max-width: 767px) {
         .map-content-wrap .map-body .infrastructure-item-details .infra-slider {
           max-width: 500px; } }
       .map-content-wrap .map-body .infrastructure-item-details .infra-slider.slider .slick-dots {
@@ -10188,13 +10174,13 @@ aside.admin-sidebar {
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         border-radius: 10px;
-        height: 230px; }
+        height: 230px;
+        /*  @media only screen and (max-width:767px) {
+            height: 300px;
+        } */ }
         @media only screen and (max-width: 1440px) {
           .map-content-wrap .map-body .infrastructure-item-details .infra-slider .infra-slider-item figure {
             height: 180px; } }
-        @media only screen and (max-width: 1199px) {
-          .map-content-wrap .map-body .infrastructure-item-details .infra-slider .infra-slider-item figure {
-            height: 300px; } }
         @media only screen and (max-width: 767px) {
           .map-content-wrap .map-body .infrastructure-item-details .infra-slider .infra-slider-item figure {
             height: 250px; } }
@@ -10289,7 +10275,7 @@ aside.admin-sidebar {
   @media only screen and (max-width: 1366px) {
     .map-content {
       padding-top: 65px; } }
-  @media only screen and (max-width: 1199px) {
+  @media only screen and (max-width: 767px) {
     .map-content {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -10319,7 +10305,7 @@ aside.admin-sidebar {
       .map-content .map-aside {
         padding-top: 65px;
         width: 300px; } }
-    @media only screen and (max-width: 1199px) {
+    @media only screen and (max-width: 767px) {
       .map-content .map-aside {
         order: 2;
         padding-top: 10px;
@@ -10350,7 +10336,7 @@ aside.admin-sidebar {
       .map-content .map-content-wrap {
         width: calc(100% - 300px);
         margin-left: 300px; } }
-    @media only screen and (max-width: 1199px) {
+    @media only screen and (max-width: 767px) {
       .map-content .map-content-wrap {
         width: calc(100% - 0px);
         margin-left: 0;
@@ -10360,7 +10346,7 @@ aside.admin-sidebar {
     .map-content .map-content-wrap.active {
       margin-left: 0px;
       width: 100%; }
-  @media only screen and (max-width: 1199px) {
+  @media only screen and (max-width: 767px) {
     .map-content.toggle-card-body {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;

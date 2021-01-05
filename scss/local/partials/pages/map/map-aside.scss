@@ -21,7 +21,7 @@
                 a.view-all {
                     float: right;
 
-                    @media #{$breakpoint-xl} {
+                    @media #{$breakpoint-md} {
                         display: none;
                     }
                 }
@@ -39,10 +39,8 @@
                         height: calc(100vh - 120px);
                     }
 
-                    @media #{$breakpoint-xl} {
-                        height: 60vh;
-                        padding-right: 0;
-                        max-width: 500px;
+                    @media #{$breakpoint-md} {
+                        height: calc(100vh - 240px);
                     }
 
                     &::-webkit-scrollbar {
@@ -62,19 +60,6 @@
                             margin-bottom: 10px;
                         }
 
-                        @media #{$breakpoint-xl} {
-                            flex: 0 0 33%;
-                            padding-right: 10px;
-                        }
-
-                        @media #{$breakpoint-md} {
-                            flex: 0 0 50%;
-                        }
-
-                        @media #{$breakpoint-xs} {
-                            flex: 0 0 100%;
-                        }
-
                         a {
                             display: block;
                             cursor: pointer;
@@ -90,10 +75,8 @@
                                     height: 160px;
                                 }
 
-                                @media #{$breakpoint-xl} {
+                                @media #{$breakpoint-md} {
                                     height: 200px;
-                                    max-width: 500px;
-                                    margin: auto;
                                 }
 
                                 &::before {

@@ -27,7 +27,7 @@
                 }
             }
 
-            @media #{$breakpoint-xl} {
+            @media #{$breakpoint-md} {
                 @include flex-direction-column(column);
                 padding: 0;
 
@@ -64,7 +64,7 @@
                     min-width: 160px;
                 }
 
-                @media #{$breakpoint-xl} {
+                @media #{$breakpoint-md} {
                     width: 100%;
                     max-width: 160px;
                     min-width: auto;
@@ -165,7 +165,7 @@
             .infra-slider {
                 padding-bottom: 10px;
 
-                @media #{$breakpoint-xl} {
+                @media #{$breakpoint-md} {
                     max-width: 500px
                 }
 
@@ -185,9 +185,9 @@
                             height: 180px;
                         }
 
-                        @media #{$breakpoint-xl} {
+                        /*  @media #{$breakpoint-md} {
                             height: 300px;
-                        }
+                        } */
 
                         @media #{$breakpoint-md} {
                             height: 250px;
