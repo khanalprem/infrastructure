@@ -9459,8 +9459,8 @@ aside.admin-sidebar {
   stroke: #E4B148;
   stroke-dasharray: 140 540;
   stroke-dashoffset: -474;
-  animation: dash 10s infinite forwards;
-  stroke-width: .25; }
+  animation: dash 1s infinite forwards;
+  stroke-width: 0.25; }
 
 #drop_circle {
   -webkit-animation: water-anim 2.25s infinite alternate;
