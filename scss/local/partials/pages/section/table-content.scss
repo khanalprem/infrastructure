@@ -11,6 +11,11 @@
       padding: 1rem;
       max-width: 87%;
     }
+    .table-wrap {
+      @media #{$breakpoint-lg} {
+        overflow-x: scroll;
+      }
+    }
     .table-header {
       margin: 10px 0 20px;
     }

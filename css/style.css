@@ -8563,6 +8563,9 @@ footer {
         margin: 2rem auto 0;
         padding: 1rem;
         max-width: 87%; } }
+    @media only screen and (max-width: 991px) {
+      .table-content .table-container .table-wrap {
+        overflow-x: scroll; } }
     .table-content .table-container .table-header {
       margin: 10px 0 20px; }
     .table-content .table-container table {
