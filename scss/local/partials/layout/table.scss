@@ -1,27 +1,25 @@
 .table {
   width: 100%;
-  margin-bottom: 1rem;
   color: $body-color;
   @include radius(10px);
+  border-collapse: collapse;
   &.is-border {
-    border: 1px solid $border-light;
+    tr {
+      border: 1px solid $border-light;
+    }
   }
 }
 .table td,
 .table th {
-  border-bottom: 1px solid $border-light;
-  padding: 0.5rem 1rem;
-  vertical-align: middle;
-  background: transparent;
-  @include transition(all 0.4s ease);
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid $border-light;
 }
 .table thead th {
   //   vertical-align: bottom;
-  padding: 0.5rem 1rem;
   border-bottom: 1px solid $border-light;
   background-color: $bg-color;
   color: $heading-color;
-  font-weight: 600;
   text-transform: capitalize;
 }
 .table tbody {
@@ -46,7 +44,7 @@
 }
 .table-sm td,
 .table-sm th {
-  padding: 0.15rem 1rem;
+  padding: 0.3rem;
 }
 
 .table-bordered td,
@@ -99,8 +97,10 @@
   }
 }
 .table-responsive {
+  // border: 1px solid $border-light;
   display: block;
   width: 100%;
+  // @include radius(10px);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }

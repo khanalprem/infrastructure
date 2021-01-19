@@ -11,13 +11,40 @@
       padding: 1rem;
       max-width: 87%;
     }
-    .table-wrap-content {
-      @media #{$breakpoint-lg} {
-        overflow-x: scroll;
-      }
-    }
     .table-header {
       margin: 10px 0 20px;
+      .map-tools {
+        @media #{$breakpoint-xl} {
+          @include flex-direction-column(column);
+          padding: 0;
+
+          .left,
+          .right {
+            padding: 10px 0;
+            width: 100%;
+          }
+
+          .left {
+            @include justify-content-between;
+            border-bottom: 1px solid $border-light;
+
+            .map-view {
+              display: block;
+            }
+          }
+        }
+        @media #{$breakpoint-sm} {
+          .right {
+            @include flex-direction-column(column);
+            .inline-row {
+              width: 100%;
+              margin-bottom: 8px;
+              margin-right: 0;
+              @include justify-content-start;
+            }
+          }
+        }
+      }
     }
     table {
       background: $white-color;

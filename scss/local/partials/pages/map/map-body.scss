@@ -1,284 +1,284 @@
 .map-content-wrap {
-    .map-header {
-        position: relative;
-        background: $white-color;
+  .map-header {
+    position: relative;
+    background: $white-color;
+    width: 100%;
+    @include display-flex(flex);
+    border-bottom: 1px solid $border-color;
+  }
+
+  .map-body {
+    height: calc(100% - 62px);
+    @include display-flex(flex);
+
+    // @media #{$breakpint }
+    .map-container {
+      width: 100%;
+      height: 100%;
+
+      #map-content {
         width: 100%;
-        @include display-flex(flex);
-        border-bottom: 1px solid $border-color;
-
-        .map-tools {
-            padding: 10px 20px;
-            width: 100%;
-            @include display-flex(flex);
-            @include align-items-center;
-            @include justify-content-between;
-
-            @media #{$breakpoint-lg-desktop} {
-                padding: 5px 15px;
-            }
-
-            .map-view {
-                display: none;
-
-                a {
-                    i {
-                        color: $primary-color;
-                    }
-                }
-            }
-
-            @media #{$breakpoint-md} {
-                @include flex-direction-column(column);
-                padding: 0;
-
-                .left,
-                .right {
-                    padding: 10px 20px;
-                    width: 100%;
-                }
-
-                .left {
-                    @include justify-content-between;
-                    border-bottom: 1px solid $border-light;
-                    padding: 5px 20px;
-
-                    .map-view {
-                        display: block;
-                    }
-                }
-            }
-
-            .left,
-            .right {
-                @include display-flex(flex);
-                @include align-items-center;
-            }
-
-
-            .custom-select {
-                width: 170px;
-                min-width: 170px;
-
-                @media #{$breakpoint-desktop} {
-                    width: 160px;
-                    min-width: 160px;
-                }
-
-                @media #{$breakpoint-md} {
-                    width: 100%;
-                    max-width: 160px;
-                    min-width: auto;
-                }
-
-                &:not(:last-child) {
-                    margin-right: 8px;
-
-                    @media #{$breakpoint-sm} {
-                        margin-right: 0;
-                    }
-                }
-
-            }
-        }
+        height: 100%;
+      }
     }
 
-    .map-body {
-        height: calc(100% - 62px);
+    .infrastructure-item-details {
+      padding: 25px;
+      background: #ffffff;
+      width: 450px;
+      border-left: 1px solid $border-color;
+      display: none;
+      height: 100%;
+      @include animation(opacity 0.4s ease);
+
+      @media #{$breakpoint-lg-desktop} {
+        height: calc(100vh - 130px);
+      }
+
+      &.active {
+        display: block;
+        @include animation(opacity 0.4s ease);
+      }
+
+      @media #{$breakpoint-desktop} {
+        padding: 20px;
+        width: 360px;
+      }
+
+      .infra-title {
+        margin-bottom: 25px;
         @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-between;
 
-        // @media #{$breakpint }
-        .map-container {
-            width: 100%;
-            height: 100%;
-
-            #map-content {
-                width: 100%;
-                height: 100%;
-            }
+        @media #{$breakpoint-desktop} {
+          margin-bottom: 18px;
         }
 
-        .infrastructure-item-details {
-            padding: 25px;
-            background: #ffffff;
-            width: 450px;
-            border-left: 1px solid $border-color;
-            display: none;
-            height: 100%;
-            @include animation(opacity .4s ease);
+        .infra-details-close {
+          width: 35px;
+          height: 35px;
+          line-height: 45px;
+          text-align: center;
+          @include radius(50%);
+          border: 1px solid $grey-light;
+          background: $bg-color;
+          cursor: pointer;
+          @include transition(all 0.4s ease);
 
-            @media #{$breakpoint-lg-desktop} {
-                height: calc(100vh - 130px);
-            }
+          i {
+            color: $text-color;
+          }
 
-            &.active {
-                display: block;
-                @include animation(opacity .4s ease);
+          @media #{$breakpoint-desktop} {
+            width: 25px;
+            height: 25px;
+            line-height: 35px;
+          }
+
+          &:hover {
+            background: $white-color;
+            border: 1px solid $secondary-color;
+
+            i {
+              color: $secondary-color;
             }
+          }
+        }
+      }
+
+      .infra-slider {
+        padding-bottom: 10px;
+
+        @media #{$breakpoint-md} {
+          max-width: 500px;
+        }
+
+        &.slider {
+          .slick-dots {
+            @include justify-content-start;
+            bottom: -10px;
+          }
+        }
+
+        .infra-slider-item {
+          figure {
+            @include radius(10px);
+            height: 230px;
 
             @media #{$breakpoint-desktop} {
-                padding: 20px;
-                width: 360px;
+              height: 180px;
             }
 
-            .infra-title {
-                margin-bottom: 25px;
-                @include display-flex(flex);
-                @include align-items-center;
-                @include justify-content-between;
-
-                @media #{$breakpoint-desktop} {
-                    margin-bottom: 18px;
-                }
-
-                .infra-details-close {
-                    width: 35px;
-                    height: 35px;
-                    line-height: 45px;
-                    text-align: center;
-                    @include radius(50%);
-                    border: 1px solid $grey-light;
-                    background: $bg-color;
-                    cursor: pointer;
-                    @include transition(all .4s ease);
-
-                    i {
-                        color: $text-color;
-                    }
-
-                    @media #{$breakpoint-desktop} {
-                        width: 25px;
-                        height: 25px;
-                        line-height: 35px;
-                    }
-
-                    &:hover {
-                        background: $white-color;
-                        border: 1px solid $secondary-color;
-
-                        i {
-                            color: $secondary-color;
-                        }
-                    }
-                }
-            }
-
-            .infra-slider {
-                padding-bottom: 10px;
-
-                @media #{$breakpoint-md} {
-                    max-width: 500px
-                }
-
-                &.slider {
-                    .slick-dots {
-                        @include justify-content-start;
-                        bottom: -10px;
-                    }
-                }
-
-                .infra-slider-item {
-                    figure {
-                        @include radius(10px);
-                        height: 230px;
-
-                        @media #{$breakpoint-desktop} {
-                            height: 180px;
-                        }
-
-                        /*  @media #{$breakpoint-md} {
+            /*  @media #{$breakpoint-md} {
                             height: 300px;
                         } */
 
-                        @media #{$breakpoint-md} {
-                            height: 250px;
-                        }
-
-                        img {
-                            @include radius(10px);
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            object-position: center;
-                        }
-                    }
-                }
+            @media #{$breakpoint-md} {
+              height: 250px;
             }
 
-            ul.infra-details {
-                margin-top: 40px;
+            img {
+              @include radius(10px);
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+        }
+      }
 
-                li {
-                    @include display-flex(flex);
+      ul.infra-details {
+        margin-top: 40px;
 
-                    // @include align-items-center;
-                    &:not(:last-child) {
-                        margin-bottom: 5px;
-                    }
+        li {
+          @include display-flex(flex);
 
-                    span {
-                        font-size: 15px;
-                        color: $heading-color;
+          // @include align-items-center;
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
 
-                        &.label {
-                            font-weight: 700;
-                            flex: 0 0 40%;
-                        }
+          span {
+            font-size: 15px;
+            color: $heading-color;
 
-                        @media #{$breakpoint-desktop} {
-                            font-size: 13px;
-                        }
-                    }
-                }
+            &.label {
+              font-weight: 700;
+              flex: 0 0 40%;
             }
 
-            .desc {
-                margin-top: 30px;
-
-                @media #{$breakpoint-desktop} {
-                    margin-top: 25px;
-                }
-
-                h4 {
-                    font-family: $body-fonts;
-                    font-size: 20px;
-                    font-weight: 700;
-                }
-
-                p {
-                    margin-top: 15px;
-                    font-size: 15px;
-                    color: $heading-color;
-
-                    @media #{$breakpoint-desktop} {
-                        font-size: 13px;
-                        margin-top: 12px;
-                    }
-                }
+            @media #{$breakpoint-desktop} {
+              font-size: 13px;
             }
+          }
+        }
+      }
+
+      .desc {
+        margin-top: 30px;
+
+        @media #{$breakpoint-desktop} {
+          margin-top: 25px;
         }
 
+        h4 {
+          font-family: $body-fonts;
+          font-size: 20px;
+          font-weight: 700;
+        }
 
+        p {
+          margin-top: 15px;
+          font-size: 15px;
+          color: $heading-color;
+
+          @media #{$breakpoint-desktop} {
+            font-size: 13px;
+            margin-top: 12px;
+          }
+        }
+      }
     }
+  }
 }
+.map-tools {
+  padding: 10px 20px;
+  width: 100%;
+  @include display-flex(flex);
+  @include align-items-center;
+  @include justify-content-between;
+  &.pd-0 {
+    padding: 0;
+  }
+  @media #{$breakpoint-lg-desktop} {
+    padding: 5px 15px;
+  }
 
-
-.collapse-sidebar {
-    line-height: 0;
-    padding-right: 15px;
+  .map-view {
+    display: none;
 
     a {
-        i {
-            color: $text-color;
-        }
+      i {
+        color: $primary-color;
+      }
+    }
+  }
 
-        &:hover {
-            i {
-                color: $secondary-color;
-            }
-        }
+  @media #{$breakpoint-md} {
+    @include flex-direction-column(column);
+    padding: 0;
+
+    .left,
+    .right {
+      padding: 10px 20px;
+      width: 100%;
     }
 
-    @media #{$breakpoint-xl} {
-        display: none;
+    .left {
+      @include justify-content-between;
+      border-bottom: 1px solid $border-light;
+      padding: 5px 20px;
+
+      .map-view {
+        display: block;
+      }
     }
+  }
+
+  .left,
+  .right {
+    @include display-flex(flex);
+    @include align-items-center;
+  }
+  .custom-select {
+    width: 170px;
+    min-width: 170px;
+
+    @media #{$breakpoint-desktop} {
+      width: 160px;
+      min-width: 160px;
+    }
+
+    @media #{$breakpoint-md} {
+      width: 100%;
+      max-width: 160px;
+      min-width: auto;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+
+      @media #{$breakpoint-sm} {
+        margin-right: 0;
+      }
+    }
+  }
+  button,
+  .inline-row {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+.collapse-sidebar {
+  line-height: 0;
+  padding-right: 15px;
+
+  a {
+    i {
+      color: $text-color;
+    }
+
+    &:hover {
+      i {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  @media #{$breakpoint-xl} {
+    display: none;
+  }
 }

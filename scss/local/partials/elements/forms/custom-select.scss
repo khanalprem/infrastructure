@@ -13,7 +13,7 @@
   p {
     display: inline-block;
     width: 100%;
-    @include transition(all .4s ease);
+    @include transition(all 0.4s ease);
 
     &.selected-item {
       border: 1px solid $grey-light;
@@ -33,17 +33,17 @@
       @media #{$breakpoint-desktop} {
         height: 2.125rem;
         line-height: 2.125rem;
-        padding: 0 1.25rem 0 .875rem;
+        padding: 0 1.25rem 0 0.875rem;
       }
 
       span {
         font-weight: 400;
         padding-right: 15px;
-        @include transition(all .3s ease);
+        @include transition(all 0.3s ease);
       }
 
       i {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
 
       &::after {
@@ -51,7 +51,7 @@
         font-family: "Material Icons";
         position: absolute;
         text-transform: initial;
-        right: .5rem;
+        right: 0.5rem;
         top: 0;
         font-size: 22px;
         color: $heading-color;
@@ -63,7 +63,6 @@
         }
       }
     }
-
   }
 
   .select-list {
@@ -77,7 +76,7 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     background-color: $white-color;
     @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
-    @include transition(all .4s ease);
+    @include transition(all 0.4s ease);
     max-height: 0;
     @include radius(5px);
 
@@ -106,7 +105,7 @@
       visibility: hidden;
       opacity: 0;
       background: $white-color;
-      padding: .35rem 0.6125rem;
+      padding: 0.35rem 0.6125rem;
       @include display-flex(flex);
       @include justify-content-start;
       @include align-items-center;
@@ -146,7 +145,7 @@
 
         .custom-checkbox {
           width: 100%;
-          padding: .5rem;
+          padding: 0.5rem;
 
           label {
             width: 100%;
@@ -221,13 +220,7 @@
         opacity: 1;
 
         &:hover {
-          background: rgba($secondary-light, .4);
-
-          span {
-
-            font-weight: 600;
-            color: $heading-color;
-          }
+          background: rgba($secondary-light, 0.4);
 
           i {
             color: $primary-color;
@@ -264,7 +257,6 @@
       .select-list {
         display: none;
       }
-
     }
   }
 
@@ -277,7 +269,7 @@
         @media #{$breakpoint-desktop} {
           height: 2rem;
           line-height: 2rem;
-          font-size: .685rem;
+          font-size: 0.685rem;
         }
       }
     }
@@ -285,10 +277,9 @@
     .select-list {
       li {
         @media #{$breakpoint-desktop} {
-          font-size: .685rem;
+          font-size: 0.685rem;
         }
       }
     }
   }
-
 }
