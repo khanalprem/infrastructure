@@ -4,70 +4,71 @@
 @import "form-table";
 @import "logo";
 @import "footer";
-
+@import "activation_banner";
+@import "table-content";
 .section {
-    padding: 130px 0;
-    position: relative;
+  padding: 130px 0;
+  position: relative;
 
-    @media #{$breakpoint-desktop} {
-        padding: 110px 0;
+  @media #{$breakpoint-desktop} {
+    padding: 110px 0;
+  }
+
+  @media #{$breakpoint-sm} {
+    padding: 90px 0;
+  }
+
+  &.is-light-bg {
+    background: $body-color;
+  }
+
+  &.is-white {
+    background-color: $white-color;
+  }
+
+  &.is-bg {
+    background-color: $bg-color;
+  }
+
+  .section-shape {
+    position: absolute;
+
+    img {
+      width: 100%;
+
+      @media #{$breakpoint-xs} {
+        display: none;
+      }
     }
 
-    @media #{$breakpoint-sm} {
-        padding: 90px 0;
+    &.is-opacity {
+      opacity: 0.5;
     }
 
-    &.is-light-bg {
-        background: $body-color;
+    &.is-top-right {
+      top: 0;
+      right: 0;
     }
 
-    &.is-white {
-        background-color: $white-color;
+    &.is-bottom-right {
+      bottom: 0;
+      right: 0;
     }
 
-    &.is-bg {
-        background-color: $bg-color;
+    &.is-top-left {
+      top: 0;
+      left: 0;
     }
 
-    .section-shape {
-        position: absolute;
-
-        img {
-            width: 100%;
-
-            @media #{$breakpoint-xs} {
-                display: none;
-            }
-        }
-
-        &.is-opacity {
-            opacity: .5;
-        }
-
-        &.is-top-right {
-            top: 0;
-            right: 0;
-        }
-
-        &.is-bottom-right {
-            bottom: 0;
-            right: 0;
-        }
-
-        &.is-top-left {
-            top: 0;
-            left: 0;
-        }
-
-        &.is-bottom-left {
-            bottom: 100px;
-            left: 0;
-        }
-
-        &.is-middle-left {
-            left: 0;
-            top: 50%;
-            @include transform(translatey(-50%));
-        }
+    &.is-bottom-left {
+      bottom: 100px;
+      left: 0;
     }
+
+    &.is-middle-left {
+      left: 0;
+      top: 50%;
+      @include transform(translatey(-50%));
+    }
+  }
 }

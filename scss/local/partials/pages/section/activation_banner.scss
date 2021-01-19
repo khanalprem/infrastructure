@@ -1,0 +1,55 @@
+.top-banner-action-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1111111;
+  .top-banner-action {
+    padding: 8px 0;
+    background: $primary-light;
+    color: $heading-color;
+    @include display-flex(flex);
+    @include align-items-center;
+    @include justify-content-center;
+    text-align: center;
+    @include animation(opacity 0.5s ease);
+    p {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    button {
+      margin-left: 40px;
+      min-height: 32px;
+      height: 32px;
+    }
+    &.final-activation {
+      background: $primary-color;
+      color: $white-color;
+      display: none;
+      p {
+        font-size: 15px;
+      }
+      a {
+        position: absolute;
+        right: 2rem;
+        top: 5px;
+        i {
+          color: $white-color;
+        }
+      }
+    }
+  }
+  &.active {
+    .top-banner-action {
+      &.final-activation {
+        display: block;
+      }
+      &.initial-activation {
+        display: none;
+      }
+    }
+  }
+  &.close {
+    display: none;
+  }
+}

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- SOCIAL MEDIA META -->
     <meta property="og:description" content="Blue Infrastructures " />
@@ -27,247 +29,273 @@
     <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32" />
 
     <!-- stylesheet start -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    />
     <link rel="stylesheet" href="css/all.css" type="text/css" />
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/slick.css" type="text/css" />
     <link rel="stylesheet" href="css/slick-theme.css" type="text/css" />
     <link rel="stylesheet" href="css/flaticon.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" type="text/css" />
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/style.css"
+      type="text/css"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- header -->
     <header class="site-header is-fixed is-light is-border">
-        <div class="container-fluid">
-            <div class="header-in">
-                <!-- /* logo */ -->
-                <a class="logo is-dark" href="home.html">
-                    <img class="logo-dark" src="img/logo.png" alt="logo-dark" />
-                    <img class="logo-white" src="img/logo-white.png" alt="logo-white" />
-                </a>
+      <div class="container-fluid">
+        <div class="header-in">
+          <!-- /* logo */ -->
+          <a class="logo is-dark" href="home.html">
+            <img class="logo-dark" src="img/logo.png" alt="logo-dark" />
+            <img class="logo-white" src="img/logo-white.png" alt="logo-white" />
+          </a>
 
-                <!-- main-navigation -->
-                <div class="main-navigation">
-                    <ul class="menu-collapse">
-                        <li><a href="about.html">
-                                <span>About</span>
-                            </a></li>
-                        <li><a href=map.html class="call-to-action">
-                                <span>Map</span>
-                            </a></li>
-                    </ul>
-                </div>
-            </div>
+          <!-- main-navigation -->
+          <div class="main-navigation">
+            <ul class="menu-collapse">
+              <li>
+                <a href="about.html">
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a href="map.html" class="call-to-action">
+                  <span>Map</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </header>
 
     <section class="map-content">
-        <!--  map-aside -->
-        <aside class="map-aside">
-            <!-- top-section -->
-            <div class="body">
-                <div class="top-section">
-                    <div class="title">
-                        <h3>Featured</h3>
-                        <a href="#/" class="view-all common-link is-auto is-clear is-icon">
-                            <span>View all</span>
-                            <i class="material-icons is-ml">chevron_right</i>
-                        </a>
-                    </div>
-                </div>
-                <!-- mid-section -->
-                <div class="mid-section">
-                    <ul class="infrastructure-list">
-                        <li class="infrastructures-item active">
-                            <a href="#/">
-                                <figure>
-                                    <img src="img/home/image-5.jpg" alt="infra-pic" />
-                                    <div class="pic-info">
-                                        <span class="title">Ancient spout</span>
-                                        <span class="location">Sundhara, Kathmandu</span>
-                                    </div>
-                                </figure>
-                            </a>
-                        </li>
-                        <li class="infrastructures-item">
-                            <a href="#/">
-                                <figure>
-                                    <img src="img/home/image-4.jpg" alt="infra-pic" />
-                                    <div class="pic-info">
-                                        <span class="title">River</span>
-                                        <span class="location">Sundarijal, Kathmandu</span>
-                                    </div>
-                                </figure>
-                            </a>
-                        </li>
-                        <li class="infrastructures-item">
-                            <a href="#/">
-                                <figure>
-                                    <img src="img/home/image-5.jpg" alt="infra-pic" />
-                                    <div class="pic-info">
-                                        <span class="title">Durbar Square</span>
-                                        <span class="location">Durbar Marg, Kathmandu</span>
-                                    </div>
-                                </figure>
-                            </a>
-                        </li>
-                        <li class="infrastructures-item">
-                            <a href="#/">
-                                <figure>
-                                    <img src="img/home/intro-img.png" alt="infra-pic" />
-                                    <div class="pic-info">
-                                        <span class="title">Kesarmahal Ancient Spot</span>
-                                        <span class="location">Thamel, Kathmandu</span>
-                                    </div>
-                                </figure>
-                            </a>
-                        </li>
-                        <li class="infrastructures-item">
-                            <a href="#/">
-                                <figure>
-                                    <img src="img/home/image-5.jpg" alt="infra-pic" />
-                                    <div class="pic-info">
-                                        <span class="title">River</span>
-                                        <span class="location">Sundarijal, Kathmandu</span>
-                                    </div>
-                                </figure>
-                            </a>
-                        </li>
-                        <li class="infrastructures-item">
-                            <a href="#/">
-                                <figure>
-                                    <img src="img/home/image-4.jpg" alt="infra-pic" />
-                                    <div class="pic-info">
-                                        <span class="title">River</span>
-                                        <span class="location">Sundarijal, Kathmandu</span>
-                                    </div>
-                                </figure>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+      <!--  map-aside -->
+      <aside class="map-aside">
+        <!-- top-section -->
+        <div class="body">
+          <div class="top-section">
+            <div class="title">
+              <h3>Featured</h3>
+              <a
+                href="#/"
+                class="view-all common-link is-auto is-clear is-icon"
+              >
+                <span>View all</span>
+                <i class="material-icons is-ml">chevron_right</i>
+              </a>
             </div>
-        </aside>
+          </div>
+          <!-- mid-section -->
+          <div class="mid-section">
+            <ul class="infrastructure-list">
+              <li class="infrastructures-item active">
+                <a href="#/">
+                  <figure>
+                    <img src="img/home/image-5.jpg" alt="infra-pic" />
+                    <div class="pic-info">
+                      <span class="title">Ancient spout</span>
+                      <span class="location">Sundhara, Kathmandu</span>
+                    </div>
+                  </figure>
+                </a>
+              </li>
+              <li class="infrastructures-item">
+                <a href="#/">
+                  <figure>
+                    <img src="img/home/image-4.jpg" alt="infra-pic" />
+                    <div class="pic-info">
+                      <span class="title">River</span>
+                      <span class="location">Sundarijal, Kathmandu</span>
+                    </div>
+                  </figure>
+                </a>
+              </li>
+              <li class="infrastructures-item">
+                <a href="#/">
+                  <figure>
+                    <img src="img/home/image-5.jpg" alt="infra-pic" />
+                    <div class="pic-info">
+                      <span class="title">Durbar Square</span>
+                      <span class="location">Durbar Marg, Kathmandu</span>
+                    </div>
+                  </figure>
+                </a>
+              </li>
+              <li class="infrastructures-item">
+                <a href="#/">
+                  <figure>
+                    <img src="img/home/intro-img.png" alt="infra-pic" />
+                    <div class="pic-info">
+                      <span class="title">Kesarmahal Ancient Spot</span>
+                      <span class="location">Thamel, Kathmandu</span>
+                    </div>
+                  </figure>
+                </a>
+              </li>
+              <li class="infrastructures-item">
+                <a href="#/">
+                  <figure>
+                    <img src="img/home/image-5.jpg" alt="infra-pic" />
+                    <div class="pic-info">
+                      <span class="title">River</span>
+                      <span class="location">Sundarijal, Kathmandu</span>
+                    </div>
+                  </figure>
+                </a>
+              </li>
+              <li class="infrastructures-item">
+                <a href="#/">
+                  <figure>
+                    <img src="img/home/image-4.jpg" alt="infra-pic" />
+                    <div class="pic-info">
+                      <span class="title">River</span>
+                      <span class="location">Sundarijal, Kathmandu</span>
+                    </div>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
 
-        <!-- map-content -->
-        <main class="map-content-wrap">
-            <!-- map-header -->
-            <div class="map-header">
-                <div class="map-tools">
-                    <!-- search option -->
-                    <div class="left">
-                        <!--  <div class="collapse-sidebar">
+      <!-- map-content -->
+      <main class="map-content-wrap">
+        <!-- map-header -->
+        <div class="map-header">
+          <div class="map-tools">
+            <!-- search option -->
+            <div class="left">
+              <!--  <div class="collapse-sidebar">
                             <a href="#/"><i class="material-icons">menu</i></a>
                         </div> -->
 
-                        <div class="search-bar">
-                            <div class="search-wrap is-transparent">
-                                <span><i class="material-icons">search</i></span>
-                                <input type="text" class="form-control is-non-capitalize is-light"
-                                    placeholder="Search by location or keyword" />
-                            </div>
-                        </div>
-
-                        <div class="map-view">
-                            <a href="#"><i class="material-icons">map</i></a>
-                        </div>
-                    </div>
-
-                    <!-- select-options -->
-                    <div class="right">
-                        <div class="custom-select is-bg">
-                            <p class="selected-item">
-                                <span>Type</span>
-                            </p>
-                            <ul class="select-list left-dropdown">
-                                <li><span>Type 1</span></li>
-                                <li><span>Type 2</span></li>
-                                <li><span>Type 3</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="custom-select is-bg">
-                            <p class="selected-item">
-                                <span>Status</span>
-                            </p>
-                            <ul class="select-list left-dropdown">
-                                <li><span>Status 1</span></li>
-                                <li><span>Status 2</span></li>
-                                <li><span>Status 3</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="custom-select is-bg">
-                            <p class="selected-item">
-                                <span>Ward</span>
-                            </p>
-                            <ul class="select-list left-dropdown">
-                                <li><span>Ward 1</span></li>
-                                <li><span>Ward 2</span></li>
-                                <li><span>Ward 3</span></li>
-                            </ul>
-                        </div>
-                    </div>
+              <div class="search-bar">
+                <div class="search-wrap is-transparent">
+                  <span><i class="material-icons">search</i></span>
+                  <input
+                    type="text"
+                    class="form-control is-non-capitalize is-light"
+                    placeholder="Search by location or keyword"
+                  />
                 </div>
+              </div>
+
+              <div class="map-view">
+                <a href="#"><i class="material-icons">map</i></a>
+              </div>
             </div>
 
-            <!-- map-body-->
-            <div class="map-body">
-                <div class="map-container">
-                    <div id="map-content"></div>
-                </div>
-                <div class="infrastructure-item-details is-overflow no-scrollbar">
-                    <div class="infra-title">
-                        <h3>Ancient Spout</h3>
-                        <span class="infra-details-close"><i class="material-icons">close</i></span>
-                    </div>
-                    <div class="infra-slider slider is-right-nav is-dark-nav is-sm">
-                        <div class="infra-slider-item">
-                            <figure><img src="./img/home/image-5.jpg" alt="pp" /></figure>
-                        </div>
-                        <div class="infra-slider-item">
-                            <figure><img src="./img/home/image-4.jpg" alt="pp" /></figure>
-                        </div>
-                        <div class="infra-slider-item">
-                            <figure><img src="./img/home/image-5.jpg" alt="pp" /></figure>
-                        </div>
-                    </div>
-                    <ul class="infra-details">
-                        <li>
-                            <span class="label">Type</span>
-                            <span>Heritage</span>
-                        </li>
-                        <li>
-                            <span class="label">Status</span>
-                            <span>Unknown </span>
-                        </li>
-                        <li>
-                            <span class="label">Location</span>
-                            <span>Sundhara, Kathmandu, 44600</span>
-                        </li>
-                        <li>
-                            <span class="label">Established date</span>
-                            <span> 1930 B.S.</span>
-                        </li>
-                    </ul>
-                    <div class="desc">
-                        <h4>Description</h4>
-                        <p>
-                            Sundhara (Nuga hiti) is famous for its gold plating and provides
-                            pure water for the rain god Rato Machhendranath during the
-                            chariot festival every 12 years. It is increasingly important to
-                            "renters," or migrants from rural areas who have moved to
-                            Kathmandu to make money or send their children to school....Read
-                            more
-                        </p>
-                    </div>
-                </div>
+            <!-- select-options -->
+            <div class="right">
+              <div class="custom-select is-bg">
+                <p class="selected-item">
+                  <span>Type</span>
+                </p>
+                <ul class="select-list left-dropdown">
+                  <li><span>Type 1</span></li>
+                  <li><span>Type 2</span></li>
+                  <li><span>Type 3</span></li>
+                </ul>
+              </div>
+
+              <div class="custom-select is-bg">
+                <p class="selected-item">
+                  <span>Status</span>
+                </p>
+                <ul class="select-list left-dropdown">
+                  <li><span>Status 1</span></li>
+                  <li><span>Status 2</span></li>
+                  <li><span>Status 3</span></li>
+                </ul>
+              </div>
+
+              <div class="custom-select is-bg">
+                <p class="selected-item">
+                  <span>Ward</span>
+                </p>
+                <ul class="select-list left-dropdown">
+                  <li><span>Ward 1</span></li>
+                  <li><span>Ward 2</span></li>
+                  <li><span>Ward 3</span></li>
+                </ul>
+              </div>
             </div>
-        </main>
+          </div>
+        </div>
+
+        <!-- map-body-->
+        <div class="map-body">
+          <div class="map-container">
+            <div id="map-content"></div>
+          </div>
+          <div class="infrastructure-item-details is-overflow no-scrollbar">
+            <div class="infra-title">
+              <h3>Ancient Spout</h3>
+              <span class="infra-details-close"
+                ><i class="material-icons">close</i></span
+              >
+            </div>
+            <div class="infra-slider slider is-right-nav is-dark-nav is-sm">
+              <div class="infra-slider-item">
+                <figure><img src="./img/home/image-3.jpg" alt="pp" /></figure>
+              </div>
+              <div class="infra-slider-item">
+                <figure><img src="./img/home/image-4.jpg" alt="pp" /></figure>
+              </div>
+              <div class="infra-slider-item">
+                <figure><img src="./img/home/image-5.jpg" alt="pp" /></figure>
+              </div>
+            </div>
+            <ul class="infra-details">
+              <li>
+                <span class="label">Type</span>
+                <span>Heritage</span>
+              </li>
+              <li>
+                <span class="label">Status</span>
+                <span>Unknown </span>
+              </li>
+              <li>
+                <span class="label">Location</span>
+                <span>Sundhara, Kathmandu, 44600</span>
+              </li>
+              <li>
+                <span class="label">Established date</span>
+                <span> 1930 B.S.</span>
+              </li>
+            </ul>
+            <div class="desc">
+              <h4>Description</h4>
+              <p>
+                Sundhara (Nuga hiti) is famous for its gold plating and provides
+                pure water for the rain god Rato Machhendranath during the
+                chariot festival every 12 years. It is increasingly important to
+                "renters," or migrants from rural areas who have moved to
+                Kathmandu to make money or send their children to school....Read
+                more
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
     </section>
 
     <!-- Jquery Core Js -->
@@ -278,18 +306,17 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
     <script src="js/blue_infra.js"></script>
     <script>
-        // TO MAKE THE MAP APPEAR YOU MUST
-        // ADD YOUR ACCESS TOKEN FROM
-        // https://account.mapbox.com
-        mapboxgl.accessToken =
-            "pk.eyJ1IjoiZ2VvbWF0dXBlbiIsImEiOiJja2E5bDFwb2swdHNyMnNvenZxa2Vpeml2In0.fCStqdwmFYFP-cUvb5vMCw";
-        var map = new mapboxgl.Map({
-            container: "map-content", // container id
-            style: "mapbox://styles/mapbox/light-v10", // style URL
-            center: [83.989834, 28.219089], // starting position [lng, lat]
-            zoom: 12, // starting zoom
-        });
+      // TO MAKE THE MAP APPEAR YOU MUST
+      // ADD YOUR ACCESS TOKEN FROM
+      // https://account.mapbox.com
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZ2VvbWF0dXBlbiIsImEiOiJja2E5bDFwb2swdHNyMnNvenZxa2Vpeml2In0.fCStqdwmFYFP-cUvb5vMCw";
+      var map = new mapboxgl.Map({
+        container: "map-content", // container id
+        style: "mapbox://styles/mapbox/light-v10", // style URL
+        center: [83.989834, 28.219089], // starting position [lng, lat]
+        zoom: 12, // starting zoom
+      });
     </script>
-</body>
-
+  </body>
 </html>
