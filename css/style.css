@@ -1127,14 +1127,14 @@ h6 {
     opacity: 0;
     background: rgba(0, 0, 0, 0.7); }
   100% {
-    opacity: .7;
+    opacity: 0.7;
     background: rgba(0, 0, 0, 0.6); } }
 @keyframes slowRevealationBg {
   0% {
     opacity: 0;
     background: rgba(0, 0, 0, 0.7); }
   100% {
-    opacity: .7;
+    opacity: 0.7;
     background: rgba(0, 0, 0, 0.6); } }
 @-webkit-keyframes dash {
   0% {
@@ -1260,6 +1260,16 @@ h6 {
   to {
     -webkit-mask-position: 100% 0;
     mask-position: 100% 0; } }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 .is-overflow {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -4943,6 +4953,18 @@ ul.demo-list {
     transition: width 0.4s ease-in-out; }
   .link-border-anim:hover::after {
     width: 100%; }
+
+.loader {
+  border: 16px solid #F5F5F5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  border-top: 16px solid #E4B148;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite; }
 
 .container {
   width: 100%;

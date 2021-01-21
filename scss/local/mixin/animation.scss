@@ -64,7 +64,6 @@
   }
 }
 
-
 @keyframes scrollup {
   0% {
     transform: translateY(0);
@@ -99,7 +98,6 @@
   to {
     right: calc(100% + 100px);
   }
-
 }
 
 @keyframes shooting1 {
@@ -133,8 +131,6 @@
     opacity: 0;
   }
 }
-
-
 
 @-webkit-keyframes jump {
   0% {
@@ -251,7 +247,6 @@
     transform: rotate(90deg);
   }
 }
-
 
 @-webkit-keyframes scale-upOne {
   0% {
@@ -813,28 +808,27 @@
   }
 }
 
-
 @-webkit-keyframes slowRevealationBg {
   0% {
     opacity: 0;
-    background: rgba($body-color, .7)
+    background: rgba($body-color, 0.7);
   }
 
   100% {
-    opacity: .7;
-    background: rgba($body-color, .6)
+    opacity: 0.7;
+    background: rgba($body-color, 0.6);
   }
 }
 
 @keyframes slowRevealationBg {
   0% {
     opacity: 0;
-    background: rgba($body-color, .7)
+    background: rgba($body-color, 0.7);
   }
 
   100% {
-    opacity: .7;
-    background: rgba($body-color, .6)
+    opacity: 0.7;
+    background: rgba($body-color, 0.6);
   }
 }
 
@@ -842,7 +836,6 @@
   0% {
     stroke-dasharray: 140 540;
     stroke-dashoffset: -474;
-
   }
 
   100% {
@@ -868,14 +861,12 @@
     -webkit-box-shadow: inset 0 0 50px $bg-color;
     box-shadow: inset 0 0 50px $bg-color;
     @include transformScale(1.2);
-
   }
 
   100% {
     @include transformScale(1);
     -webkit-box-shadow: inset 0 0 0px transparent;
     box-shadow: inset 0 0 0px transparent;
-
   }
 }
 
@@ -913,8 +904,6 @@
     stroke: $white-color;
   }
 }
-
-
 
 @keyframes textDraw {
   0% {
@@ -1016,5 +1005,23 @@
   to {
     -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
