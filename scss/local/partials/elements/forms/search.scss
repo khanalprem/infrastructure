@@ -3,6 +3,11 @@
   @include justify-content-end;
   @include align-items-center;
 
+  &.is-full {
+    .search-wrap {
+      max-width: 100%;
+    }
+  }
   .search-wrap {
     @include display-flex(flex);
     @include justify-content-between;
@@ -101,12 +106,6 @@
       svg {
         font-size: 1.5rem;
       }
-    }
-  }
-
-  &.is-full {
-    .search-wrap {
-      max-width: 100%;
     }
   }
 }

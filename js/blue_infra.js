@@ -142,13 +142,16 @@
   selectToggle();
 
   function customDropdown() {
-    $(".custom-dropdown a.dropdown-link").on("click", function (e) {
-      e.preventDefault();
-      $(this).closest(".custom-dropdown").toggleClass("active");
-      // $(this).children('ul.custom-dropdown-menu').slideToggle(300);
-    });
+    $(".custom-dropdown a.dropdown-link, .custom-dropdown .search-bar").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(this).closest(".custom-dropdown").toggleClass("active");
+        // $(this).children('ul.custom-dropdown-menu').slideToggle(300);
+      }
+    );
 
-    /* $(document).mouseup(function (e) {
+    /*  $(document).mouseup(function (e) {
       var container = $(".custom-dropdown-menu");
       // If the target of the click isn't the container
       if (!container.is(e.target) && container.has(e.target).length === 0) {
