@@ -7799,26 +7799,31 @@ footer.site-footer {
 .pagination {
   display: flex;
   align-items: center; }
-  .pagination .page-item:first-child .page-link {
+  .pagination .page-item .page-link:first-child, .pagination .page-item .page-link:last-child {
     margin-left: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px; }
+    width: 100px;
+    text-align: center; }
+    @media only screen and (max-width: 1440px) {
+      .pagination .page-item .page-link:first-child, .pagination .page-item .page-link:last-child {
+        width: 80px; } }
+  .pagination .page-item .page-link:first-child {
+    border-right: 0; }
   .pagination .page-item .page-link {
     position: relative;
     display: block;
-    padding: .5rem .75rem;
+    padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #007bff;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    transition: all .4s ease; }
+    color: #E4B148;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    transition: all 0.4s ease; }
+    @media only screen and (max-width: 1440px) {
+      .pagination .page-item .page-link {
+        padding: 0.35rem 0.5rem; } }
     .pagination .page-item .page-link:hover, .pagination .page-item .page-link.active {
-      background: #738DFF;
-      color: white; }
-  .pagination .page-item:last-child .page-link {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px; }
+      background: #E4B148;
+      color: #ffffff; }
 
 .progress-step-wrap {
   padding: 20px 0; }
@@ -8572,37 +8577,22 @@ footer {
         max-width: 87%; } }
     .table-content .table-container .table-header {
       margin: 10px 0 20px; }
-      @media only screen and (max-width: 1199px) {
-        .table-content .table-container .table-header .map-tools {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          padding: 0; }
-          .table-content .table-container .table-header .map-tools .left,
-          .table-content .table-container .table-header .map-tools .right {
-            padding: 10px 0;
-            width: 100%; }
-          .table-content .table-container .table-header .map-tools .left {
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            border-bottom: 1px solid #e2e2e2; }
-            .table-content .table-container .table-header .map-tools .left .map-view {
-              display: block; } }
-      @media only screen and (max-width: 576px) {
-        .table-content .table-container .table-header .map-tools .right {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column; }
-          .table-content .table-container .table-header .map-tools .right .inline-row {
-            width: 100%;
-            margin-bottom: 8px;
-            margin-right: 0;
-            -webkit-box-pack: start;
-            -ms-flex-pack: start;
-            justify-content: flex-start; } }
+      .table-content .table-container .table-header .map-tools {
+        padding-left: 0;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .table-content .table-container .table-header .map-tools .right span {
+          white-space: nowrap; }
+        @media only screen and (max-width: 767px) {
+          .table-content .table-container .table-header .map-tools {
+            padding: 0; }
+            .table-content .table-container .table-header .map-tools .left,
+            .table-content .table-container .table-header .map-tools .right {
+              padding: 10px 0;
+              width: 100%; }
+            .table-content .table-container .table-header .map-tools .left {
+              border-bottom: 1px solid #e2e2e2; } }
     .table-content .table-container table {
       background: #ffffff; }
       .table-content .table-container table thead {
@@ -10292,6 +10282,8 @@ aside.admin-sidebar {
   justify-content: space-between; }
   .map-tools.pd-0 {
     padding: 0; }
+  .map-tools.pl-0 {
+    padding-left: 0; }
   @media only screen and (max-width: 1560px) {
     .map-tools {
       padding: 5px 15px; } }

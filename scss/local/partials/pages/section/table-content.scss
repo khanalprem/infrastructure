@@ -14,10 +14,15 @@
     .table-header {
       margin: 10px 0 20px;
       .map-tools {
-        @media #{$breakpoint-xl} {
-          @include flex-direction-column(column);
+        padding-left: 0;
+        @include justify-content-between;
+        .right {
+          span {
+            white-space: nowrap;
+          }
+        }
+        @media #{$breakpoint-md} {
           padding: 0;
-
           .left,
           .right {
             padding: 10px 0;
@@ -25,23 +30,7 @@
           }
 
           .left {
-            @include justify-content-between;
             border-bottom: 1px solid $border-light;
-
-            .map-view {
-              display: block;
-            }
-          }
-        }
-        @media #{$breakpoint-sm} {
-          .right {
-            @include flex-direction-column(column);
-            .inline-row {
-              width: 100%;
-              margin-bottom: 8px;
-              margin-right: 0;
-              @include justify-content-start;
-            }
           }
         }
       }
