@@ -7799,31 +7799,35 @@ footer.site-footer {
 .pagination {
   display: flex;
   align-items: center; }
-  .pagination .page-item .page-link:first-child, .pagination .page-item .page-link:last-child {
-    margin-left: 0;
-    width: 100px;
-    text-align: center; }
-    @media only screen and (max-width: 1440px) {
-      .pagination .page-item .page-link:first-child, .pagination .page-item .page-link:last-child {
-        width: 80px; } }
-  .pagination .page-item .page-link:first-child {
-    border-right: 0; }
+  .pagination .page-item .page-link {
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .pagination .page-item .page-link:first-child {
+      border-right: 0; }
   .pagination .page-item .page-link {
     position: relative;
-    display: block;
-    padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
     color: #E4B148;
     background-color: #ffffff;
     border: 1px solid #e2e2e2;
     transition: all 0.4s ease; }
-    @media only screen and (max-width: 1440px) {
-      .pagination .page-item .page-link {
-        padding: 0.35rem 0.5rem; } }
+    .pagination .page-item .page-link i {
+      color: #E4B148; }
     .pagination .page-item .page-link:hover, .pagination .page-item .page-link.active {
       background: #E4B148;
       color: #ffffff; }
+      .pagination .page-item .page-link:hover i, .pagination .page-item .page-link.active i {
+        color: #ffffff; }
 
 .progress-step-wrap {
   padding: 20px 0; }
