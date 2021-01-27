@@ -1,197 +1,197 @@
 .map-aside {
-    .body {
-        padding: 20px 25px;
-        padding-right: 15px;
+  .body {
+    padding: 20px 25px;
+    padding-right: 15px;
 
-        @media #{$breakpoint-desktop} {
-            padding: 15px 20px;
-            padding-right: 10px;
+    @media #{$breakpoint-desktop} {
+      padding: 15px 20px;
+      padding-right: 10px;
+    }
+
+    .top-section {
+      margin-bottom: 10px;
+
+      .title {
+        @include clear;
+
+        h3 {
+          float: left;
         }
 
-        .top-section {
-            margin-bottom: 10px;
+        a.view-all {
+          float: right;
 
-            .title {
-                @include clear;
+          @media #{$breakpoint-md} {
+            display: none;
+          }
+        }
+      }
+    }
 
-                h3 {
-                    float: left;
-                }
+    .mid-section {
+      ul {
+        &.infrastructure-list {
+          overflow-y: scroll;
+          height: calc(100vh - 135px);
+          padding-right: 8px;
 
-                a.view-all {
-                    float: right;
+          @media #{$breakpoint-desktop} {
+            height: calc(100vh - 120px);
+          }
 
-                    @media #{$breakpoint-md} {
-                        display: none;
-                    }
-                }
+          @media #{$breakpoint-md} {
+            height: calc(100vh - 240px);
+          }
+
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: $border-dark;
+          }
+
+          li.infrastructures-item {
+            &:not(:last-child) {
+              margin-bottom: 10px;
             }
-        }
 
-        .mid-section {
-            ul {
-                &.infrastructure-list {
-                    overflow-y: scroll;
-                    height: calc(100vh - 135px);
-                    padding-right: 8px;
+            a {
+              display: block;
+              cursor: pointer;
+
+              figure {
+                position: relative;
+                margin-bottom: 0;
+                height: 180px;
+                @include radius(10px);
+                @include transition(all 0.4s ease);
+
+                @media #{$breakpoint-desktop} {
+                  height: 160px;
+                }
+
+                @media #{$breakpoint-md} {
+                  height: 200px;
+                }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  @include transition(all 0.4s ease);
+                  background: rgba($heading-color, 0.2);
+                  @include radius(10px);
+                }
+
+                .pic-info {
+                  position: absolute;
+                  left: 20px;
+                  bottom: 15px;
+
+                  @media #{$breakpoint-desktop} {
+                    left: 15px;
+                    bottom: 10px;
+                  }
+
+                  span {
+                    display: block;
+
+                    &.title {
+                      font-size: 20px;
+                      font-weight: 700;
+                      margin-bottom: -2px;
+                      color: $white-color;
+                      text-transform: capitalize;
+                    }
+
+                    &.location {
+                      color: $white-color;
+                      font-size: 14px;
+                    }
 
                     @media #{$breakpoint-desktop} {
-                        height: calc(100vh - 120px);
+                      &.title {
+                        font-size: 18px;
+                      }
+
+                      &.location {
+                        font-size: 12px;
+                      }
                     }
-
-                    @media #{$breakpoint-md} {
-                        height: calc(100vh - 240px);
-                    }
-
-                    &::-webkit-scrollbar {
-                        width: 6px;
-                    }
-
-                    &::-webkit-scrollbar-track {
-                        background: transparent;
-                    }
-
-                    &::-webkit-scrollbar-thumb {
-                        background: $border-dark;
-                    }
-
-                    li.infrastructures-item {
-                        &:not(:last-child) {
-                            margin-bottom: 10px;
-                        }
-
-                        a {
-                            display: block;
-                            cursor: pointer;
-
-                            figure {
-                                position: relative;
-                                margin-bottom: 0;
-                                height: 180px;
-                                @include radius(10px);
-                                @include transition(all .4s ease);
-
-                                @media #{$breakpoint-desktop} {
-                                    height: 160px;
-                                }
-
-                                @media #{$breakpoint-md} {
-                                    height: 200px;
-                                }
-
-                                &::before {
-                                    content: '';
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    @include transition(all .4s ease);
-                                    background: rgba($heading-color, .2);
-                                }
-
-                                .pic-info {
-                                    position: absolute;
-                                    left: 20px;
-                                    bottom: 15px;
-
-                                    @media #{$breakpoint-desktop} {
-                                        left: 15px;
-                                        bottom: 10px;
-                                    }
-
-                                    span {
-                                        display: block;
-
-                                        &.title {
-                                            font-size: 20px;
-                                            font-weight: 700;
-                                            margin-bottom: -2px;
-                                            color: $white-color;
-                                            text-transform: capitalize;
-                                        }
-
-                                        &.location {
-                                            color: $white-color;
-                                            font-size: 14px;
-                                        }
-
-                                        @media #{$breakpoint-desktop} {
-                                            &.title {
-                                                font-size: 18px;
-                                            }
-
-                                            &.location {
-                                                font-size: 12px;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
-                                    object-position: center;
-                                    @include radius(10px);
-                                }
-                            }
-                        }
-
-                        &.active {
-                            figure {
-                                img {
-                                    border: 4px solid $primary-color;
-                                }
-                            }
-                        }
-
-                        &:hover {
-                            figure {
-                                &::before {
-                                    background: rgba($secondary-color, .2);
-                                }
-                            }
-
-                        }
-                    }
+                  }
                 }
-            }
-        }
-    }
 
-    .bottom-section {
-        height: calc(100vh - 82vh);
-        background: $white-color;
-        padding: 10px 20px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-
-        @media #{$breakpoint-lg-desktop} {
-            padding: 10px 12px;
-        }
-
-        .upgrade-premium {
-            margin-bottom: 20px;
-
-            @media #{$breakpoint-lg-desktop} {
-                margin-bottom: 10px;
-            }
-        }
-
-        .buttons {
-            button {
-                width: auto;
-                min-width: auto;
-                /*  font-size: .875rem;
-                @media #{$breakpoint-lg-desktop}{
-                    font-size: .75rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: center;
+                  @include radius(10px);
                 }
-                @media #{$breakpoint-md-desktop}{
-                    font-size: .585rem;
-                } */
+              }
             }
+
+            &.active {
+              figure {
+                img {
+                  border: 4px solid $primary-color;
+                }
+              }
+            }
+
+            &:hover {
+              figure {
+                &::before {
+                  background: rgba($secondary-color, 0.2);
+                }
+              }
+            }
+          }
         }
+      }
     }
+  }
+
+  .bottom-section {
+    background: rgba($heading-color, 0.4);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    ul.slider-arrow {
+      padding: 10px;
+      @include display-flex(flex);
+      @include justify-content-center;
+      li {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+        a {
+          padding: 6px;
+          @include radius(50%);
+          text-align: center;
+          @include display-flex(flex);
+          @include align-items-center;
+          border: 1px solid $white-color;
+          i {
+            color: $white-color;
+          }
+          &:hover {
+            border: 1px solid $secondary-color;
+            i {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
 }

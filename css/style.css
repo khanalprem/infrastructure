@@ -3445,7 +3445,29 @@ ul.social-list {
     -o-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    max-height: 0; }
+    max-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .custom-dropdown ul.custom-dropdown-menu::-webkit-scrollbar {
+      width: 4px;
+      background: #C0BFC4;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px; }
+    .custom-dropdown ul.custom-dropdown-menu::-webkit-scrollbar-track {
+      background-color: #C0BFC4;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px; }
+    .custom-dropdown ul.custom-dropdown-menu::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      background: #C9C9C9; }
     .custom-dropdown ul.custom-dropdown-menu::before {
       content: "";
       width: 0;
@@ -10046,7 +10068,7 @@ aside.admin-sidebar {
           .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item a figure {
             height: 200px; } }
         .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item a figure::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -10057,7 +10079,11 @@ aside.admin-sidebar {
           -o-transition: all 0.4s ease;
           -ms-transition: all 0.4s ease;
           transition: all 0.4s ease;
-          background: rgba(51, 51, 51, 0.2); }
+          background: rgba(51, 51, 51, 0.2);
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          border-radius: 10px; }
         .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item a figure .pic-info {
           position: absolute;
           left: 20px;
@@ -10096,30 +10122,41 @@ aside.admin-sidebar {
     .map-aside .body .mid-section ul.infrastructure-list li.infrastructures-item:hover figure::before {
       background: rgba(228, 177, 72, 0.2); }
 .map-aside .bottom-section {
-  height: calc(100vh - 82vh);
-  background: #ffffff;
-  padding: 10px 20px;
+  background: rgba(51, 51, 51, 0.4);
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 100%; }
-  @media only screen and (max-width: 1560px) {
-    .map-aside .bottom-section {
-      padding: 10px 12px; } }
-  .map-aside .bottom-section .upgrade-premium {
-    margin-bottom: 20px; }
-    @media only screen and (max-width: 1560px) {
-      .map-aside .bottom-section .upgrade-premium {
-        margin-bottom: 10px; } }
-  .map-aside .bottom-section .buttons button {
-    width: auto;
-    min-width: auto;
-    /*  font-size: .875rem;
-    @media only screen and (max-width: 1560px){
-        font-size: .75rem;
-    }
-    @media only screen and (max-width:1366px){
-        font-size: .585rem;
-    } */ }
+  .map-aside .bottom-section ul.slider-arrow {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .map-aside .bottom-section ul.slider-arrow li:not(:last-child) {
+      margin-right: 10px; }
+    .map-aside .bottom-section ul.slider-arrow li a {
+      padding: 6px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: 1px solid #ffffff; }
+      .map-aside .bottom-section ul.slider-arrow li a i {
+        color: #ffffff; }
+      .map-aside .bottom-section ul.slider-arrow li a:hover {
+        border: 1px solid #E4B148; }
+        .map-aside .bottom-section ul.slider-arrow li a:hover i {
+          color: #E4B148; }
 
 .map-content-wrap .map-header {
   position: relative;
