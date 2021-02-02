@@ -6,158 +6,158 @@
     overflow: hidden;
 } */
 .map-scroll {
-    overflow: scroll;
-    width: 350px;
-    height: 50vh;
-    background: $white-color;
-    border: 1px solid $border-dark;
-    z-index: 11;
-    top: 0;
-    left: 0;
-    @include transition(all .4s ease);
+  overflow: scroll;
+  width: 350px;
+  height: 50vh;
+  background: $white-color;
+  border: 1px solid $border-dark;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  @include transition(all 0.4s ease);
 }
 
 .absolute {
-    position: absolute;
-    width: 100px;
-    height: 50px;
-    background-color: orange;
-    left: 350px;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-color: orange;
+  left: 350px;
 }
 
 .map-content {
+  padding-top: 78px;
+  min-height: 100vh;
+  @include display-flex(flex);
+  align-items: stretch;
+
+  @media #{$breakpoint-md-desktop} {
+    padding-top: 65px;
+  }
+
+  @media #{$breakpoint-md} {
+    // height: initial;
+    @include flex-direction-column(column);
+  }
+
+  .map-aside {
+    width: 400px;
+    background: $white-color;
+    border: 1px solid $border-dark;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
     padding-top: 78px;
-    min-height: 100vh;
-    @include display-flex(flex);
-    align-items: stretch;
+    @include transition(all 0.4s ease);
+    height: 100vh;
+    @include animation(slowRevealation 0.4s ease);
 
-    @media #{$breakpoint-md-desktop} {
-        padding-top: 65px;
+    @media #{$breakpoint-lg-desktop} {
+      width: 350px;
+    }
+
+    @media #{$breakpoint-desktop} {
+      padding-top: 65px;
+      width: 300px;
     }
 
     @media #{$breakpoint-md} {
-        // height: initial;
-        @include flex-direction-column(column);
+      order: 2;
+      padding-top: 10px;
+      width: 100%;
+      height: auto;
+      position: relative;
+      border: 0;
+      display: block;
     }
 
-    .map-aside {
-        width: 400px;
-        background: $white-color;
-        border: 1px solid $border-dark;
-        position: fixed;
-        z-index: 11;
-        top: 0;
-        left: 0;
-        padding-top: 78px;
-        @include transition(all .4s ease);
-        height: 100vh;
-        @include animation(slowRevealation .4s ease);
+    &.active {
+      margin-left: -420px;
+    }
+  }
 
-        @media #{$breakpoint-lg-desktop} {
-            width: 350px;
-        }
+  .map-content-wrap {
+    width: calc(100% - 400px);
+    margin-left: 400px;
+    position: relative;
+    z-index: 1;
+    @include transition(all 0.4s ease);
+    @include animation(slowRevealation 0.4s ease);
 
-        @media #{$breakpoint-desktop} {
-            padding-top: 65px;
-            width: 300px;
-        }
-
-        @media #{$breakpoint-md} {
-            order: 2;
-            padding-top: 10px;
-            width: 100%;
-            height: auto;
-            position: relative;
-            border: 0;
-            display: block;
-        }
-
-        &.active {
-            margin-left: -420px;
-        }
-
+    @media #{$breakpoint-lg-desktop} {
+      width: calc(100% - 360px);
+      margin-left: 360px;
     }
 
-    .map-content-wrap {
-        width: calc(100% - 400px);
-        margin-left: 400px;
-        position: relative;
-        z-index: 1;
-        @include transition(all .4s ease);
-        @include animation(slowRevealation .4s ease);
-
-        @media #{$breakpoint-lg-desktop} {
-            width: calc(100% - 360px);
-            margin-left: 360px;
-        }
-
-        @media #{$breakpoint-desktop} {
-            width: calc(100% - 300px);
-            margin-left: 300px;
-        }
-
-        @media #{$breakpoint-md} {
-            width: calc(100% - 0px);
-            margin-left: 0;
-            order: 1;
-
-            .map-body {
-                display: none;
-            }
-        }
-
-        &.active {
-            margin-left: 0px;
-            width: 100%;
-        }
-
+    @media #{$breakpoint-desktop} {
+      width: calc(100% - 300px);
+      margin-left: 300px;
     }
 
     @media #{$breakpoint-md} {
-        &.toggle-card-body {
-            @include flex-direction-row(row);
+      width: calc(100% - 0px);
+      margin-left: 0;
+      order: 1;
 
-            .map-aside {
-                display: none !important;
-            }
-
-            .map-content-wrap {
-                .map-body {
-                    display: block;
-
-                    .map-container {
-                        display: none;
-                    }
-
-                    .infrastructure-item-details {
-                        &.active {
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: auto;
-                            z-index: 1111;
-                            top: 0;
-                            left: 0;
-                            background: $white-color;
-                            border-left: 0;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.toggle-map-body {
-            @include flex-direction-row(row);
-
-            .map-aside {
-                display: none;
-            }
-
-            .map-content-wrap {
-                .map-body {
-                    display: block;
-                }
-            }
-        }
+      .map-body {
+        display: none;
+      }
     }
+
+    &.active {
+      margin-left: 0px;
+      width: 100%;
+    }
+  }
+
+  @media #{$breakpoint-md} {
+    &.toggle-card-body {
+      @include flex-direction-row(row);
+
+      .map-aside {
+        display: none !important;
+      }
+
+      .map-content-wrap {
+        .map-body {
+          display: block;
+
+          .map-container {
+            display: none;
+          }
+          .chart-body {
+            display: none;
+          }
+          .infrastructure-item-details {
+            &.active {
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: auto;
+              z-index: 1111;
+              top: 0;
+              left: 0;
+              background: $white-color;
+              border-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.toggle-map-body {
+      @include flex-direction-row(row);
+
+      .map-aside {
+        display: none;
+      }
+
+      .map-content-wrap {
+        .map-body {
+          display: block;
+        }
+      }
+    }
+  }
 }

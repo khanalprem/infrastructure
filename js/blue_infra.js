@@ -1,5 +1,5 @@
 (function ($) {
-  "use strict";
+  ("use strict");
   var winWidth = $(window).width();
   var winHeight = $(window).innerHeight();
   var headHeight = $(".site-header").innerHeight();
@@ -416,6 +416,17 @@
   }
   toggle_card_body();
 
+  function pagination() {
+    $(".pagination .page-item").on("click", "a", function () {
+      if ($(this).closest("li").next().hasClass("active")) {
+        $(".pagination .page-item a").removeClass("active");
+      } else {
+        $(".pagination .page-item a").removeClass("active");
+      }
+      $(this).closest("a").addClass("active");
+    });
+  }
+  pagination();
   /* ---map-body functions */
 
   if (jQuery(".testimonial-slider").length > 0) {
@@ -443,4 +454,100 @@
       arrows: true,
     });
   }
+
+  //bar chart
+  var options = {
+    series: [
+      {
+        data: [200, 300, 448, 470, 240, 500, 600],
+      },
+    ],
+    colors: ["#E4B148"],
+    chart: {
+      type: "bar",
+      height: 200,
+    },
+    dataLabels: {
+      enabled: true,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    xaxis: {
+      categories: [
+        "Province-1",
+        "Province-2",
+        "Province-3",
+        "Province-4",
+        "Province-5",
+        "Province-6",
+        "Province-7",
+      ],
+    },
+  };
+
+  var chart = new ApexCharts(document.querySelector("#barchart"), options);
+  chart.render();
+
+  //pie area ApexCharts]
+  var options = {
+    series: [70, 68, 65],
+    colors: ["#feb019", "#ff4560", "#008ffb"],
+    chart: {
+      height: 150,
+      type: "donut",
+    },
+    labels: ["Province-1", "Province-2", "Province-3"],
+    dataLabels: {
+      enabled: false,
+    },
+    fill: {
+      opacity: 1,
+    },
+    stroke: {
+      width: 1,
+      colors: undefined,
+    },
+    yaxis: {
+      show: false,
+    },
+    legend: {
+      position: "right",
+    },
+    responsive: [
+      {
+        breakpoint: 1440,
+        options: {
+          chart: {
+            height: 1000,
+          },
+          legend: {
+            position: "right",
+          },
+        },
+      },
+    ],
+    plotOptions: {
+      polarArea: {
+        rings: {
+          strokeWidth: 0,
+        },
+      },
+    },
+    /*   theme: {
+      monochrome: {
+        enabled: true,
+        shadeTo: 'light',
+        shadeIntensity: 0.6
+      }
+    } */
+  };
+
+  var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
+  chart.render();
 })(window.jQuery);

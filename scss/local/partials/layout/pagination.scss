@@ -23,7 +23,9 @@
       i {
         color: $secondary-color;
       }
-      &:hover,
+      &:hover {
+        background: lighten($secondary-light, 10%);
+      }
       &.active {
         background: $secondary-color;
         color: $white-color;

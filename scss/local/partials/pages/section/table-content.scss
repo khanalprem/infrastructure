@@ -11,15 +11,18 @@
       padding: 1rem;
       max-width: 87%;
     }
+    @media #{$breakpoint-lg} {
+      max-width: 100%;
+    }
     .table-header {
       margin: 10px 0 20px;
       .map-tools {
         padding-left: 0;
         @include justify-content-between;
         .right {
-          span {
+          /* span {
             white-space: nowrap;
-          }
+          } */
         }
         @media #{$breakpoint-md} {
           padding: 0;

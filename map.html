@@ -46,6 +46,7 @@
     <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/slick.css" type="text/css" />
     <link rel="stylesheet" href="css/slick-theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/apexcharts.css" />
     <link rel="stylesheet" href="css/flaticon.css" type="text/css" />
     <link
       rel="stylesheet"
@@ -275,6 +276,40 @@
           <div class="map-container">
             <div id="map-content"></div>
           </div>
+
+          <div class="chart-body is-overflow">
+            <div class="row">
+              <div class="grid-xl-12 grd-lg-12">
+                <div class="dashboard-card is-light mb-15">
+                  <div class="card-header">
+                    <ul class="left">
+                      <h4>Bar Chart</h4>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div id="barchart"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-xl-12 grid-lg-12">
+                <div class="dashboard-card is-light">
+                  <div class="card-header">
+                    <ul class="left">
+                      <h4>Pie Chart</h4>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="grid-md-12">
+                        <div id="pie-chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="infrastructure-item-details is-overflow no-scrollbar">
             <div class="infra-title">
               <h3>Ancient Spout</h3>
@@ -331,6 +366,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
     <script src="js/map.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
     <script src="js/blue_infra.js"></script>
