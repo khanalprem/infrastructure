@@ -1,29 +1,33 @@
-.custom-tab, 
-.custom-option{
-    
-    .custom-tab-content, 
-    .option-tab-content{
-        padding:.6125rem;
+.custom-tab,
+.custom-option {
+
+    .custom-tab-content,
+    .option-tab-content {
+        padding: .6125rem;
+
         .tab-item,
-         .option-item{
+        .option-item {
             display: none;
             @include transition(all .4s ease);
             @include animation(opacity 1s ease);
-            &.current{
+
+            &.current {
                 display: block;
             }
         }
     }
 }
+
 ul.tab-list,
-ul.option-list{
+ul.option-list {
     @include display-flex(flex);
     @include justify-content-start;
     @include align-items-center;
     // @include flex-wrap(wrap);
-    margin:0;
-    li{
-        a{
+    margin: 0;
+
+    li {
+        a {
             position: relative;
             display: block;
             width: auto;
@@ -33,55 +37,65 @@ ul.option-list{
             @include transition(all .5s linear);
             border: 1px solid transparent;
             text-align: center;
-            @media #{$breakpoint-desktop}{
+
+            @media #{$breakpoint-desktop} {
                 padding: .35rem .5rem;
             }
         }
-        &:not(:last-child){
+
+        &:not(:last-child) {
             margin-right: .5rem;
         }
-        
+
     }
-    &.is-bg{
-        li{
-            a{
+
+    &.is-bg {
+        li {
+            a {
                 background-color: transparent;
                 @include radius(10px);
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     @include radius(7px);
                 }
+
                 &.current,
                 &:hover {
-                    i{
+                    i {
                         color: $secondary-color;
                     }
+
                     color: $secondary-color;
                 }
             }
+
             &.current {
-                a{
-                    color: $secondary-color;
+                a {
                     background-color: $secondary-light;
-                    i{
+
+                    i {
                         color: $secondary-color;
                     }
                 }
             }
         }
     }
-    &.is-shadow{
+
+    &.is-shadow {
         background: $white-color;
         @include box-shadow(0 0 70px $shadow-light);
         @include flex-wrap(nowrap);
-        li{
-            a{
+
+        li {
+            a {
                 text-transform: capitalize;
             }
         }
     }
-    &.is-border{
-        li{
-            a{
+
+    &.is-border {
+        li {
+            a {
                 &::after {
                     content: '';
                     position: absolute;
@@ -95,9 +109,11 @@ ul.option-list{
                     visibility: hidden;
                 }
             }
+
             &.current {
-                a{
+                a {
                     color: $heading-color;
+
                     &::after {
                         width: 100%;
                         opacity: 1;
@@ -105,54 +121,63 @@ ul.option-list{
                     }
                 }
             }
+
             &:hover {
-                a{
+                a {
                     color: $heading-color;
                 }
             }
         }
     }
-    &.is-icon{
-        li{
-            a{
+
+    &.is-icon {
+        li {
+            a {
                 background: $white-color;
                 width: 40px;
                 height: 40px;
                 @include display-flex(flex);
                 @include align-items-center;
                 @include justify-content-center;
-                i{
+
+                i {
                     font-size: 22px;
                     color: $border-color;
                 }
-                @media #{$breakpoint-desktop}{
-                   width: 32px;
-                   height: 32px;
-                   i{
-                       font-size: 20px;
-                   }      
+
+                @media #{$breakpoint-desktop} {
+                    width: 32px;
+                    height: 32px;
+
+                    i {
+                        font-size: 20px;
+                    }
                 }
             }
-            &.current{
+
+            &.current {
                 background: $yellow-color;
-                i{
+
+                i {
                     color: $primary-color;
                 }
             }
         }
     }
-    &.is-flex{
-        li{
+
+    &.is-flex {
+        li {
             flex: 0 0 45%;
             width: 45%;
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 margin-right: 0 !important;
             }
-            a{
+
+            a {
                 width: 100%;
             }
         }
     }
 
 }
-

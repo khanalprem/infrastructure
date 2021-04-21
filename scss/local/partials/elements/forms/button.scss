@@ -61,6 +61,7 @@ a.common-link,
   }
 
   &.is-icon {
+
     svg,
     i {
       color: $secondary-color;
@@ -160,6 +161,10 @@ a.common-link,
 
     i {
       color: $secondary-color;
+    }
+
+    span.svg-icon {
+      margin-left: .5rem;
     }
 
     &.is-dark {

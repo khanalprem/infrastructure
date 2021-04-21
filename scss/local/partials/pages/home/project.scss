@@ -1,0 +1,1320 @@
+.site-main {
+    margin: 100px auto;
+}
+
+.tags {
+
+    .tag-content {
+        @include display-flex(flex);
+        @include justify-content-start;
+        @include align-items-start;
+        @include flex-wrap(wrap);
+
+        a {
+            @include radius(24px);
+            cursor: pointer;
+            color: $grey-color;
+            font-weight: 600;
+            background-color: $bg-color;
+            padding: 2.5px .75rem;
+            // text-transform: capitalize;
+            color: $heading-color;
+            font-size: .775rem;
+
+            &:not(:last-child) {
+                margin-right: .6125rem;
+                margin-bottom: .6125rem;
+            }
+
+            @media #{$breakpoint-desktop} {
+                padding: 2.5px .75rem;
+
+                &:not(:last-child) {
+                    margin-right: .35rem;
+                    margin-bottom: .35rem;
+                }
+            }
+        }
+    }
+}
+
+ul {
+    &.info-list {
+
+        li {
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-start;
+            padding: 0 10px;
+            @include transition (all .5s ease-in-out);
+            font-size: .775rem;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            @media #{$breakpoint-lg-desktop} {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            @media #{$breakpoint-desktop} {
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+
+            strong {
+                @include flex(0 0 250px);
+                max-width: 250px;
+                font-weight: 600;
+                color: $heading-color;
+                text-transform: capitalize;
+                @include display-flex(flex);
+                @include justify-content-end;
+                @include align-items-end;
+                margin-right: 1.5rem;
+                font-size: .875rem;
+
+            }
+
+            span {
+                flex-grow: 1;
+                // text-transform: capitalize;
+                color: $heading-color;
+                font-weight: 500;
+            }
+
+        }
+
+        &.is-between {
+            li {
+                @include display-flex(flex);
+                @include justify-content-between;
+                @include align-items-center;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+
+                    @media #{$breakpoint-lg-desktop} {
+                        margin-bottom: 15px;
+                    }
+
+                    @media #{$breakpoint-desktop} {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                strong {
+                    @include justify-content-start;
+                    @include align-items-start;
+                }
+
+                span {
+                    font-weight: 600;
+                    color: $heading-color;
+                    font-size: 1.125rem;
+                    font-family: $heading-fonts;
+                    text-align: right;
+
+                    @media #{$breakpoint-lg-desktop} {
+                        font-size: .785rem;
+                    }
+
+                    @media #{$breakpoint-desktop} {
+                        font-size: .685rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.back-page {
+    @include display-flex(flex);
+    @include justify-content-start;
+    @include align-items-center;
+    color: $primary-color;
+    margin-bottom: 30px;
+
+    svg {
+        fill: $primary-color;
+        margin-right: .5rem;
+        max-width: 24px;
+    }
+
+}
+
+.site-main-in {
+    @include display-flex(flex);
+    @include justify-content-start;
+    @include align-items-stretch;
+    width: 100%;
+    @include transition(all 0.2s linear);
+
+    .project-all-card {
+        width: 100%;
+    }
+
+    @media #{$breakpoint-pt} {
+        display: block;
+    }
+
+    &.profile-site-main-in {
+        aside {
+            .profile-details {
+                min-height: auto !important;
+
+                .profile-figure {
+                    .info-list {
+                        li {
+                            &:not(:last-child) {
+                                margin-bottom: 8px;
+
+                                @media #{$breakpoint-lg-desktop} {
+                                    margin-bottom: 5px;
+                                }
+
+                                @media #{$breakpoint-desktop} {
+                                    margin-bottom: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .projects {
+        max-height: 100% !important;
+
+
+        .project-list {
+            padding: 0;
+            border: 1px solid $border-color;
+            @include radius(10px);
+            // padding: .5rem .6125rem;
+            color: $heading-color;
+            @include transition(all 0.4s ease-in-out);
+            @include display-flex(flex);
+            @include justify-content-start;
+
+            figure {
+                @include flex(0 0 140px);
+                max-width: 140px;
+                margin: 0;
+                overflow: hidden;
+                position: relative;
+                padding-top: 30.566%;
+                background: $border-dark;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+                @media #{$breakpoint-lg-desktop} {
+                    @include flex(0 0 110px);
+                    max-width: 110px;
+                    padding-top: 25.566%;
+                }
+
+                @media #{$breakpoint-desktop} {
+                    @include flex(0 0 100px);
+                    max-width: 100px;
+                    padding-top: 20.566%;
+                }
+
+                .overlay {
+                    @include overlay(rgba($heading-color, 0.7));
+                    @include display-flex(flex);
+                    @include align-items-center;
+                    @include justify-content-center;
+                    @include flex-direction-column(column);
+                    top: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include transition(all 0.5s ease-in-out);
+                    bottom: initial;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+
+                    .overlay-icons {
+                        @include display-flex(flex);
+                        @include align-items-center;
+                        @include justify-content-center;
+
+                        span {
+                            cursor: pointer;
+                            background-color: $white-color;
+                            width: 28px;
+                            height: 28px;
+                            @include display-flex(flex);
+                            @include justify-content-center;
+                            @include align-items-center;
+                            @include flex-direction-column(column);
+                            @include radius(4px);
+                            @include transition(all 0.4s ease);
+
+                            span.svg-img,
+                            img {
+                                transform: scale(0.9);
+                                max-height: 18px;
+                            }
+
+                            @media #{$breakpoint-lg-desktop} {
+                                width: 28px;
+                                height: 28px;
+
+                                img {
+                                    max-width: 16px;
+                                }
+                            }
+
+                            &:not(:last-child) {
+                                margin-right: 0.6125rem;
+                            }
+
+                            img {
+                                position: initial;
+                                height: initial;
+                                width: initial;
+                                top: initial;
+                                bottom: initial;
+                                max-width: 16px;
+                            }
+
+                            &:hover {
+                                color: $primary-color;
+                                background: $primary-light;
+                                @include transform(scale(1.1));
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                    opacity: 1;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .project-content {
+                flex-grow: 1;
+                padding: 0.875rem 0.75rem;
+
+                @media #{$breakpoint-lg-desktop} {
+                    padding: 0.75rem 0.625rem;
+                }
+
+                @media #{$breakpoint-desktop} {
+                    padding: 0.625rem 0.525rem;
+                }
+            }
+
+            .project-header {
+                position: relative;
+                padding-right: 1.5rem;
+
+                h6 {
+                    text-transform: uppercase;
+                    font-size: 0.625rem;
+                    font-weight: 600;
+                    font-family: $body-fonts;
+
+                    a {
+                        color: $secondary-color;
+                    }
+
+                }
+
+                h4 {
+                    margin-top: 0.5rem;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    @include trim(2);
+
+
+
+                    a {
+                        color: $heading-color;
+                    }
+                }
+
+                .project-meta {
+                    margin-top: 0.5rem;
+
+                    @media #{$breakpoint-desktop} {
+                        font-size: 0.25rem;
+                    }
+
+                    ul {
+                        @include display-flex(flex);
+                        @include justify-content-start;
+                        @include align-items-center;
+                    }
+
+                    li {
+                        font-size: 0.75rem;
+                        color: $grey-color;
+
+                        a {
+                            &.common-button {
+                                padding: 2px 12px;
+                                text-transform: uppercase;
+                                min-width: initial;
+                                min-height: initial;
+                                font-size: 0.75rem;
+                                border: 1px solid $border-color;
+                            }
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: 0.6125rem;
+                        }
+
+                        @media #{$breakpoint-lg-desktop} {
+                            font-size: 0.625rem;
+
+                            a {
+                                &.common-button {
+                                    padding: 0px 8px;
+                                    font-size: 0.625rem;
+                                }
+                            }
+                        }
+
+                        @media #{$breakpoint-desktop} {
+                            font-size: 0.525rem;
+
+                            a {
+                                &.common-button {
+                                    font-size: 0.525rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .custom-dropdown {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    img {
+                        width: 18px;
+
+                        @media #{$breakpoint-lg-desktop} {
+                            width: 14px;
+                        }
+
+                        @media #{$breakpoint-desktop} {
+                            width: 12px;
+                        }
+                    }
+
+                    li {
+                        margin: 0;
+                        border-radius: 0;
+                        border: none;
+
+                        a {
+                            font-size: 0.875rem;
+                        }
+
+                        &:not(:last-child) {
+                            border-bottom: 1px solid $border-color;
+                        }
+                    }
+                }
+            }
+
+            .project-footer {
+                @include display-flex(flex);
+                @include justify-content-between;
+                @include align-items-center;
+                margin-top: 1rem;
+
+                @media #{$breakpoint-lg-desktop} {
+                    margin-top: 1rem;
+                }
+
+                @media #{$breakpoint-desktop} {
+                    margin-top: 0.875rem;
+                }
+
+                ul {
+                    @include display-flex(flex);
+                    @include align-items-center;
+
+                    li {
+                        border: none;
+                        margin-bottom: 0;
+                        @include display-flex(flex);
+                        @include align-items-center;
+                        font-size: 0.875rem;
+
+                        @media #{$breakpoint-lg-desktop} {
+                            font-size: 0.625rem;
+                        }
+
+                        @media #{$breakpoint-desktop} {
+                            font-size: 0.585rem;
+                        }
+
+                        a {
+                            line-height: 0;
+                            margin-right: 0.5rem;
+                        }
+
+                        span {
+                            font-weight: 600;
+                        }
+
+                        span.svg-icon {
+                            font-size: 1rem;
+
+                            img,
+                            svg {
+                                max-width: 18px;
+                            }
+
+                            @media #{$breakpoint-lg-desktop} {
+                                font-size: 0.875rem;
+
+                                img,
+                                svg {
+                                    max-width: 12px;
+                                }
+                            }
+                        }
+
+                        @media #{$breakpoint-lg-desktop} {
+                            &:not(:last-child) {
+                                margin-right: 0.6125rem;
+                            }
+                        }
+                    }
+
+                    &.is-start {
+                        @include justify-content-start;
+                    }
+
+                    &.is-end {
+                        @include justify-content-end;
+                    }
+                }
+            }
+
+            &.is-active {
+                background-color: $primary-light;
+                border: 0.5px solid $primary-color;
+            }
+
+            &:hover {
+
+                figure {
+                    .overlay {
+                        bottom: 0;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &.is-grid {
+            .project-list {
+                display: block;
+                background-color: $white-color;
+                padding: 0;
+                margin-top: 2rem;
+
+                @media #{$breakpoint-desktop} {
+                    margin-top: 1.5rem;
+                }
+
+                figure {
+                    @include flex(0 0 100%);
+                    max-width: 100%;
+                    padding-top: 50.566%;
+                }
+
+
+            }
+        }
+    }
+
+    aside {
+        background: $white-color;
+
+        &.sidebar {
+            @include flex(0 0 450px);
+            max-width: 450px;
+            @include transition(all 0.2s linear);
+
+            @media #{$breakpoint-lg-desktop} {
+                flex: 0 0 400px;
+                max-width: 400px;
+            }
+
+            @media #{$breakpoint-desktop} {
+                flex: 0 0 320px;
+                max-width: 320px;
+            }
+
+            @media #{$breakpoint-pt} {
+                @include flex(0 0 100%);
+                max-width: 100%;
+            }
+
+            .naxa-card {
+                height: 100%;
+
+                .naxa-body {
+                    padding: 1rem;
+
+                    &.pd-0 {
+                        padding: 0;
+                    }
+                }
+            }
+
+            .card-header {
+                @media #{$breakpoint-lg-desktop} {
+                    padding-top: 0.6125rem;
+                }
+
+                h5 {
+                    text-transform: capitalize;
+                }
+            }
+
+            .project-details {
+                figure {
+                    margin-top: 1rem;
+                    @include radius(10px);
+                    text-align: center;
+
+                    img {
+                        @include radius(10px);
+                    }
+                }
+
+                .project-header {
+                    position: relative;
+
+                    h6 {
+                        text-transform: uppercase;
+                        font-size: 0.625rem;
+                        font-weight: 400;
+
+                        @media #{$breakpoint-lg-desktop} {
+                            font-size: 0.625rem;
+                        }
+
+                        @media #{$breakpoint-desktop} {
+                            font-size: 0.525rem;
+                        }
+
+                        span {
+                            font-family: $body-fonts;
+                            color: $secondary-color;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.325rem;
+                        margin: 10px 0 20px;
+
+                        a {
+                            color: $heading-color;
+                        }
+
+                        @media #{$breakpoint-lg-desktop} {
+                            font-size: 0.875rem;
+                            margin: 5px 0 10px;
+                        }
+                    }
+
+                    h4 {
+                        margin-top: 0.2rem;
+                        font-size: 0.875rem;
+                        font-weight: 400;
+
+                        a {
+                            color: $heading-color;
+                        }
+                    }
+
+                    .project-meta {
+                        margin-top: 0.5rem;
+
+                        ul {
+                            @include display-flex(flex);
+                            @include justify-content-start;
+                            @include align-items-center;
+                        }
+
+                        li {
+                            border: none;
+                            margin-bottom: 0;
+                            font-size: 0.875rem;
+
+                            a {
+                                &.common-button {
+                                    padding: 3px 15px;
+                                    text-transform: uppercase;
+                                    min-width: initial;
+                                    min-height: initial;
+                                    font-size: 0.875rem;
+                                }
+                            }
+
+                            &:not(:last-child) {
+                                margin-right: 0.6125rem;
+                            }
+                        }
+                    }
+
+                    .custom-dropdown {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+
+                        li {
+                            margin: 0;
+                            border-radius: 0;
+                            border: none;
+
+                            a {
+                                font-size: 0.875rem;
+                            }
+
+                            &:not(:last-child) {
+                                border-bottom: 1px solid $border-color;
+                            }
+                        }
+                    }
+                }
+
+                .project-footer {
+                    @include display-flex(flex);
+                    @include justify-content-between;
+                    @include align-items-center;
+                    margin-top: 1rem;
+
+                    ul {
+                        @include display-flex(flex);
+                        @include align-items-center;
+
+                        li {
+                            border: none;
+                            margin-bottom: 0;
+
+                            a {
+                                span.svg-icon {
+                                    margin-right: 0.6125rem;
+                                }
+                            }
+
+                            span.svg-icon {
+                                font-size: 1.2rem;
+                            }
+
+                            img,
+                            svg {
+                                max-width: 18px;
+                                max-height: 18px;
+                            }
+
+                            &:first-child {
+                                margin-right: 0.5rem;
+
+                                a {
+                                    span.svg-icon {
+                                        margin-right: 0.25rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.is-start {
+                            @include justify-content-start;
+                        }
+
+                        &.is-end {
+                            @include justify-content-end;
+                        }
+                    }
+
+                    a {
+                        &.common-button {
+                            &.is-border {
+                                color: $primary-color;
+                                padding: 5px;
+                                min-width: initial;
+                                min-height: initial;
+                                font-size: 0.775rem;
+
+                                img {
+                                    max-width: 18px;
+                                    max-height: 18px;
+                                }
+
+                                span.svg-icon {
+                                    border: none;
+                                    margin-left: 0.5rem;
+                                    margin-right: 0;
+                                }
+
+                                &:hover {
+                                    background-color: transparent;
+                                    color: $primary-color;
+                                    border-color: $primary-color;
+                                }
+
+                                @media #{$breakpoint-lg-desktop} {
+                                    font-size: 0.675rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .profile-details {
+                .profile-figure {
+                    text-align: center;
+
+                    figure {
+                        img {
+                            width: 150px;
+                            height: 150px;
+
+                            @media #{$breakpoint-lg-desktop} {
+                                width: 110px;
+                                height: 110px;
+                            }
+
+                            @media #{$breakpoint-desktop} {
+                                width: 90px;
+                                height: 90px;
+                            }
+                        }
+                    }
+
+                    .profile-figure-content {
+                        h4 {
+                            font-size: 1.5rem;
+                            margin-bottom: 0.5rem;
+
+                            @media #{$breakpoint-lg-desktop} {
+                                font-size: 1.25rem;
+                                margin-bottom: 0.25rem;
+                            }
+
+                            @media #{$breakpoint-desktop} {
+                                font-size: 0.938rem;
+                            }
+                        }
+
+                        a {
+                            color: $secondary-color;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-size: 0.875rem;
+
+                            @media #{$breakpoint-lg-desktop} {
+                                font-size: 0.685rem;
+                            }
+
+                            @media #{$breakpoint-desktop} {
+                                font-size: 0.585rem;
+                            }
+                        }
+                    }
+
+                    ul {
+                        &.info-list {
+                            max-width: 400px;
+                            margin: 2rem auto;
+
+                            @media #{$breakpoint-desktop} {
+                                margin: 1.125rem auto;
+                            }
+
+                            li {
+                                text-align: left;
+
+                                strong {
+                                    @include flex(0 0 100px);
+                                    max-width: 100px;
+                                }
+                            }
+                        }
+                    }
+
+                    .buttons {
+                        margin: 30px 0 60px;
+
+                        @media #{$breakpoint-lg-desktop} {
+                            margin: 20px 0 40px;
+                        }
+
+                        @media #{$breakpoint-desktop} {
+                            margin: 15px 0 30px;
+                        }
+                    }
+                }
+
+                .description {
+                    margin-top: 60px;
+
+                    @media #{$breakpoint-lg-desktop} {
+                        margin-top: 40px;
+                    }
+
+                    p,
+                    h3 {
+                        color: $heading-color;
+                    }
+                }
+
+                .buttons {
+                    margin-top: 3rem;
+
+                    @media #{$breakpoint-lg-desktop} {
+                        margin-top: 2.5rem;
+                    }
+
+                    @media #{$breakpoint-desktop} {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 0.938rem;
+                margin-bottom: 0.5rem;
+                color: $body-color;
+                font-family: $body-fonts;
+
+                @media #{$breakpoint-lg-desktop} {
+                    font-size: 0.75rem;
+                }
+
+                @media #{$breakpoint-desktop} {
+                    font-size: 0.685rem;
+                }
+            }
+
+            &.details-sidebar {
+                .project-details {
+                    padding: 1.5rem;
+
+                    @media #{$breakpoint-lg-desktop} {
+                        padding: 1rem;
+                    }
+
+                    figure {
+                        margin: 2rem 0;
+
+                        @media #{$breakpoint-lg-desktop} {
+                            margin: 1rem 0;
+                        }
+                    }
+
+                    .info-list {
+                        li {
+                            strong {
+                                @include flex(0 0 180px);
+                                max-width: 180px;
+
+                                @media #{$breakpoint-lg-desktop} {
+                                    @include flex(0 0 120px);
+                                    max-width: 120px;
+                                }
+
+                                @media #{$breakpoint-desktop} {
+                                    @include flex(0 0 100px);
+                                    max-width: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .site-main-card {
+        flex-grow: 1;
+        width: calc(100% - 450px);
+        height: auto;
+
+        @media #{$breakpoint-lg-desktop} {
+            width: calc(100% - 400px);
+        }
+
+        @media #{$breakpoint-desktop} {
+            width: calc(100% - 320px);
+        }
+
+        @media #{$breakpoint-pt} {
+            width: 100%;
+        }
+
+        &.is-bg {
+            background-color: $bg-color;
+        }
+
+        .project-details-card {
+            padding: 2rem;
+
+            @media #{$breakpoint-lg-desktop} {
+                padding: 1rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+                text-transform: capitalize;
+                font-family: $body-fonts;
+
+                @media #{$breakpoint-lg-desktop} {
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                @media #{$breakpoint-desktop} {
+                    font-size: 0.875rem;
+                }
+            }
+
+            .custom-tab-content {
+                padding-top: 2rem;
+            }
+
+            .raw-photos {
+                padding: 0 0.6125rem;
+
+                a {
+                    margin-bottom: 1rem;
+                    display: block;
+                    position: relative;
+                    @include radius(10px);
+                    padding-top: 66.566%;
+
+                    video {
+                        background-size: 100% 100%;
+
+                        source {
+                            z-index: 5;
+                        }
+                    }
+
+                    img,
+                    video,
+                    iframe {
+                        @include radius(10px);
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center center;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .comments {
+            padding: 2rem;
+            background-color: $white-color;
+            border-top: 1px solid $border-color;
+
+            h3 {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+                text-transform: capitalize;
+                font-family: $body-fonts;
+            }
+
+            ul {
+                &.list {
+                    li {
+                        padding: 0.6125rem 0;
+                        border: none;
+
+                        h6 {
+                            font-family: $body-fonts;
+                        }
+                    }
+
+                    figure {
+                        @include flex(0 0 40px);
+                        @include radius(50%);
+                        max-width: 40px;
+                        height: 40px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .profile-details-card {
+            padding: 2rem;
+
+
+
+            @media #{$breakpoint-desktop} {
+                padding: 1.5rem 2rem;
+            }
+
+            .custom-tab {
+                .custom-tab-content {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .profile-banner {
+                margin-bottom: 2rem;
+
+                figure {
+                    position: relative;
+                    margin: 0;
+                    overflow: hidden;
+                    position: relative;
+                    padding-top: 25.566%;
+                    @include radius(10px);
+
+                    @media #{$breakpoint-lg-desktop} {
+                        padding-top: 22.566%;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center center;
+                        opacity: 1;
+                        @include radius(10px);
+                    }
+                }
+
+                .profile-banner-content {
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    left: 50px;
+                    color: $white-color;
+                    max-width: 580px;
+
+                    @media #{$breakpoint-lg-desktop} {
+                        left: 30px;
+                    }
+
+                    h2 {
+                        color: $white-color;
+                        font-size: 1.75rem;
+                        font-weight: 500;
+
+                        @media #{$breakpoint-lg-desktop} {
+                            font-size: 1.25rem;
+                        }
+
+                        @media #{$breakpoint-desktop} {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    p {
+                        margin: 1rem 0 3rem;
+
+                        @media #{$breakpoint-lg-desktop} {
+                            margin: 1rem 0 2rem;
+                        }
+                    }
+
+                    a {
+                        &.common-button {
+                            background-color: $white-color;
+                            color: $primary-color;
+                            max-width: max-content;
+                        }
+                    }
+                }
+            }
+        }
+
+        .project-all-card {
+            padding: 2rem 4rem;
+            background: $white-color;
+
+            @media #{$breakpoint-lg-desktop} {
+                padding: 1.5rem 3rem;
+
+                .projects {
+                    padding: 0;
+                }
+            }
+
+            @media #{$breakpoint-desktop} {
+                padding: 1rem 3rem;
+            }
+
+            .card-header {
+                padding-top: 2rem;
+                margin-bottom: -10px;
+
+                @media #{$breakpoint-lg-desktop} {
+                    padding-top: 1.5rem;
+                }
+
+                @media #{$breakpoint-desktop} {
+                    padding-top: 1rem;
+                }
+            }
+        }
+
+        .upload-card {
+            .upload-row {
+                @include transition(all 0.4s ease-in-out);
+                @include display-flex(flex);
+                @include justify-content-start;
+                @include align-items-stretch;
+
+                @media #{$breakpoint-pt} {
+                    @include flex-direction-column(column);
+                }
+
+                .left-list {
+                    border-right: 1px solid $border-color;
+                    @include flex(0 0 400px);
+                    max-width: 400px;
+
+                    @media #{$breakpoint-lg-desktop} {
+                        @include flex(0 0 320px);
+                        max-width: 320px;
+                    }
+
+                    @media #{$breakpoint-lg-desktop} {
+                        @include flex(0 0 250px);
+                        max-width: 250px;
+                    }
+
+                    @media #{$breakpoint-pt} {
+                        @include flex(0 0 100%);
+                        max-width: 100%;
+                    }
+
+                    ul {
+                        &.list {
+                            li {
+                                a {
+                                    font-weight: 600;
+                                    color: $border-dark;
+                                }
+
+                                &.active {
+                                    a {
+                                        color: $primary-color;
+                                    }
+                                }
+
+                                &:hover {
+                                    background-color: $primary-light;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .upload-form {
+                flex-grow: 1;
+                min-height: calc(100vh - 150px);
+                max-height: calc(100vh - 150px);
+
+                @include display-flex(flex);
+                @include flex-direction-column(column);
+
+                .upload-content {
+                    -webkit-box-flex: 1;
+                    flex-grow: 1;
+                    padding: 2rem;
+                    padding-bottom: 1rem;
+                }
+
+                .form-group {
+                    .custom-checkbox {
+                        label {
+                            text-transform: initial;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                padding: 0 1.5rem 1.5rem 1.5rem;
+
+                a {
+                    &.common-button.is-clear {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            ul {
+                &.list {
+                    li {
+                        border: none;
+
+                        .custom-radio {
+                            label {
+                                font-size: 1rem;
+
+                                @media #{$breakpoint-lg-desktop} {
+                                    font-size: 0.875rem;
+                                }
+
+                                @media #{$breakpoint-desktop} {
+                                    font-size: 0.775rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.toggle-active {
+        aside {
+            max-width: 0;
+            @include flex(0 0 0);
+        }
+
+        .site-main-card {
+            width: 100%;
+        }
+    }
+}
