@@ -53,6 +53,8 @@
         position: relative;
         z-index: 11;
 
+
+
         &.is-center {
             top: 30px !important;
             @include justify-content-center;
@@ -61,6 +63,7 @@
 
     .banner-caption {
         position: relative;
+
 
         .caption-content {
             position: relative;
@@ -71,7 +74,7 @@
             }
 
             h1 {
-                font-size: 3.75rem; //64px
+                font-size: 3rem; //64px
                 color: $heading-color;
                 font-weight: 400;
                 padding-bottom: 40px;
@@ -79,9 +82,22 @@
                 text-transform: capitalize;
                 max-width: 700px;
 
+                span {
+                    text-transform: capitalize;
+
+                    &.blue {
+                        color: $primary-color;
+
+                    }
+
+                    &.green {
+                        color: $secondary-color;
+
+                    }
+                }
+
                 @media #{$breakpoint-lg-desktop} {
-                    font-size: 3.5rem;
-                    max-width: 500px;
+                    max-width: 600px;
                     line-height: 60px;
                 }
 
@@ -162,6 +178,7 @@
             height: 90%;
             top: 8rem !important;
             @include contain(right);
+            background-position: right -25% bottom 45% !important;
 
             @media #{$breakpoint-lg-desktop} {
                 top: 7rem !important;

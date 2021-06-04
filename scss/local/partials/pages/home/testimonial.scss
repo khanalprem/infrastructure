@@ -210,3 +210,204 @@
         }
     }
 }
+
+.home-slider {
+
+    .slick-arrow,
+    .slick-arrow {
+        top: 50%;
+        position: absolute !important;
+        z-index: 11;
+        width: 45px;
+        height: 45px;
+        @include radius(50%);
+        border: 1px solid $white-color;
+        background: transparent;
+        @include transition(all .3s ease);
+
+        @media #{$breakpoint-desktop} {
+            width: 35px;
+            height: 35px
+        }
+
+        &::before {
+            font-family: "Material Icons";
+            font-size: 25px;
+            color: $white-color;
+
+            @media #{$breakpoint-desktop} {
+                font-size: 18px;
+            }
+        }
+
+        &:hover {
+            background: $white-color;
+
+            &::before {
+                color: $primary-color;
+            }
+        }
+
+    }
+
+    .slick-prev {
+        left: 25px;
+
+        &::before {
+            content: "keyboard_arrow_left";
+        }
+    }
+
+    .slick-next {
+        right: 25px;
+
+        &::before {
+            content: "keyboard_arrow_right";
+        }
+    }
+
+    .home-slider-wrapper {
+        position: relative;
+        @include cover(center);
+        padding: 130px 0;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($primary-color, .8);
+        }
+
+        .text {
+            font-family: $heading-fonts;
+            color: $white-color;
+            font-size: 1.3rem;
+        }
+
+        .infrastructures-data-grid {
+            .grid-data {
+                @include flex(0 0 50%);
+                max-width: 50%;
+                padding: 0 1rem;
+
+
+
+                &:nth-child(2) {
+                    .infra-data {
+                        margin-top: 5rem;
+                    }
+                }
+
+                &:nth-child(3) {
+                    .infra-data {
+                        margin-bottom: 5rem;
+                    }
+                }
+
+                @media #{$breakpoint-sm} {
+                    @include flex(0 0 100%);
+                    max-width: 100%;
+                    margin-top: 1.5rem;
+
+                    &:nth-child(2) {
+                        .infra-data {
+                            margin-top: 1.5rem;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        .infra-data {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+
+
+                .infra-data {
+                    background: $primary-color;
+                    @include radius(10px);
+                    @include flex-hr-center;
+                    min-height: 250px;
+
+                    .data {
+                        font-size: 75px;
+                        line-height: 85px;
+                        font-family: $heading-fonts;
+                        color: $white-color;
+                        margin-bottom: 5px;
+                        font-style: italic;
+
+                        @media #{$breakpoint-desktop} {
+                            font-size: 65px;
+                            line-height: 75px;
+                            margin-bottom: 3px;
+                        }
+                    }
+
+                    .label {
+                        font-size: 18px;
+                        color: $white-color;
+                        text-transform: capitalize;
+                        font-weight: 700;
+
+                        @media #{$breakpoint-desktop} {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .row-grid {
+                &:last-child {
+                    margin-top: 5rem;
+                    margin-left: 30px;
+
+                    @media #{$breakpoint-desktop} {
+                        margin-top: 3rem;
+                        margin-bottom: 20px;
+                    }
+
+                    @media only screen and (max-width: 593px) {
+                        margin-top: 0;
+                        margin-left: 0;
+                    }
+                }
+
+                .grid-data {
+                    margin-bottom: 30px;
+
+                    @media #{$breakpoint-desktop} {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+
+        }
+
+        &.is-green {
+            &::before {
+                background-color: rgba($secondary-color, .8);
+            }
+
+            .infrastructures-data-grid {
+                .grid-data {
+
+
+                    .infra-data {
+                        background-color: $secondary-color;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+
+}

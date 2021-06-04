@@ -429,8 +429,8 @@
   pagination();
   /* ---map-body functions */
 
-  if (jQuery('.testimonial-slider').length > 0) {
-    var mainSlider = $('.testimonial-slider');
+  if (jQuery('.home-slider').length > 0) {
+    var mainSlider = $('.home-slider');
 
     mainSlider.slick({
       slidesToShow: 1,

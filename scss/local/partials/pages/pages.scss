@@ -19,3 +19,54 @@
     cursor: pointer;
     height: 100%;
 }
+
+.is-flex {
+    @include display-flex(flex);
+    @include align-items-center;
+
+    &.is-start {
+        @include justify-content-start;
+    }
+
+    &.is-between {
+        @include justify-content-between;
+    }
+
+    &.is-around {
+        @include justify-content-around;
+    }
+
+    &.is-end {
+        @include justify-content-end;
+    }
+
+    &.is-center {
+        @include justify-content-center;
+    }
+
+
+    &.is-wrap {
+        @include flex-wrap(wrap);
+    }
+
+    &.is-stretch {
+        @include align-items-stretch;
+    }
+
+    &.is-align-center {
+        @include align-items-center;
+    }
+
+    &.is-align-start {
+        @include align-items-start;
+    }
+
+    &.is-align-end {
+        @include align-items-end;
+    }
+
+}
+
+.is-grow {
+    @include flex-grow(1);
+}
