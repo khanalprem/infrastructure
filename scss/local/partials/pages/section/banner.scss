@@ -23,7 +23,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba($primary-color, 0.8);
+            background-color: rgba($secondary-color, 0.8);
             @include cover(center);
             z-index: 1;
         }

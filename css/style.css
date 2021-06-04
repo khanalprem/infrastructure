@@ -1368,7 +1368,8 @@ h6 {
       margin-bottom: 15px; } }
   .common-title h1 {
     color: #333333;
-    font-weight: 400; }
+    font-weight: 400;
+    font-size: 2.5rem; }
     .common-title h1 span {
       text-transform: lowercase; }
       .common-title h1 span.italic {
@@ -1380,6 +1381,8 @@ h6 {
     @media only screen and (max-width: 991px) {
       .common-title h1 {
         margin-bottom: 15px; } }
+  .common-title p {
+    margin-top: 1rem; }
   .common-title.is-light h1 {
     color: #ffffff; }
     .common-title.is-light h1 span.italic {
@@ -8158,7 +8161,7 @@ footer.site-footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(81, 101, 247, 0.8);
+    background-color: rgba(42, 185, 94, 0.8);
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -9980,6 +9983,10 @@ aside.admin-sidebar {
     .intro-section .intro-para {
       padding-left: 0; } }
 
+.figures {
+  max-width: 400px;
+  margin: 0 auto; }
+
 .significance-section .contents {
   padding-right: 3rem; }
   @media only screen and (max-width: 1440px) {
@@ -9996,48 +10003,6 @@ aside.admin-sidebar {
     @media only screen and (max-width: 1440px) {
       .significance-section .contents .para p:not(:last-child) {
         margin-bottom: 20px; } }
-  .significance-section .contents ul {
-    margin-top: 50px; }
-    @media only screen and (max-width: 1440px) {
-      .significance-section .contents ul {
-        margin-top: 35px; } }
-    .significance-section .contents ul li {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .significance-section .contents ul li:not(:last-child) {
-        margin-bottom: 35px; }
-        @media only screen and (max-width: 1440px) {
-          .significance-section .contents ul li:not(:last-child) {
-            margin-bottom: 25px; } }
-      @media only screen and (max-width: 360px) {
-        .significance-section .contents ul li {
-          display: block; } }
-      .significance-section .contents ul li figure {
-        max-width: 55px;
-        flex: 0 0 55px; }
-        .significance-section .contents ul li figure img {
-          width: 100%; }
-        @media only screen and (max-width: 1440px) {
-          .significance-section .contents ul li figure {
-            max-width: 40px;
-            flex: 0 0 40px; } }
-        @media only screen and (max-width: 991px) {
-          .significance-section .contents ul li figure {
-            margin: 20px auto; } }
-      .significance-section .contents ul li .list-info {
-        padding-left: 30px; }
-        @media only screen and (max-width: 991px) {
-          .significance-section .contents ul li .list-info {
-            padding-left: 0; } }
-        .significance-section .contents ul li .list-info h3 {
-          font-weight: 400;
-          margin-bottom: 12px; }
-        @media only screen and (max-width: 1440px) {
-          .significance-section .contents ul li .list-info {
-            padding-left: 25px; }
-            .significance-section .contents ul li .list-info h3 {
-              margin-bottom: 8px; } }
   .significance-section .contents ul.partners {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10100,6 +10065,112 @@ aside.admin-sidebar {
           @media only screen and (max-width: 1440px) {
             .significance-section .contents ul.partners li.partner-list .fig img {
               max-width: 120px; } }
+  .significance-section .contents ul {
+    margin-top: 50px; }
+    @media only screen and (max-width: 1440px) {
+      .significance-section .contents ul {
+        margin-top: 35px; } }
+    .significance-section .contents ul li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .significance-section .contents ul li:not(:last-child) {
+        margin-bottom: 35px; }
+        @media only screen and (max-width: 1440px) {
+          .significance-section .contents ul li:not(:last-child) {
+            margin-bottom: 25px; } }
+      @media only screen and (max-width: 360px) {
+        .significance-section .contents ul li {
+          display: block; } }
+      .significance-section .contents ul li figure {
+        max-width: 55px;
+        flex: 0 0 55px; }
+        .significance-section .contents ul li figure img {
+          width: 100%; }
+        @media only screen and (max-width: 1440px) {
+          .significance-section .contents ul li figure {
+            max-width: 40px;
+            flex: 0 0 40px; } }
+        @media only screen and (max-width: 991px) {
+          .significance-section .contents ul li figure {
+            margin: 20px auto; } }
+      .significance-section .contents ul li .list-info {
+        padding-left: 30px; }
+        @media only screen and (max-width: 991px) {
+          .significance-section .contents ul li .list-info {
+            padding-left: 0; } }
+        .significance-section .contents ul li .list-info h3 {
+          font-weight: 400;
+          margin-bottom: 12px; }
+        @media only screen and (max-width: 1440px) {
+          .significance-section .contents ul li .list-info {
+            padding-left: 25px; }
+            .significance-section .contents ul li .list-info h3 {
+              margin-bottom: 8px; } }
+    .significance-section .contents ul.is-list li {
+      margin: 0;
+      padding: .5rem 0;
+      padding-left: 2.5rem;
+      position: relative;
+      font-size: .875rem; }
+      .significance-section .contents ul.is-list li:before {
+        content: "check_circle";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        color: #2AB95E;
+        font-family: "Material Icons";
+        font-size: 1.4rem; }
+      .significance-section .contents ul.is-list li:not(:last-child) {
+        margin-bottom: 0; }
+  .significance-section .contents .about-timeline ul li {
+    padding-left: 3rem;
+    position: relative; }
+    .significance-section .contents .about-timeline ul li:not(:last-child) {
+      margin-bottom: 0;
+      padding-bottom: 2rem; }
+    .significance-section .contents .about-timeline ul li .timeline-content .timeline-header {
+      margin-bottom: .6125rem; }
+      .significance-section .contents .about-timeline ul li .timeline-content .timeline-header h5 {
+        text-transform: capitalize; }
+      .significance-section .contents .about-timeline ul li .timeline-content .timeline-header span {
+        padding: .25rem .6125rem;
+        background-color: #2AB95E;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        border-radius: 24px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: .75rem;
+        margin-right: .5rem; }
+        .significance-section .contents .about-timeline ul li .timeline-content .timeline-header span small {
+          margin-right: .25rem;
+          font-size: .775rem; }
+    .significance-section .contents .about-timeline ul li .timeline-content p {
+      font-size: .875rem; }
+    .significance-section .contents .about-timeline ul li:before {
+      position: absolute;
+      top: 0;
+      left: 9.5px;
+      content: "";
+      height: 100%;
+      width: 2px;
+      border-left: 2px dashed #5165F7; }
+    .significance-section .contents .about-timeline ul li:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      height: 20px;
+      width: 20px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #5165F7; }
+    .significance-section .contents .about-timeline ul li:last-child:before {
+      display: none; }
 .significance-section .picture-illustrtations {
   height: 100%;
   display: -webkit-box;
@@ -10126,8 +10197,7 @@ aside.admin-sidebar {
     -webkit-border-radius: 18px;
     -moz-border-radius: 18px;
     -ms-border-radius: 18px;
-    border-radius: 18px;
-    width: 100%; }
+    border-radius: 18px; }
   .significance-section .picture-illustrtations .right-picture-illust {
     flex: 0 0 60%;
     max-width: 60%; }
@@ -10165,6 +10235,15 @@ aside.admin-sidebar {
         max-width: 300px;
         padding-right: 0;
         padding-bottom: 10px; } }
+.significance-section.timeline-section .figures img {
+  max-width: 200px;
+  margin-bottom: 1rem;
+  max-height: 300px; }
+.significance-section.timeline-section .picture-illustrtations .right-picture-illust .figures img {
+  max-width: 200px;
+  margin-bottom: 1rem;
+  max-height: 310px;
+  width: auto !important; }
 
 .data-graph-body {
   flex: 0 0 70%;
