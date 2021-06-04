@@ -1,10 +1,39 @@
-@import "map-aside";
-@import "map-body";
-
 /* .map-page{
     height: 100vh;
     overflow: hidden;
 } */
+.infra-slider {
+  ul {
+    &.tab-list {
+      max-width: 130px;
+      @include radius(24px);
+      background-color: $white-color;
+      border: 1px solid $border-color;
+      @include justify-content-start;
+      margin-top: -13px;
+
+      li {
+        @include radius(24px);
+        @include flex(0 0 50%);
+        max-width: 50%;
+        margin: 0;
+
+        a {
+          @include radius(24px);
+          font-size: .875rem;
+          padding: .35rem .875rem;
+          width: 100%;
+          color: $body-color;
+
+          &.current {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
 .map-scroll {
   overflow: scroll;
   width: 350px;
@@ -14,7 +43,7 @@
   z-index: 11;
   top: 0;
   left: 0;
-  @include transition(all 0.4s ease);
+  @include transition(all .4s ease);
 }
 
 .absolute {
@@ -49,9 +78,9 @@
     top: 0;
     left: 0;
     padding-top: 78px;
-    @include transition(all 0.4s ease);
+    @include transition(all .4s ease);
     height: 100vh;
-    @include animation(slowRevealation 0.4s ease);
+    @include animation(slowRevealation .4s ease);
 
     @media #{$breakpoint-lg-desktop} {
       width: 350px;
@@ -75,6 +104,7 @@
     &.active {
       margin-left: -420px;
     }
+
   }
 
   .map-content-wrap {
@@ -82,8 +112,8 @@
     margin-left: 400px;
     position: relative;
     z-index: 1;
-    @include transition(all 0.4s ease);
-    @include animation(slowRevealation 0.4s ease);
+    @include transition(all .4s ease);
+    @include animation(slowRevealation .4s ease);
 
     @media #{$breakpoint-lg-desktop} {
       width: calc(100% - 360px);
@@ -109,6 +139,7 @@
       margin-left: 0px;
       width: 100%;
     }
+
   }
 
   @media #{$breakpoint-md} {
@@ -126,9 +157,7 @@
           .map-container {
             display: none;
           }
-          .chart-body {
-            display: none;
-          }
+
           .infrastructure-item-details {
             &.active {
               display: block;
@@ -161,3 +190,121 @@
     }
   }
 }
+
+
+.ol-popup {
+  position: absolute;
+  background-color: $white-color;
+  bottom: 25px;
+  left: 19%;
+  @include transform(translateX(-19%));
+  max-width: 280px;
+  min-width: 280px;
+  padding: 1rem;
+  @include radius(10px);
+  width: 100%;
+  @include box-shadow(0 15px 50px rgba($heading-color, .16));
+
+  &::before {
+    content: '';
+    border-style: solid;
+    position: absolute;
+    border-color: $white-color transparent;
+    border-width: 0 10px 10px;
+    bottom: -9px;
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    @include transform(translateX(-50%));
+    @include transform (rotate(180deg));
+  }
+
+  img {
+    @include radius(10px);
+    margin-bottom: 10px;
+  }
+
+  .pStyle {
+    text-align: left;
+
+    h5 {
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+
+    span {
+      color: $body-color;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+
+
+}
+
+
+a {
+  color: $secondary-color;
+}
+
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup-closer:after {
+  content: '✖';
+}
+
+/* .ol-popup-closer:hover {
+   background-color: #3531ec7e;
+} */
+.overlay-container {
+  background-color: #00994c;
+  widows: 150px;
+  color: #0000;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  border-radius: 1px;
+  padding: 2px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  left: 10%;
+  margin-left: -100px;
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
+.ol-zoom-in {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(250, 240, 240);
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+}
+
+.ol-zoom-out {
+  background-color: rgb(250, 240, 240);
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid #ccc;
+}
+
+
+@import "map-aside";
+@import "map-body";

@@ -32,11 +32,12 @@ ul.option-list {
             display: block;
             width: auto;
             padding: .5rem 1rem;
-            font-weight: 600;
+            font-weight: 400;
             text-transform: capitalize;
             @include transition(all .5s linear);
             border: 1px solid transparent;
             text-align: center;
+            color: $body-light;
 
             @media #{$breakpoint-desktop} {
                 padding: .35rem .5rem;
@@ -112,7 +113,7 @@ ul.option-list {
 
             &.current {
                 a {
-                    color: $heading-color;
+                    color: $primary-color;
 
                     &::after {
                         width: 100%;
