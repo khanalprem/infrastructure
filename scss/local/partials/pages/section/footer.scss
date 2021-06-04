@@ -7,7 +7,7 @@ footer {
     }
 
     .explore-section {
-        padding-bottom: 120px;
+        padding-bottom: 60px;
         @include display-flex(flex);
         @include justify-content-between;
         border-bottom: 1px solid $white-color;
@@ -40,7 +40,7 @@ footer {
     }
 
     .footer-copyright {
-        padding-top: 80px;
+        padding-top: 50px;
         @include display-flex(flex);
         @include justify-content-between;
 
@@ -92,5 +92,13 @@ footer {
                 margin-top: 20px;
             }
         }
+    }
+
+    .note {
+        color: rgba($white-color, .8);
+        font-size: .775rem;
+        text-align: right;
+        margin-top: .6125rem;
+        padding-right: .6125rem;
     }
 }

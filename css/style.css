@@ -7373,7 +7373,7 @@ footer.site-footer {
   padding-bottom: 70px; }
   @media only screen and (max-width: 1560px) {
     footer.site-footer {
-      margin-top: 100px; } }
+      margin-top: 70px; } }
   footer.site-footer .footer-up {
     margin-top: -200px;
     margin-bottom: 70px; }
@@ -8657,7 +8657,7 @@ footer {
     footer {
       padding: 90px 0 50px; } }
   footer .explore-section {
-    padding-bottom: 120px;
+    padding-bottom: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8691,7 +8691,7 @@ footer {
         footer .explore-section .buttons {
           margin-top: 40px; } }
   footer .footer-copyright {
-    padding-top: 80px;
+    padding-top: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8732,6 +8732,12 @@ footer {
     @media only screen and (max-width: 360px) {
       footer .footer-copyright .copyright {
         margin-top: 20px; } }
+  footer .note {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: .775rem;
+    text-align: right;
+    margin-top: .6125rem;
+    padding-right: .6125rem; }
 
 .top-banner-action-wrap {
   position: fixed;
@@ -10235,15 +10241,17 @@ aside.admin-sidebar {
         max-width: 300px;
         padding-right: 0;
         padding-bottom: 10px; } }
-.significance-section.timeline-section .figures img {
-  max-width: 200px;
-  margin-bottom: 1rem;
-  max-height: 300px; }
-.significance-section.timeline-section .picture-illustrtations .right-picture-illust .figures img {
-  max-width: 200px;
-  margin-bottom: 1rem;
-  max-height: 310px;
-  width: auto !important; }
+.significance-section.timeline-section {
+  overflow: hidden; }
+  .significance-section.timeline-section .figures img {
+    max-width: 200px;
+    margin-bottom: 1rem;
+    max-height: 300px; }
+  .significance-section.timeline-section .picture-illustrtations .right-picture-illust .figures img {
+    max-width: 200px;
+    margin-bottom: 1rem;
+    max-height: 310px;
+    width: auto !important; }
 
 .data-graph-body {
   flex: 0 0 70%;

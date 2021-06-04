@@ -375,6 +375,8 @@
     }
 
     &.timeline-section {
+        overflow: hidden;
+
         .figures {
             img {
                 max-width: 200px;

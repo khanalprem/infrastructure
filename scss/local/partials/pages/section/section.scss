@@ -6,9 +6,11 @@
 @import "footer";
 @import "activation_banner";
 @import "table-content";
+
 .section {
   padding: 130px 0;
   position: relative;
+
 
   @media #{$breakpoint-desktop} {
     padding: 110px 0;
