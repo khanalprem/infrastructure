@@ -185,7 +185,7 @@ header {
     }
 
     &.scroll-header {
-        background: rgba($white-color, .1);
+        background: rgba($white-color, .9);
         top: 0 !important;
         @include box-shadow(0 0 15px 2px $shadow-light);
         backdrop-filter: blur(5px);

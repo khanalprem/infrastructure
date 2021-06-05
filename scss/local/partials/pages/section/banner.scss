@@ -2,6 +2,14 @@
     position: relative;
     @include transition(all 0.4s ease);
 
+    .note {
+        font-size: 12px;
+        font-style: italic;
+        margin-top: 1rem;
+        max-width: 500px;
+        display: block;
+    }
+
     &.home-banner {
         overflow: hidden;
     }
@@ -178,7 +186,7 @@
             height: 90%;
             top: 8rem !important;
             @include contain(right);
-            background-position: right -25% bottom 45% !important;
+            background-position: right -10% bottom 45% !important;
 
             @media #{$breakpoint-lg-desktop} {
                 top: 7rem !important;
